@@ -59,8 +59,13 @@ public:
     /// \brief destructor
     ~Ratio() = default;
     
-    Ratio operator+(const Ratio &r) const;
-
+    //Operators
+    Ratio operator+(const Ratio &r);
+    Ratio operator-(const Ratio &r);
+    Ratio operator*(const Ratio &r);
+    Ratio operator*(const float &f);
+    Ratio operator/(const Ratio &r);
+    Ratio operator-();
     friend std::ostream& operator<< (std::ostream& stream, const Ratio& ratio);
 
     /// \brief operator to access to the ist element of a vector

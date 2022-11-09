@@ -7,13 +7,13 @@ int main() {
 
     //exemple test unitaire : static_assert ( factoriel(4) == 24, " factoriel error ");
     
-//    VectorD v(3);
-//
-//    v[0] = 1.0;
-//    v[1] = 0.3; 
-//    v[2] = 5.2;
-//
-//    std::cout << "v : " << v << std::endl;    
+    Ratio r(1,2);
+    Ratio r2(2,3);
+    Ratio r3;
 
+    r3 = r - r2;
+    std::cout << r3 << std::endl;
+    r3 = r*r2;
+    std::cout << r3 << std::endl;
     return 0;
 }

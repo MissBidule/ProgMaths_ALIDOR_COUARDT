@@ -6,3 +6,11 @@
 
 #IncludeRegexTransform: 
 
+../RatioLib/include/Ratio.hpp
+iostream
+-
+
+/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/RatioLib/src/Ratio.cpp
+Ratio.hpp
+/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/RatioLib/src/Ratio.hpp
+
