@@ -46,7 +46,7 @@ public:
     /// \brief constructor from rational
     /// \param num : the numerator component of the rational
     /// \param denom : the denominator component of the rational
-    Ratio(const int & num, const int & denom);
+    Ratio(const int & num = 0, const int & denom = 1);
     
     /// \brief constructor from float
     /// \param number : the number to be converted into rational
@@ -70,7 +70,23 @@ public:
     /// \todo
     /// \test
     //exemple de doc doxygen À ENLEVER
+    
+public:
+    
+    /// \brief convert a real to a rational
+    /// \param  number: the real to be converted
+    /// \param  nb_iter: iterations of the conversion
+    /// \return the rational number
+    Ratio convertFloatToRatio(const float & number, const unsigned & nb_iter = 10);
+    
+    /// \brief convert a rational to a real
+    /// \param  number: the rational to be converted
+    /// \return the real number
+    float convertRatioToFloat(const Ratio & number);
+    
 };
+
+inline int sign(const int nb) {return (nb >= 0) - (nb < 0);}
 
 #endif
 

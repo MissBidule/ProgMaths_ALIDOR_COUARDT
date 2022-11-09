@@ -2,6 +2,12 @@
 
 Ratio::Ratio(const int & num, const int & denom) : mNum(num), mDenom(denom) {}
 
+Ratio::Ratio(const float & number) : mNum(0), mDenom(1) {
+    Ratio temp(convertFloatToRatio(number));
+    mNum = temp.mNum;
+    mDenom = temp.mDenom;
+}
+
 Ratio::Ratio(const Ratio & r) : mNum(r.mNum), mDenom(r.mDenom) {}
 
 //Overload << operator
