@@ -44,112 +44,19 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle"><div class="title">Ratio.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &lt;cmath&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;cstdlib&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
-</div>
+
 <p><a href="Ratio_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorD.html">VectorD</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">class defining a vector for linear algebra operations.  <a href="classVectorD.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRatio.html">Ratio</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">class defining a rational for algebra operations.  <a href="classRatio.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:aadab616654f907986f8d551fee222bd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVectorD.html">VectorD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Ratio_8hpp.html#aadab616654f907986f8d551fee222bd4">operator*</a> (const double value, const <a class="el" href="classVectorD.html">VectorD</a> &amp;vec)</td></tr>
-<tr class="memdesc:aadab616654f907986f8d551fee222bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">scale a vector with a constant value  <a href="Ratio_8hpp.html#aadab616654f907986f8d551fee222bd4">More...</a><br /></td></tr>
-<tr class="separator:aadab616654f907986f8d551fee222bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade999a9898c399c33a1fdf8dcb41f30b"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Ratio_8hpp.html#ade999a9898c399c33a1fdf8dcb41f30b">operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="classVectorD.html">VectorD</a> &amp;v)</td></tr>
-<tr class="memdesc:ade999a9898c399c33a1fdf8dcb41f30b"><td class="mdescLeft">&#160;</td><td class="mdescRight">overload the operator &lt;&lt; for <a class="el" href="classVectorD.html" title="class defining a vector for linear algebra operations.">VectorD</a>  <a href="Ratio_8hpp.html#ade999a9898c399c33a1fdf8dcb41f30b">More...</a><br /></td></tr>
-<tr class="separator:ade999a9898c399c33a1fdf8dcb41f30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="aadab616654f907986f8d551fee222bd4" name="aadab616654f907986f8d551fee222bd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadab616654f907986f8d551fee222bd4">&#9670;&#160;</a></span>operator*()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classVectorD.html">VectorD</a> operator* </td>
-          <td>(</td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classVectorD.html">VectorD</a> &amp;&#160;</td>
-          <td class="paramname"><em>vec</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>scale a vector with a constant value </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>: scale factor </td></tr>
-    <tr><td class="paramname">vec</td><td>is the vector to be scaled </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the scaled vector </dd></dl>
-
-</div>
-</div>
-<a id="ade999a9898c399c33a1fdf8dcb41f30b" name="ade999a9898c399c33a1fdf8dcb41f30b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade999a9898c399c33a1fdf8dcb41f30b">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>stream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classVectorD.html">VectorD</a> &amp;&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>overload the operator &lt;&lt; for <a class="el" href="classVectorD.html" title="class defining a vector for linear algebra operations.">VectorD</a> </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stream</td><td>: input stream </td></tr>
-    <tr><td class="paramname">v</td><td>: the vector to output </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the output stream containing the vector data </dd></dl>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

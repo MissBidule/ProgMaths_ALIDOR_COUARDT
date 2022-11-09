@@ -39,13 +39,15 @@ $(function() {
 <div id="main-nav"></div>
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">Ratio </div></div>
+  <div class="headertitle"><div class="title"><a class="el" href="classRatio.html" title="class defining a rational for algebra operations.">Ratio</a> </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
 <ul><li class="level1"><a href="#instroduction_sec">What for?</a></li>
-<li class="level1"><a href="#install_bigsec">How to install</a><ul><li class="level2"><a href="#dependencies_sec">Dependecies</a></li>
+<li class="level1"><a href="#install_bigsec">How to install ?</a><ul><li class="level2"><a href="#dependencies_sec">Dependecies</a></li>
 <li class="level2"><a href="#install_sec">Install with cmake (Linux / Mac)</a></li>
+<li class="level2"><a href="#XCode_sec">Install for XCode (Mac)</a></li>
+<li class="level2"><a href="#doc_sec">Doxygen Documentation (Linux / Mac)</a></li>
 </ul>
 </li>
 </ul>
@@ -56,9 +58,9 @@ $(function() {
 </div>
 <h1><a class="anchor" id="instroduction_sec"></a>
 What for?</h1>
-<p ><a class="el" href="classVectorD.html" title="class defining a vector for linear algebra operations.">VectorD</a> is a super tool. </p>
+<p ><a class="el" href="classRatio.html" title="class defining a rational for algebra operations.">Ratio</a> is a moderatly cool tool. </p>
 <h1><a class="anchor" id="install_bigsec"></a>
-How to install</h1>
+How to install ?</h1>
 <h2><a class="anchor" id="dependencies_sec"></a>
 Dependecies</h2>
 <ul>
@@ -73,7 +75,19 @@ Install with cmake (Linux / Mac)</h2>
 <li>cd build </li>
 <li>cmake .. </li>
 <li>make </li>
-<li>if Doxygen installed: make html </li>
+</ul>
+<h2><a class="anchor" id="XCode_sec"></a>
+Install for XCode (Mac)</h2>
+<ul>
+<li>go to main dir </li>
+<li>mkdir build-xcode </li>
+<li>cd build-xcode </li>
+<li>cmake .. -GXcode </li>
+</ul>
+<h2><a class="anchor" id="doc_sec"></a>
+Doxygen Documentation (Linux / Mac)</h2>
+<ul>
+<li>need Doxygen installed: make html </li>
 <li>The documentation is located in :<ul>
 <li>[path to build]/doc/doc-doxygen/html/index.html or</li>
 <li>or [path to build]/INTERFACE/doc/doc-doxygen/html/index.html </li>

@@ -7,26 +7,32 @@
 /// \image html myImage.jpg
 /// \tableofcontents
 /// \section instroduction_sec What for?
-/// VectorD is a super tool.
-/// \section install_bigsec How to install
+/// Ratio is a moderatly cool tool.
+/// \section installBigSec How to install ?
 /// \subsection dependencies_sec Dependecies
 /// \li nothing
 /// \li Doxygen (if you want the documentation)
-/// \subsection install_sec Install with cmake (Linux / Mac)
+/// \subsection installSec Install with cmake (Linux / Mac)
 /// \li go to main dir
 /// \li mkdir build
 /// \li cd build
 /// \li cmake ..
 /// \li make
-/// \li if Doxygen installed: make html
+/// \subsection XCodeSec Install for XCode (Mac)
+/// \li go to main dir
+/// \li mkdir build-xcode
+/// \li cd build-xcode
+/// \li cmake .. -GXcode
+/// \subsection docSec Doxygen Documentation (Linux / Mac)
+/// \li need Doxygen installed: make html
 /// \li The documentation is located in :
 /// 	- [path to build]/doc/doc-doxygen/html/index.html or 
 /// 	- or [path to build]/INTERFACE/doc/doc-doxygen/html/index.html
 
 
 
-/// \class VectorD
-/// \brief class defining a vector for linear algebra operations.
+/// \class Ratio
+/// \brief class defining a rational for algebra operations.
 class Ratio {
     
 private:
@@ -34,6 +40,15 @@ private:
     int mDenom; /*!< denominator component */
     
 public:
+    
+    /// \brief constructor from rational
+    /// \param num : the numerator component of the rational
+    /// \param denom : the denominator component of the rational
+    Ratio(const int & num, const int & denom);
+    
+    /// \brief constructor from float
+    /// \param number : the number to be converted into rational
+    Ratio(const float & number);
     
     /// \brief copy-constructor
     /// \param r : the source rational to be copied
