@@ -31,7 +31,7 @@
 						"string" : "3.13"
 					},
 					"parentIndex" : 0,
-					"projectIndex" : 0,
+					"projectIndex" : 1,
 					"source" : "RatioLib",
 					"targetIndexes" : 
 					[
@@ -45,7 +45,7 @@
 						"string" : "3.13"
 					},
 					"parentIndex" : 1,
-					"projectIndex" : 0,
+					"projectIndex" : 1,
 					"source" : "RatioLib/doc",
 					"targetIndexes" : 
 					[
@@ -59,7 +59,7 @@
 						"string" : "3.13"
 					},
 					"parentIndex" : 0,
-					"projectIndex" : 1,
+					"projectIndex" : 2,
 					"source" : "tests",
 					"targetIndexes" : 
 					[
@@ -75,15 +75,23 @@
 				{
 					"childIndexes" : 
 					[
-						1
+						1,
+						2
 					],
 					"directoryIndexes" : 
 					[
-						0,
+						0
+					],
+					"name" : "RatioLib"
+				},
+				{
+					"directoryIndexes" : 
+					[
 						1,
 						2
 					],
 					"name" : "Ratio",
+					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
 						0,
@@ -112,35 +120,35 @@
 					"id" : "Ratio::@8f2e06132bc3ad500312",
 					"jsonFile" : "target-Ratio-Debug-b0ec74c0bd5619664b17.json",
 					"name" : "Ratio",
-					"projectIndex" : 0
+					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "html::@823755c9640417a52d4c",
 					"jsonFile" : "target-html-Debug-2cd52933e83828781800.json",
 					"name" : "html",
-					"projectIndex" : 0
+					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "main1::@a44f0ac069e85531cdee",
 					"jsonFile" : "target-main1-Debug-129c4ff3827066874f43.json",
 					"name" : "main1",
-					"projectIndex" : 1
+					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "main2::@a44f0ac069e85531cdee",
 					"jsonFile" : "target-main2-Debug-1f1047a62216cb12b588.json",
 					"name" : "main2",
-					"projectIndex" : 1
+					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "main3::@a44f0ac069e85531cdee",
 					"jsonFile" : "target-main3-Debug-c66ba3c6649d17547800.json",
 					"name" : "main3",
-					"projectIndex" : 1
+					"projectIndex" : 2
 				}
 			]
 		}

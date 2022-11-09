@@ -140,7 +140,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Ratio
+CMAKE_PROJECT_NAME:STATIC=RatioLib
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -209,6 +209,12 @@ DOXYGEN_DOT_EXECUTABLE:FILEPATH=/usr/bin/dot
 
 //Doxygen documentation generation tool (http://www.doxygen.org)
 DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
+
+//Value Computed by CMake
+RatioLib_BINARY_DIR:STATIC=/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build
+
+//Value Computed by CMake
+RatioLib_SOURCE_DIR:STATIC=/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT
 
 //Value Computed by CMake
 Ratio_BINARY_DIR:STATIC=/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build/INTERFACE

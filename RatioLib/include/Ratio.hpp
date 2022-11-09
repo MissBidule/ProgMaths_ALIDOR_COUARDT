@@ -1,5 +1,5 @@
-#ifndef __VECTORD__HPP
-#define __VECTORD__HPP
+#ifndef __RATIO__HPP
+#define __RATIO__HPP
 
 // Doxygen menu
 /// \version 0.1

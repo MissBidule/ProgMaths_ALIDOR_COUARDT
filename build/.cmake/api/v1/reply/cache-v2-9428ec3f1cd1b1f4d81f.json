@@ -851,7 +851,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Ratio"
+			"value" : "RatioLib"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1176,6 +1176,30 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "[/usr/bin/doxygen][cfound components: doxygen dot ][v1.8.17()]"
+		},
+		{
+			"name" : "RatioLib_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build"
+		},
+		{
+			"name" : "RatioLib_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT"
 		},
 		{
 			"name" : "Ratio_BINARY_DIR",
