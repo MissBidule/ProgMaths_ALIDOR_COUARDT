@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.13)
 
 
 # give a name to the project
-project(RatioLib)
+project(Ratio)
 
 # display VERBOSE messages : cmake --log-level=VERBOSE ..
 

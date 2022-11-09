@@ -5,7 +5,8 @@
 
 int main() {
 
-//    VectorD v1(3);
+    Ratio r1(1,3);
+    Ratio r2(r1);
 //    v1[0] = 1.0;
 //    v1[1] = 0.3; 
 //    v1[2] = 5.2;

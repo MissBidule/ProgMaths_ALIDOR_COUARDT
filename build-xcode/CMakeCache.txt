@@ -132,7 +132,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=RatioLib
+CMAKE_PROJECT_NAME:STATIC=Ratio
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
@@ -203,15 +203,6 @@ DOXYGEN_DOT_EXECUTABLE:FILEPATH=/opt/homebrew/bin/dot
 DOXYGEN_EXECUTABLE:FILEPATH=/opt/homebrew/bin/doxygen
 
 //Value Computed by CMake
-RatioLib_BINARY_DIR:STATIC=/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode
-
-//Value Computed by CMake
-RatioLib_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-RatioLib_SOURCE_DIR:STATIC=/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3
-
-//Value Computed by CMake
 Ratio_BINARY_DIR:STATIC=/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/INTERFACE
 
 //Value Computed by CMake
@@ -219,6 +210,15 @@ Ratio_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 Ratio_SOURCE_DIR:STATIC=/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib
+
+//Value Computed by CMake
+Ratiob_BINARY_DIR:STATIC=/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/INTERFACE
+
+//Value Computed by CMake
+Ratiob_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Ratiob_SOURCE_DIR:STATIC=/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib
 
 //Value Computed by CMake
 tests_BINARY_DIR:STATIC=/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/tests
@@ -229,22 +229,13 @@ tests_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 tests_SOURCE_DIR:STATIC=/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/tests
 
-//Value Computed by CMake
-vectorD_BINARY_DIR:STATIC=/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/INTERFACE
-
-//Value Computed by CMake
-vectorD_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-vectorD_SOURCE_DIR:STATIC=/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib
-
 
 ########################
 # INTERNAL cache entries
 ########################
 
 //Stored Xcode object GUID
-ALL_BUILD_GUID_CMAKE:INTERNAL=31579E3F89014BBC98A20677
+ALL_BUILD_GUID_CMAKE:INTERNAL=5488B0EF3EEF4A7E93C708E7
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -377,27 +368,21 @@ DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
 //Details about finding Doxygen
 FIND_PACKAGE_MESSAGE_DETAILS_Doxygen:INTERNAL=[/opt/homebrew/bin/doxygen][cfound components: doxygen dot ][v1.9.5()]
 //Stored Xcode object GUID
-PROJECT_RatioLib_GUID_CMAKE:INTERNAL=AE818390194E4447BE180386
+PROJECT_Ratio_GUID_CMAKE:INTERNAL=01FBF4FCDD614BA8A85E7E7B
 //Stored Xcode object GUID
-PROJECT_Ratio_GUID_CMAKE:INTERNAL=28B653EB64194A7B841C914D
+PROJECT_tests_GUID_CMAKE:INTERNAL=04780640D1A14D59BE6CE7D2
 //Stored Xcode object GUID
-PROJECT_tests_GUID_CMAKE:INTERNAL=66F62727F4AE4988A33C10C8
+Ratio_GUID_CMAKE:INTERNAL=D6B8A356C3CA4D3A9DD8A7C1
 //Stored Xcode object GUID
-PROJECT_vectorD_GUID_CMAKE:INTERNAL=5D62E76EC63049E68E88AC03
+ZERO_CHECK_GUID_CMAKE:INTERNAL=47D2FB3887E3442A97F8925D
 //Stored Xcode object GUID
-Ratio_GUID_CMAKE:INTERNAL=31AA2578F5014E94AD938B08
+html_GUID_CMAKE:INTERNAL=F95C354E2F3046EEB3819EF8
 //Stored Xcode object GUID
-ZERO_CHECK_GUID_CMAKE:INTERNAL=86C7CD1C589D4AEF83D9347B
+install_GUID_CMAKE:INTERNAL=CC1EAB84F1BF444CA82836ED
 //Stored Xcode object GUID
-html_GUID_CMAKE:INTERNAL=3F4F8D205EF94B2A92170C26
+main1_GUID_CMAKE:INTERNAL=58F3EBBFFD124035BD585DC1
 //Stored Xcode object GUID
-install_GUID_CMAKE:INTERNAL=0A8163B47E9C44899F989353
+main2_GUID_CMAKE:INTERNAL=6BF4451ED1964FA88A60046A
 //Stored Xcode object GUID
-main1_GUID_CMAKE:INTERNAL=DDFCB17890B644E49E04EF3C
-//Stored Xcode object GUID
-main2_GUID_CMAKE:INTERNAL=674A486CD9594A33AF90F74D
-//Stored Xcode object GUID
-main3_GUID_CMAKE:INTERNAL=2CB77383BFF248ED8B015BD5
-//Stored Xcode object GUID
-vectorD_GUID_CMAKE:INTERNAL=856BDE61CE4847D6941DE085
+main3_GUID_CMAKE:INTERNAL=869E85DBC0D24EC7978888C1
 

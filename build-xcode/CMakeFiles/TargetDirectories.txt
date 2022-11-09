@@ -3,8 +3,6 @@
 /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/CMakeFiles/ZERO_CHECK.dir
 /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/INTERFACE/CMakeFiles/Ratio.dir
 /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/INTERFACE/CMakeFiles/install.dir
-/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/INTERFACE/CMakeFiles/ALL_BUILD.dir
-/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/INTERFACE/CMakeFiles/ZERO_CHECK.dir
 /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/INTERFACE/doc/CMakeFiles/html.dir
 /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/INTERFACE/doc/CMakeFiles/install.dir
 /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/tests/CMakeFiles/main1.dir
