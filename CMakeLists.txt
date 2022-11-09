@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.13)
 
 
 # give a name to the project
-project(Ratio)
+project(RatioLib)
 
 # display VERBOSE messages : cmake --log-level=VERBOSE ..
 
@@ -38,7 +38,7 @@ file(MAKE_DIRECTORY ${PROJECT_BINARY_DIR}/output)
 # (optional) put the binary files in this directory
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 
-# add RatioLib
+# add vectorDLib
 message(STATUS "RatioLib cmake part ..." )
 add_subdirectory(RatioLib INTERFACE)
 include_directories(${CMAKE_SOURCE_DIR}/RatioLib/include) # important : other projects called by this cmake will know this include directory
