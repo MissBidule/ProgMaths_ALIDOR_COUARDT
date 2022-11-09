@@ -1,6 +1,8 @@
 #ifndef __RATIO__HPP
 #define __RATIO__HPP
 
+#include <iostream>
+
 // Doxygen menu
 /// \version 0.1
 /// \mainpage
@@ -57,6 +59,10 @@ public:
     /// \brief destructor
     ~Ratio() = default;
     
+    Ratio operator+(const Ratio &r) const;
+
+    friend std::ostream& operator<< (std::ostream& stream, const Ratio& ratio);
+
     /// \brief operator to access to the ist element of a vector
     /// \param  i: index of the targeted vector component
     /// \return vector[i]
@@ -67,3 +73,6 @@ public:
 };
 
 #endif
+
+
+
