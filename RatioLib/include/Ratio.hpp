@@ -14,7 +14,7 @@
 /// \subsection dependencies_sec Dependecies
 /// \li nothing
 /// \li Doxygen (if you want the documentation)
-/// \subsection installSec Install with cmake (Linux / Mac)
+/// \subsection installSec Install with cmake (C++17) (Linux / Mac)
 /// \li go to main dir
 /// \li mkdir build
 /// \li cd build
@@ -31,7 +31,9 @@
 /// 	- [path to build]/doc/doc-doxygen/html/index.html or 
 /// 	- or [path to build]/INTERFACE/doc/doc-doxygen/html/index.html
 
-
+/// \brief return the sign of the number
+/// \return 1 if positive or equal to 0, -1 otherwise
+inline int sign(const float nb) {return (nb >= 0) - (nb < 0);}
 
 /// \class Ratio
 /// \brief class defining a rational for algebra operations.
@@ -82,16 +84,30 @@ public:
     /// \param  number: the real to be converted
     /// \param  nb_iter: iterations of the conversion
     /// \return the rational number
-    Ratio convertFloatToRatio(const float & number, const unsigned & nb_iter = 10);
+    /// \todo create a limit to not exceed the bit size of the number type and avoid infinite loop
+    /// \todo create an epsylon of difference between the actual number and the rational
+    static Ratio convertFloatToRatio(const float & number, unsigned nb_iter = 10);
     
     /// \brief convert a rational to a real
     /// \param  number: the rational to be converted
     /// \return the real number
-    float convertRatioToFloat(const Ratio & number);
+    float convertRatioToFloat();
+    
+    /// \brief return the sign of the rational
+    /// \return 1 if positive or equal to 0, -1 otherwise
+    inline int numSign() const {return sign(mNum);}
+    
+    /// \brief simplify a rational
+    /// \return the modified number
+    Ratio& simplify();
+    
+    Ratio operator+(const Ratio &r) const;
+    
+    Ratio invert() const;
+
+    friend std::ostream& operator<< (std::ostream& stream, const Ratio& ratio);
     
 };
-
-inline int sign(const int nb) {return (nb >= 0) - (nb < 0);}
 
 #endif
 
