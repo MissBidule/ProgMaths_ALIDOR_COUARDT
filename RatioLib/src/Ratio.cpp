@@ -37,7 +37,7 @@ Ratio Ratio::convertFloatToRatio(const float & number, unsigned nb_iter) {
     
 }
 
-float Ratio::convertRatioToFloat() {
+float Ratio::convertRatioToFloat()const {
     if (mDenom == 0)
         throw std::runtime_error("Math error: Attempted to divide by Zero\n");
     return mNum/(float)mDenom;
@@ -102,7 +102,42 @@ Ratio Ratio::operator-(const Ratio &r){
     return Ratio(a*d - b*c, b*d).simplify();
 }
 
+//Overload / operator
+Ratio Ratio::operator/(const Ratio &r){
+    int a = mNum;
+    int b = mDenom;
+    int c = r.mNum;
+    int d = r.mDenom;
+
+    if (b == 0 || d == 0){
+        throw std::overflow_error("Divide by zero exception");
+    }
+
+    return Ratio(a*d, b*c);
+}
+
 //Overload unary minus operator
 Ratio Ratio::operator-(){
-    return Ratio(mNum,mDenom);
+    return Ratio(-mNum,mDenom);
+}
+
+Ratio Ratio::sqrt(const Ratio &r){
+    double a = r.mNum;
+    double b = r.mDenom;
+    Ratio result;
+
+    a = std::sqrt(a);
+    b = std::sqrt(b);
+
+    //check if the sqrt is a float, if yes then convert float to Ratio
+    if(((a-std::floor(a)) != 0) || ((b-std::floor(b)) != 0)){
+        double temp = r.convertRatioToFloat();
+        temp = std::sqrt(temp);
+        result = Ratio::convertFloatToRatio(temp);
+    }
+    else{
+        result = Ratio(a,b);
+    }
+
+return result;
 }

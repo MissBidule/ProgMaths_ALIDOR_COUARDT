@@ -9,6 +9,8 @@
 ../RatioLib/include/Ratio.hpp
 iostream
 -
+math.h
+-
 
 /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/tests/src/main1.cpp
 iostream

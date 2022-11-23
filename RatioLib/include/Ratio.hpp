@@ -2,6 +2,7 @@
 #define __RATIO__HPP
 
 #include <iostream>
+#include <math.h>
 
 // Doxygen menu
 /// \version 0.1
@@ -87,11 +88,12 @@ public:
     /// \todo create a limit to not exceed the bit size of the number type and avoid infinite loop
     /// \todo create an epsylon of difference between the actual number and the rational
     static Ratio convertFloatToRatio(const float & number, unsigned nb_iter = 10);
-    
+    static Ratio sqrt(const Ratio &r);
+
     /// \brief convert a rational to a real
     /// \param  number: the rational to be converted
     /// \return the real number
-    float convertRatioToFloat();
+    float convertRatioToFloat()const;
     
     /// \brief return the sign of the rational
     /// \return 1 if positive or equal to 0, -1 otherwise
@@ -103,9 +105,7 @@ public:
     
     Ratio operator+(const Ratio &r) const;
     
-    Ratio invert() const;
-
-    friend std::ostream& operator<< (std::ostream& stream, const Ratio& ratio);
+    Ratio invert() const;  
     
 };
 
