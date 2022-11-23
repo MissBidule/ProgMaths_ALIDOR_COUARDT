@@ -64,10 +64,12 @@ public:
     
     //Operators
     Ratio operator+(const Ratio &r);
+    Ratio operator+(const Ratio &r) const;
     Ratio operator-(const Ratio &r);
     Ratio operator*(const Ratio &r);
     Ratio operator*(const float &f);
     Ratio operator/(const Ratio &r);
+    bool operator==(const Ratio &r) const;
     Ratio operator-();
     friend std::ostream& operator<< (std::ostream& stream, const Ratio& ratio);
 
@@ -88,7 +90,13 @@ public:
     /// \todo create a limit to not exceed the bit size of the number type and avoid infinite loop
     /// \todo create an epsylon of difference between the actual number and the rational
     static Ratio convertFloatToRatio(const float & number, unsigned nb_iter = 10);
+    
+    /// \brief Do the square root of rational
+    /// \return the square root of a rational
     static Ratio sqrt(const Ratio &r);
+
+    static Ratio Zero();
+    static Ratio Infinite();
 
     /// \brief convert a rational to a real
     /// \param  number: the rational to be converted
@@ -101,10 +109,7 @@ public:
     
     /// \brief simplify a rational
     /// \return the modified number
-    Ratio& simplify();
-    
-    Ratio operator+(const Ratio &r) const;
-    
+    Ratio& simplify();    
     Ratio invert() const;  
     
 };
