@@ -42,6 +42,7 @@ set(CMAKE_BINARY_DIR "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_pr
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/INTERFACE/cmake_install.cmake")
+  include("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/googletest/cmake_install.cmake")
   include("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/tests/cmake_install.cmake")
 
 endif()

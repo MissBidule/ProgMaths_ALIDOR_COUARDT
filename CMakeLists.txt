@@ -38,10 +38,14 @@ file(MAKE_DIRECTORY ${PROJECT_BINARY_DIR}/output)
 # (optional) put the binary files in this directory
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 
-# add vectorDLib
+# add RatioDLib
 message(STATUS "RatioLib cmake part ..." )
 add_subdirectory(RatioLib INTERFACE)
 include_directories(${CMAKE_SOURCE_DIR}/RatioLib/include) # important : other projects called by this cmake will know this include directory
+
+# add google test
+message(STATUS "google test cmake part ..." )
+add_subdirectory(googletest)
 
 # add tests
 message(STATUS "tests cmake part ..." )

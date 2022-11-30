@@ -1,0 +1,33 @@
+Target dependency graph (12 targets)
+Ratio in Ratio, no dependencies
+gtest in Ratio, no dependencies
+gmock in Ratio, depends on:
+gtest in Ratio (explicit)
+gmock_main in Ratio, depends on:
+gmock in Ratio (explicit)
+gtest in Ratio (explicit)
+gtest_main in Ratio, depends on:
+gtest in Ratio (explicit)
+main1 in Ratio, depends on:
+Ratio in Ratio (explicit)
+gtest in Ratio (explicit)
+main2 in Ratio, depends on:
+Ratio in Ratio (explicit)
+gtest in Ratio (explicit)
+main3 in Ratio, depends on:
+Ratio in Ratio (explicit)
+gtest in Ratio (explicit)
+ZERO_CHECK in Ratio, no dependencies
+ALL_BUILD in Ratio, depends on:
+Ratio in Ratio (explicit)
+gmock in Ratio (explicit)
+gmock_main in Ratio (explicit)
+gtest in Ratio (explicit)
+gtest_main in Ratio (explicit)
+main1 in Ratio (explicit)
+main2 in Ratio (explicit)
+main3 in Ratio (explicit)
+ZERO_CHECK in Ratio (explicit)
+html in Ratio, no dependencies
+install in Ratio, depends on:
+ALL_BUILD in Ratio (explicit)
