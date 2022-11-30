@@ -1,17 +1,19 @@
 #include <iostream>
-
+#include <gtest/gtest.h>
 #include "Ratio.hpp"
 
 
-int main() {
+int main(int argc, char **argv) {
 
+    ::testing::InitGoogleTest(&argc, argv);
+    
     Ratio r1(1,3);
     Ratio r2(r1);
     
     std::cout << r2 << std::endl;
     std::cout << r2*4 << std::endl;
     std::cout << r2.convertRatioToFloat() << std::endl;
-    std::cout << Ratio::convertFloatToRatio(28.6) << std::endl;
+    std::cout << Ratio::convertFloatToRatio(28) << std::endl;
     std::cout << Ratio(6,30).simplify() << std::endl;
     std::cout << r1+r2 << std::endl;
 //    v1[0] = 1.0;
@@ -27,5 +29,5 @@ int main() {
 //    std::cout << "v1 - v2  : " << v1 - v2 << std::endl;
 //    std::cout << "v1.v2    : " << v1.dot(v2) << std::endl;
 
-    return 0;
+    return RUN_ALL_TESTS();
 }
