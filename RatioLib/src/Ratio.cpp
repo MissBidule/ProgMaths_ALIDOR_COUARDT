@@ -23,9 +23,10 @@ Ratio::Ratio(const Ratio & r) : mNum(r.mNum), mDenom(r.mDenom) {}
 //Overload << operator
 std::ostream& operator<< (std::ostream& stream, const Ratio& ratio) {
     if (ratio == Ratio::Infinite()){
-        stream << "Inf";
+        stream << "Inf.";
     }
-    stream << ratio.mNum << '/' << ratio.mDenom;
+    else
+        stream << ratio.mNum << '/' << ratio.mDenom;
     return stream;
 }
 
