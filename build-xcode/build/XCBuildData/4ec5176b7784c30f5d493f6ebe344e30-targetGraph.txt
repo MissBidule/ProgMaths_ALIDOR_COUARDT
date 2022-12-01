@@ -1,6 +1,6 @@
 Target dependency graph (3 targets)
 Ratio in Ratio, no dependencies
 gtest in Ratio, no dependencies
-main1 in Ratio, depends on:
+main3 in Ratio, depends on:
 Ratio in Ratio (explicit)
 gtest in Ratio (explicit)

@@ -46,6 +46,8 @@ private:
     
 public:
     
+    //Constructors
+    
     /// \brief constructor from rational
     /// \param num : the numerator component of the rational
     /// \param denom : the denominator component of the rational
@@ -62,7 +64,19 @@ public:
     /// \brief destructor
     ~Ratio() = default;
     
+public:
+    //Getters
+    
+    /// \brief returns the numerator value
+    inline int getNum() const { return mNum;};
+    
+    /// \brief returns the denominator value
+    inline int getDenom() const { return mDenom;};
+    
+public:
+    
     //Operators
+    
     Ratio operator+(const Ratio &r);
     Ratio operator+(const Ratio &r) const;
     Ratio operator-(const Ratio &r);
@@ -83,13 +97,15 @@ public:
     
 public:
     
+    //Various other functions
+    
     /// \brief convert a real to a rational
     /// \param  number: the real to be converted
     /// \param  nb_iter: iterations of the conversion
     /// \return the rational number
     /// \todo create a limit to not exceed the bit size of the number type and avoid infinite loop
     /// \todo create an epsylon of difference between the actual number and the rational
-    static Ratio convertFloatToRatio(const float & number, unsigned nb_iter = 10);
+    static Ratio convertFloatToRatio(const float & number, unsigned nb_iter = 11);
     
     /// \brief Do the square root of rational
     /// \return the square root of a rational

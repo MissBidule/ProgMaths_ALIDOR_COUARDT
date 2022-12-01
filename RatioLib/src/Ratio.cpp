@@ -34,15 +34,16 @@ Ratio Ratio::convertFloatToRatio(const float & number, unsigned nb_iter) {
     if (number == 0) return Ratio();
     if (nb_iter == 0) return Ratio();
     
-    //std::cout << sign(number);
-    
     if (fabs(number) < 1) {
-        return convertFloatToRatio(1/number, nb_iter).invert();
+        return (convertFloatToRatio(1/fabs(number), nb_iter).invert()) * sign(number);
     }
     
-    int q = abs(floor(number));
-    return (Ratio(q,1) + convertFloatToRatio(fabs(number)-q, nb_iter-1)) * sign(number);
+    if (fabs(number) > 1) {
+        float q = fabs(floor(number));
+        return (Ratio(q,1) + convertFloatToRatio(fabs(number)-q, nb_iter-1)) * sign(number);
+    }
     
+    return Ratio(1) * sign(number);
 }
 
 float Ratio::convertRatioToFloat()const {
