@@ -23,7 +23,7 @@ TEST (RatioConstructor, floatConstructor) {
     std::mt19937 generator(0);
     //max value
     //Has a weird behaviour above 100
-    const size_t maxValue = 100;
+    const size_t maxValue = 1000;
     std::uniform_real_distribution<float> uniformDistributionValue(-(int)maxValue,maxValue);
 
     // run many times the same test with different values
@@ -34,13 +34,9 @@ TEST (RatioConstructor, floatConstructor) {
         
         // build the corresponding rational
         Ratio r(data);
-        
-        std::cout << Ratio::convertFloatToRatio(data) << std::endl;
-        std::cout << r.convertRatioToFloat() << std::endl;
-        std::cout << data << std::endl;
-        std::cout << run << std::endl;
 
-        ASSERT_NEAR(data, r.getNum()/(float)r.getDenom(), 0.00001);//10-6
+        //due to the double precisions as absolute value increases, we adapt the acceptable error converted
+        ASSERT_NEAR(data, r.getNum()/(float)r.getDenom(), 0.00000015*maxValue);
     }
 }
 
