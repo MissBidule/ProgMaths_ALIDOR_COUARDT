@@ -108,6 +108,7 @@ public:
     /// \brief Do the square root of rational
     /// \return the square root of a rational
     static Ratio sqrt(const Ratio &r);
+    static Ratio exp(const Ratio &r);
 
     static Ratio Zero();
     static Ratio Infinite();
