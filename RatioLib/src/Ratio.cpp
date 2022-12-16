@@ -111,6 +111,10 @@ Ratio Ratio::operator-(const Ratio &r){
     return Ratio(a*d - b*c, b*d).simplify();
 }
 
+bool Ratio::operator!=(const Ratio &r) const{
+    return (!(*this==r));
+}
+
 bool Ratio::operator==(const Ratio &r) const{
     return ((r.mNum == mNum) && (r.mDenom == mDenom));
 }
@@ -154,6 +158,10 @@ bool Ratio::operator>(const Ratio &r)const{
 
 bool Ratio::operator<=(const Ratio &r)const{
     return(!(*this>r));
+}
+
+bool Ratio::operator>=(const Ratio &r)const{
+    return(!(*this<r));
 }
 
 //Square root of a Rational
