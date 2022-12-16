@@ -183,7 +183,7 @@ Ratio Ratio::sqrt(const Ratio &r){
         result = Ratio(a,b);
     }
 
-return result;
+    return result;
 }
 
 Ratio Ratio::exp(const Ratio &r){
@@ -202,14 +202,18 @@ Ratio Ratio::exp(const Ratio &r){
         result = convertFloatToRatio(std::pow(std::exp(1/b),a));
     }
 
-return result;
+    return result;
 }
 
-Ratio Ratio::cos(const Ratio &r){
+//Approximation of cosinus
+Ratio Ratio::cos(Ratio &r){
     long a = r.mNum;
     long b = r.mDenom;
+    int n = 0;
+    Ratio unitaire(1,1);
+    Ratio divide(1,2);
     Ratio result;
-    Ratio Epsilon(1,10000);
+    Ratio Epsilon(1,10000); //threshold
 
     if (a == 0){
         result.mNum = 1;
@@ -219,9 +223,18 @@ Ratio Ratio::cos(const Ratio &r){
         throw std::runtime_error("Cosinus of infinity");
     }
     else{
-        //if (r < Epsilon)
+        while (r>Epsilon){
+                r = r*divide;
+                n+=1;
+        }
+        std::cout << r << std::endl;
+        result = unitaire-((r*r)*divide);
+        while(n>0){
+            result = ((result*result) + (result*result)) - unitaire;
+            n-=1;
+        }
     }
-return result;
+    return result;
 }
 
 Ratio Ratio::Zero(){

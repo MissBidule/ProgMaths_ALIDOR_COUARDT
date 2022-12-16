@@ -126,7 +126,7 @@ public:
     /// \return the square root of a rational
     static Ratio sqrt(const Ratio &r);
     static Ratio exp(const Ratio &r);
-    static Ratio cos(const Ratio &r);
+    static Ratio cos(Ratio &r);
 
     static Ratio Zero();
     static Ratio Infinite();
