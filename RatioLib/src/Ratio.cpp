@@ -52,7 +52,7 @@ float Ratio::convertRatioToFloat()const {
 }
 
 Ratio Ratio::invert() const {
-    return Ratio(mDenom*numSign(), std::abs(mNum));
+    return Ratio(mDenom*signRatio(), std::abs(mNum));
 }
 
 Ratio& Ratio::simplify() {
