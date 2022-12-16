@@ -41,8 +41,8 @@ inline int sign(const float nb) {return (nb >= 0) - (nb < 0);}
 class Ratio {
     
 private:
-    int mNum; /*!< numerator component */
-    int mDenom; /*!< denominator component */
+    long mNum; /*!< numerator component */
+    long mDenom; /*!< denominator component */
     
 public:
     
@@ -51,7 +51,7 @@ public:
     /// \brief constructor from rational
     /// \param num : the numerator component of the rational
     /// \param denom : the denominator component of the rational
-    Ratio(const int & num = 0, const int & denom = 1);
+    Ratio(const long & num = 0, const long & denom = 1);
     
     /// \brief constructor from float
     /// \param number : the number to be converted into rational
@@ -68,10 +68,10 @@ public:
     //Getters
     
     /// \brief returns the numerator value
-    inline int getNum() const { return mNum;};
+    inline long getNum() const { return mNum;};
     
     /// \brief returns the denominator value
-    inline int getDenom() const { return mDenom;};
+    inline long getDenom() const { return mDenom;};
     
 public:
     
@@ -103,9 +103,7 @@ public:
     /// \param  number: the real to be converted
     /// \param  nb_iter: iterations of the conversion
     /// \return the rational number
-    /// \todo create a limit to not exceed the bit size of the number type and avoid infinite loop
-    /// \todo create an epsylon of difference between the actual number and the rational
-    static Ratio convertFloatToRatio(const float & number, unsigned nb_iter = 11);
+    static Ratio convertFloatToRatio(const float & number, unsigned nb_iter = 15);
     
     /// \brief Do the square root of rational
     /// \return the square root of a rational
