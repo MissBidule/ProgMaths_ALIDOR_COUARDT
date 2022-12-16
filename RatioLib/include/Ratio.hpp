@@ -78,15 +78,18 @@ public:
     //Operators
     
     //operator%
-    
-    Ratio operator+(const Ratio &r);
     Ratio operator+(const Ratio &r) const;
-    Ratio operator-(const Ratio &r);
-    Ratio operator*(const Ratio &r);
-    Ratio operator*(const float &f);
-    Ratio operator/(const Ratio &r);
+    Ratio operator-(const Ratio &r) const;
+    Ratio operator-() const;
+    Ratio operator*(const Ratio &r) const;
+    Ratio operator*(const float &f) const;
+    Ratio operator/(const Ratio &r) const;
+    //operator >
+    //operator <
+    //operator >=
+    //operator <=
     bool operator==(const Ratio &r) const;
-    Ratio operator-();
+    //operator!=
     friend std::ostream& operator<< (std::ostream& stream, const Ratio& ratio);
 
     /// \brief operator to access to the ist element of a vector
@@ -117,17 +120,17 @@ public:
     static Ratio convertFloatToRatio(const float & number, unsigned nb_iter = 15);
     
     /// \brief Do the square root of rational
+    /// \param  r: the ratio to be squared
     /// \return the square root of a rational
     static Ratio sqrt(const Ratio &r);
     static Ratio exp(const Ratio &r);
-
     static Ratio Zero();
     static Ratio Infinite();
 
     /// \brief convert a rational to a real
     /// \param  number: the rational to be converted
     /// \return the real number
-    float convertRatioToFloat()const;
+    float convertRatioToFloat() const;
     
     /// \brief return the sign of the rational
     /// \return 1 if positive or equal to 0, -1 otherwise

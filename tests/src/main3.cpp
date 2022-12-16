@@ -6,6 +6,34 @@
 #include <gtest/gtest.h>
 #include "Ratio.hpp"
 
+//tester :
+//toutes les fonctions
+//les cas particuliers
+//les exceptions
+//les affichages
+
+/////////////////////////////////////////////////////
+// other operations
+
+TEST (OtherOperations, sign) {
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_real_distribution<float> uniformDistributionValue(-(int)maxValue,(int)maxValue);
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+
+        // generate random data
+        float data = uniformDistributionValue(generator);
+        
+        // build the corresponding rational
+        int generatedSign = sign(data);
+
+        ASSERT_GE(data*generatedSign, 0);
+    }
+}
+
 /////////////////////////////////////////////////////
 // constructors
 
@@ -24,7 +52,7 @@ TEST (RatioConstructor, floatConstructor) {
     //max value
     //Has a weird behaviour above 100
     const size_t maxValue = 1000;
-    std::uniform_real_distribution<float> uniformDistributionValue(-(int)maxValue,maxValue);
+    std::uniform_real_distribution<float> uniformDistributionValue(-(int)maxValue,(int)maxValue);
 
     // run many times the same test with different values
     for(int run=0; run<100; ++run){
@@ -44,7 +72,7 @@ TEST (RatioConstructor, copyConstructor) {
     std::mt19937 generator(0);
     //max value
     const size_t maxValue = 10;
-    std::uniform_int_distribution<int> uniformIntDistribution(-maxValue,maxValue);
+    std::uniform_int_distribution<int> uniformIntDistribution(-(int)maxValue,(int)maxValue);
 
     // run many times the same test with different values
     for(int run=0; run<100; ++run){
@@ -66,7 +94,7 @@ TEST (RatioConstructor, copyConstructor) {
 /////////////////////////////////////////////////////
 // arithmetic
 
-//TEST (VectorDArithmetic, plus) {
+//TEST (RatioArithmetic, modulo) {
 //
 //    const size_t maxSize = 1000;  // max size of the tested vectors
 //    std::mt19937 generator(0);
@@ -102,6 +130,7 @@ TEST (RatioConstructor, copyConstructor) {
 //    }
 //}
 //
+
 ///////////////////////////////////////////////////////
 //// exception
 //

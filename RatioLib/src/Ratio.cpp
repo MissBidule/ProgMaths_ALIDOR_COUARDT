@@ -4,6 +4,8 @@
 
 #include "Ratio.hpp"
 
+//TRIER LES FONCTIONS SVP
+
 Ratio::Ratio(const long & num, const long & denom) : mNum(num), mDenom(denom) {
     if (denom < 0){ 
         mDenom = -denom;
@@ -65,47 +67,47 @@ Ratio& Ratio::simplify() {
 }
 
 //Overload + operator
-Ratio Ratio::operator+(const Ratio &r){
+Ratio Ratio::operator+(const Ratio &r) const{
     long a = mNum;
     long b = mDenom;
     long c = r.mNum;
     long d = r.mDenom;
 
     if (b == 0 || d == 0){
-        throw std::overflow_error("Divide by zero exception");
+        throw std::runtime_error("Math error: Attempted to divide by Zero\n");
     }
 
     return Ratio(a*d + b*c, b*d).simplify();
 }
 
 //Overload * operator
-Ratio Ratio::operator*(const Ratio &r){
+Ratio Ratio::operator*(const Ratio &r) const{
     long a = mNum;
     long b = mDenom;
     long c = r.mNum;
     long d = r.mDenom;
 
     if (b == 0 || d == 0){
-        throw std::overflow_error("Divide by zero exception");
+        throw std::runtime_error("Math error: Attempted to divide by Zero\n");
     }
 
     return Ratio(a*c, b*d).simplify();
 }
 
 //Overload * operator (ratio * float)
-Ratio Ratio::operator*(const float &f){
+Ratio Ratio::operator*(const float &f) const{
     return Ratio(mNum*f,mDenom).simplify();
 }
 
 //Overload - operator
-Ratio Ratio::operator-(const Ratio &r){
+Ratio Ratio::operator-(const Ratio &r) const{
     long a = mNum;
     long b = mDenom;
     long c = r.mNum;
     long d = r.mDenom;
 
     if (b == 0 || d == 0){
-        throw std::overflow_error("Divide by zero exception");
+        throw std::runtime_error("Math error: Attempted to divide by Zero\n");
     }
 
     return Ratio(a*d - b*c, b*d).simplify();
@@ -116,21 +118,21 @@ bool Ratio::operator==(const Ratio &r) const{
 }
 
 //Overload / operator
-Ratio Ratio::operator/(const Ratio &r){
+Ratio Ratio::operator/(const Ratio &r) const{
     long a = mNum;
     long b = mDenom;
     long c = r.mNum;
     long d = r.mDenom;
 
     if (b == 0 || d == 0){
-        throw std::overflow_error("Divide by zero exception");
+        throw std::runtime_error("Math error: Attempted to divide by Zero\n");
     }
 
     return Ratio(a*d, b*c);
 }
 
 //Overload unary minus operator
-Ratio Ratio::operator-(){
+Ratio Ratio::operator-() const{
     return Ratio(-mNum,mDenom);
 }
 
