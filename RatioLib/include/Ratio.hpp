@@ -2,7 +2,7 @@
 #define __RATIO__HPP
 
 #include <iostream>
-#include <math.h>
+#include <cmath>
 
 // Doxygen menu
 /// \version 0.1
