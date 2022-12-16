@@ -87,6 +87,16 @@
 				{
 					"backtrace" : 5,
 					"path" : "/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/RatioLib/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/googletest/googletest/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/googletest/googletest"
 				}
 			],
 			"language" : "CXX",
@@ -101,6 +111,10 @@
 		{
 			"backtrace" : 2,
 			"id" : "Ratio::@8f2e06132bc3ad500312"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "gtest::@f95b5c00bd49b3b4698d"
 		}
 	],
 	"id" : "main1::@a44f0ac069e85531cdee",
@@ -119,6 +133,15 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "../INTERFACE/libRatio.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../lib/libgtestd.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
 				"role" : "libraries"
 			}
 		],

@@ -9,13 +9,13 @@
 ../RatioLib/include/Ratio.hpp
 iostream
 -
-math.h
+cmath
 -
 
 /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/RatioLib/src/Ratio.cpp
 stdexcept
 -
-math.h
+cmath
 -
 numeric
 -

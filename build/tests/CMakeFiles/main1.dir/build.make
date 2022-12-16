@@ -80,6 +80,7 @@ main1_EXTERNAL_OBJECTS =
 bin/main1: tests/CMakeFiles/main1.dir/src/main1.cpp.o
 bin/main1: tests/CMakeFiles/main1.dir/build.make
 bin/main1: INTERFACE/libRatio.a
+bin/main1: lib/libgtestd.a
 bin/main1: tests/CMakeFiles/main1.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/main1"
 	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main1.dir/link.txt --verbose=$(VERBOSE)

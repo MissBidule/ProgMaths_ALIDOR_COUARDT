@@ -40,6 +40,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build/INTERFACE/cmake_install.cmake")
+  include("/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build/googletest/cmake_install.cmake")
   include("/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build/tests/cmake_install.cmake")
 
 endif()

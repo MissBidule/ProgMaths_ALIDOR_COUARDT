@@ -1,5 +1,5 @@
 #include <stdexcept>
-#include <math.h>
+#include <cmath>
 #include <numeric>
 
 #include "Ratio.hpp"
@@ -151,6 +151,25 @@ Ratio Ratio::sqrt(const Ratio &r){
     }
     else{
         result = Ratio(a,b);
+    }
+
+return result;
+}
+
+Ratio Ratio::exp(const Ratio &r){
+    double a = r.mNum;
+    double b = r.mDenom;
+    Ratio result;
+
+    if(a == 0){
+        result.mNum = 1;
+        result.mDenom = 1;
+    }
+    else if(b == 0){
+        result = Infinite();
+    }
+    else{
+        result = convertFloatToRatio(std::pow(std::exp(1/b),a));
     }
 
 return result;
