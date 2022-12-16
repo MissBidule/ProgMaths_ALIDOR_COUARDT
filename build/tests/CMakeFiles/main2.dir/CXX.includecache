@@ -9,7 +9,7 @@
 ../RatioLib/include/Ratio.hpp
 iostream
 -
-math.h
+cmath
 -
 
 /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/tests/src/main2.cpp

@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -Wall -Wextra -Wpedantic -pedantic-errors -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/RatioLib/include 
+CXX_INCLUDES = -I/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/RatioLib/include -isystem /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/googletest/googletest/include -isystem /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/googletest/googletest 
 

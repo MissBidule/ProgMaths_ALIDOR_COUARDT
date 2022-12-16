@@ -1,0 +1,282 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						3,
+						6
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "INTERFACE",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "RatioLib",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "INTERFACE/doc",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "RatioLib/doc",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "googletest",
+					"childIndexes" : 
+					[
+						4
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "googletest"
+				},
+				{
+					"build" : "googletest/googlemock",
+					"childIndexes" : 
+					[
+						5
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "googletest/googlemock",
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				},
+				{
+					"build" : "googletest/googletest",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 3,
+					"source" : "googletest/googletest",
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"build" : "tests",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "tests",
+					"targetIndexes" : 
+					[
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "Ratio",
+					"targetIndexes" : 
+					[
+						0,
+						5
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "googletest-distribution",
+					"parentIndex" : 0
+				},
+				{
+					"childIndexes" : 
+					[
+						3
+					],
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "gmock",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "gtest",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "tests",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Ratio::@8f2e06132bc3ad500312",
+					"jsonFile" : "target-Ratio-Debug-5ae29bca7d434f00a3f0.json",
+					"name" : "Ratio",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "gmock::@d68da25237a7ca2351af",
+					"jsonFile" : "target-gmock-Debug-5d2c81704289dfe06536.json",
+					"name" : "gmock",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "gmock_main::@d68da25237a7ca2351af",
+					"jsonFile" : "target-gmock_main-Debug-0aa46043b17d7f92dc63.json",
+					"name" : "gmock_main",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "gtest::@f95b5c00bd49b3b4698d",
+					"jsonFile" : "target-gtest-Debug-cec5cf436f39a950964b.json",
+					"name" : "gtest",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "gtest_main::@f95b5c00bd49b3b4698d",
+					"jsonFile" : "target-gtest_main-Debug-cce56d8183eaed854a25.json",
+					"name" : "gtest_main",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "html::@823755c9640417a52d4c",
+					"jsonFile" : "target-html-Debug-2cd52933e83828781800.json",
+					"name" : "html",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "main1::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-main1-Debug-63a87836ad39738c7e8d.json",
+					"name" : "main1",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "main2::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-main2-Debug-4656712e02a906d50fea.json",
+					"name" : "main2",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "main3::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-main3-Debug-f9526a46beb9ee672e9d.json",
+					"name" : "main3",
+					"projectIndex" : 4
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build",
+		"source" : "/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

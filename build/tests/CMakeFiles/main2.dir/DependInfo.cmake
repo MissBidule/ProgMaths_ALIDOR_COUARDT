@@ -11,11 +11,14 @@ set(CMAKE_CXX_COMPILER_ID "Clang")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../RatioLib/include"
+  "../googletest/googletest/include"
+  "../googletest/googletest"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build/INTERFACE/CMakeFiles/Ratio.dir/DependInfo.cmake"
+  "/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build/googletest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
