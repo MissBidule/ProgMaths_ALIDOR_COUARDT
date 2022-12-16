@@ -134,10 +134,32 @@ Ratio Ratio::operator-(){
     return Ratio(-mNum,mDenom);
 }
 
+bool Ratio::operator<(const Ratio &r)const{
+    long a = mNum;
+    long b = mDenom;
+    long c = r.mNum;
+    long d = r.mDenom;
+
+    return((a*d)<(b*c));
+}
+
+bool Ratio::operator>(const Ratio &r)const{
+    long a = mNum;
+    long b = mDenom;
+    long c = r.mNum;
+    long d = r.mDenom;
+
+    return((a*d)>(b*c));
+}
+
+bool Ratio::operator<=(const Ratio &r)const{
+    return(!(*this>r));
+}
+
 //Square root of a Rational
 Ratio Ratio::sqrt(const Ratio &r){
-    double a = r.mNum;
-    double b = r.mDenom;
+    long a = r.mNum;
+    long b = r.mDenom;
     Ratio result;
 
     a = std::sqrt(a);
@@ -157,8 +179,8 @@ return result;
 }
 
 Ratio Ratio::exp(const Ratio &r){
-    double a = r.mNum;
-    double b = r.mDenom;
+    long a = r.mNum;
+    long b = r.mDenom;
     Ratio result;
 
     if(a == 0){
@@ -172,6 +194,25 @@ Ratio Ratio::exp(const Ratio &r){
         result = convertFloatToRatio(std::pow(std::exp(1/b),a));
     }
 
+return result;
+}
+
+Ratio Ratio::cos(const Ratio &r){
+    long a = r.mNum;
+    long b = r.mDenom;
+    Ratio result;
+    Ratio Epsilon(1,10000);
+
+    if (a == 0){
+        result.mNum = 1;
+        result.mDenom = 1;
+    }
+    else if (b == 0){
+        throw std::runtime_error("Cosinus of infinity");
+    }
+    else{
+        //if (r < Epsilon)
+    }
 return result;
 }
 

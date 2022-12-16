@@ -82,11 +82,17 @@ public:
     Ratio operator+(const Ratio &r);
     Ratio operator+(const Ratio &r) const;
     Ratio operator-(const Ratio &r);
+    Ratio operator-();
     Ratio operator*(const Ratio &r);
     Ratio operator*(const float &f);
     Ratio operator/(const Ratio &r);
-    bool operator==(const Ratio &r) const;
-    Ratio operator-();
+    bool operator==(const Ratio &r)const;
+    bool operator!=(const Ratio &r)const;
+    bool operator<(const Ratio &r)const;
+    bool operator>(const Ratio &r)const;
+    bool operator<=(const Ratio &r)const;
+    bool operator>=(const Ratio &r)const;
+    
     friend std::ostream& operator<< (std::ostream& stream, const Ratio& ratio);
 
     /// \brief operator to access to the ist element of a vector
@@ -120,6 +126,7 @@ public:
     /// \return the square root of a rational
     static Ratio sqrt(const Ratio &r);
     static Ratio exp(const Ratio &r);
+    static Ratio cos(const Ratio &r);
 
     static Ratio Zero();
     static Ratio Infinite();
