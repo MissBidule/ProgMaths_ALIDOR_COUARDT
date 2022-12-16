@@ -20,7 +20,7 @@
     "activeRunDestination" : {
       "disableOnlyActiveArch" : false,
       "platform" : "macosx",
-      "sdk" : "macosx13.0",
+      "sdk" : "macosx13.1",
       "sdkVariant" : "macos",
       "supportedArchitectures" : [
         "arm64e",
@@ -47,11 +47,10 @@
       }
     }
   },
-  "qos" : "default",
   "schemeCommand" : "launch",
   "schemeCommand2" : "launch",
   "showNonLoggedProgress" : true,
-  "useDryRun" : true,
+  "useDryRun" : false,
   "useImplicitDependencies" : true,
   "useLegacyBuildLocations" : false,
   "useParallelTargets" : true
