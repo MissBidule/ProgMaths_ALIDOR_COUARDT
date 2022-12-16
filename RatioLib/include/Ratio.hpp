@@ -77,6 +77,8 @@ public:
     
     //Operators
     
+    //operator%
+    
     Ratio operator+(const Ratio &r);
     Ratio operator+(const Ratio &r) const;
     Ratio operator-(const Ratio &r);
@@ -99,6 +101,15 @@ public:
     
     //Various other functions
     
+    //cos
+    //sin
+    //tan
+    //abs
+    //ent
+    //gcd
+    //log
+    //pow
+    
     /// \brief convert a real to a rational
     /// \param  number: the real to be converted
     /// \param  nb_iter: iterations of the conversion
@@ -119,7 +130,7 @@ public:
     
     /// \brief return the sign of the rational
     /// \return 1 if positive or equal to 0, -1 otherwise
-    inline int numSign() const {return sign(mNum);}
+    inline int signRatio() const {return sign(mNum);}
     
     /// \brief simplify a rational
     /// \return the modified number

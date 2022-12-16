@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		19D5F1812E6F4684B6B5AFB3 /* ZERO_CHECK */ = {
+		5800C5A9629847038D096DAF /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 9C06A2FFFD7B41D09109A20D /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = 13A7040415EB4F19AEFA360A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
 				D6FB35DDAE44AFC785D8C16D /* Generate CMakeFiles/ZERO_CHECK */,
 			);
@@ -18,30 +18,30 @@
 			name = ZERO_CHECK;
 			productName = ZERO_CHECK;
 		};
-		22F9D2B71F734E09A1883DD3 /* install */ = {
+		5E4F83E575664516BD87B2CF /* install */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 4B981EC783394F3092E4E390 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildConfigurationList = DD4BFFAB5AFD4CA3849D6DAD /* Build configuration list for PBXAggregateTarget "install" */;
 			buildPhases = (
 				93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */,
 			);
 			dependencies = (
-				E02CB36A799B443086536EB8 /* PBXTargetDependency */,
+				960B414B64464806BB89D0CF /* PBXTargetDependency */,
 			);
 			name = install;
 			productName = install;
 		};
-		B305C428D5674034BB1C385B /* ALL_BUILD */ = {
+		70A9133FCEB24BDB8A8EE4CA /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = D6F130C6904B4FDCAE1C2C3E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 3E2554F3DA7644D182B392CF /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
 				4684D8BE08F5E8B650054912 /* Generate CMakeFiles/ALL_BUILD */,
 			);
 			dependencies = (
-				5911D58ED20148A78C210B4F /* PBXTargetDependency */,
-				4DA9EFD34737408B91ED0DE2 /* PBXTargetDependency */,
-				8D3B8E2246584AF995AEDDA9 /* PBXTargetDependency */,
-				99EC22EC29304AA990170960 /* PBXTargetDependency */,
-				6E01A131B42749D8ADCA03F7 /* PBXTargetDependency */,
+				206E98B811F74949BEA8956C /* PBXTargetDependency */,
+				99C36139330445A49D2C3A5F /* PBXTargetDependency */,
+				DFBF3668ACC14016BA3444A6 /* PBXTargetDependency */,
+				C510A208B5B6404783753942 /* PBXTargetDependency */,
+				7C206864F6494CBEA5A2CF30 /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
@@ -49,39 +49,39 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		1DFA8AE7D0634904968CDBBE /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 44EE0293B2BF4D91B273946A /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */; };
-		3CDDDB97ABF940C99AB7C611 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 47C340E3B4B74898A0C70C65 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt */; };
-		3E8D2E5361C040F8879167AD /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = E180A2BE0E924ED091088183 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */; };
-		675642D6F030459ABA3135E2 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 9F3894E86FF742CB993FC0FA /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt */; };
-		B72D4B8EF55342E99BA7110F /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock-all.cc */ = {isa = PBXBuildFile; fileRef = B84606DBD0C446AA8ECC9B22 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock-all.cc */; };
-		BE88B7BFB4FA409D8E7490A0 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock_main.cc */ = {isa = PBXBuildFile; fileRef = C41B36B26E8D43E2B3DD8973 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock_main.cc */; };
-		D1FD96A4CFC74C708010FB0B /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest-all.cc */ = {isa = PBXBuildFile; fileRef = 894F9228B0B5468BB7EAF22C /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest-all.cc */; };
-		D2AC170A03D14F2F8B31B5F9 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest_main.cc */ = {isa = PBXBuildFile; fileRef = 489ED1B7D8FF4EE1BCD2BB7A /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest_main.cc */; };
+		19E29C51C18543C6AD68D0BF /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest_main.cc */ = {isa = PBXBuildFile; fileRef = DF1DC89D4ECA4857A5911512 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest_main.cc */; };
+		42AB40D0F68047C694684E1D /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 514CA59CF4ED4D65A2FD8284 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */; };
+		4C10788223574543B65B19B4 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = E2140C3A3B6645B28640FAD8 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */; };
+		96459DDC70D84B2DA3E09D9E /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock-all.cc */ = {isa = PBXBuildFile; fileRef = B469D38CD881458BB7867617 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock-all.cc */; };
+		DD80AB4686A744FAAD55211D /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = AD5040FDDEF34345A415104A /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt */; };
+		E741C4FCAB604E079FC86230 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = C3F036A0EE18458DAEC77B44 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt */; };
+		EA7822DDA78044689269A0F6 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest-all.cc */ = {isa = PBXBuildFile; fileRef = 8D07E8E892234749BF69746E /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest-all.cc */; };
+		F221117B50D949C0AC4FB0E5 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock_main.cc */ = {isa = PBXBuildFile; fileRef = B2F7F0E434BD4CF9B474C0EA /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock_main.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		0151D3AE45C246068AE6814C /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		1C97706CEE7A4E21BA4BD9C0 /* Release */ = {
+		399FE8AEF5C649B1B15212BD /* Release */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = Release;
 		};
-		88B5BB9DAD254330AB9C2908 /* RelWithDebInfo */ = {
+		756FAC53FDFE45FA88AAFA88 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		84DD78D7AF9449ABB58883D3 /* RelWithDebInfo */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = RelWithDebInfo;
 		};
-		BE08B80277094176804C507B /* MinSizeRel */ = {
+		9B6747CA4DFA4E9EB1F876EB /* MinSizeRel */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -91,131 +91,131 @@
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		1230D8A6FA1949DFB4BCAC5F /* PBXContainerItemProxy */ = {
+		1CD4AD35C62A419D95440C27 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 998D4F05D31047D38A1A4F85 /* Project object */;
+			containerPortal = E8E269489ABF4B3E88693F3D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B305C428D5674034BB1C385B;
+			remoteGlobalIDString = 37A34E7B8A8E4C089743BF97;
+			remoteInfo = gtest;
+		};
+		3E03FAD6CB9248E2BDBB930D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8E269489ABF4B3E88693F3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5800C5A9629847038D096DAF;
+			remoteInfo = ZERO_CHECK;
+		};
+		3E97942AE96C4097B94A9546 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8E269489ABF4B3E88693F3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70A9133FCEB24BDB8A8EE4CA;
 			remoteInfo = ALL_BUILD;
 		};
-		16E87A186E0D49DA981AB7F8 /* PBXContainerItemProxy */ = {
+		4166F91A33DA4829A97965C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 998D4F05D31047D38A1A4F85 /* Project object */;
+			containerPortal = E8E269489ABF4B3E88693F3D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 545C2757DA884E39A3478345;
+			remoteGlobalIDString = 37A34E7B8A8E4C089743BF97;
 			remoteInfo = gtest;
 		};
-		3A0308298EB44345BCDE93E2 /* PBXContainerItemProxy */ = {
+		4F6E4C43A94D47B983BFE349 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 998D4F05D31047D38A1A4F85 /* Project object */;
+			containerPortal = E8E269489ABF4B3E88693F3D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 545C2757DA884E39A3478345;
+			remoteGlobalIDString = 37A34E7B8A8E4C089743BF97;
 			remoteInfo = gtest;
 		};
-		557AB62937494C178810FED4 /* PBXContainerItemProxy */ = {
+		5A38497B2DAC4F629CB63119 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 998D4F05D31047D38A1A4F85 /* Project object */;
+			containerPortal = E8E269489ABF4B3E88693F3D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 545C2757DA884E39A3478345;
-			remoteInfo = gtest;
-		};
-		5A5209602C934C32B7374BF2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 998D4F05D31047D38A1A4F85 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C6619341921D4EA092DFB018;
-			remoteInfo = gtest_main;
-		};
-		5FAADD930E7F40ECAC9DF2DB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 998D4F05D31047D38A1A4F85 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BEDF61EE96F246FF84C8890C;
-			remoteInfo = gmock;
-		};
-		66D395B25B04445AACEED7BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 998D4F05D31047D38A1A4F85 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 19D5F1812E6F4684B6B5AFB3;
-			remoteInfo = ZERO_CHECK;
-		};
-		699EF48A92C6460DAC2C7B0E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 998D4F05D31047D38A1A4F85 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A6996AAD2EE84FBD909A9FEA;
+			remoteGlobalIDString = 67E9D428C3804F83A2CC9FA8;
 			remoteInfo = gmock_main;
 		};
-		D175EF7C1DA844FB9B827B22 /* PBXContainerItemProxy */ = {
+		63109EA0C871495BBEEBF727 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 998D4F05D31047D38A1A4F85 /* Project object */;
+			containerPortal = E8E269489ABF4B3E88693F3D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 19D5F1812E6F4684B6B5AFB3;
-			remoteInfo = ZERO_CHECK;
-		};
-		EA37342518EC43948187EE5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 998D4F05D31047D38A1A4F85 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 19D5F1812E6F4684B6B5AFB3;
-			remoteInfo = ZERO_CHECK;
-		};
-		ED3497BACE934C9CB362B818 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 998D4F05D31047D38A1A4F85 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 545C2757DA884E39A3478345;
-			remoteInfo = gtest;
-		};
-		FF44164FFA79405B884DB7BE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 998D4F05D31047D38A1A4F85 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BEDF61EE96F246FF84C8890C;
+			remoteGlobalIDString = DB13B222568F42ACADA6160F;
 			remoteInfo = gmock;
+		};
+		6CE3A523A24F4658A21A7400 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8E269489ABF4B3E88693F3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5800C5A9629847038D096DAF;
+			remoteInfo = ZERO_CHECK;
+		};
+		9D07CD872B58440D8767F4A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8E269489ABF4B3E88693F3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59579BB5F008471AB02F79D3;
+			remoteInfo = gtest_main;
+		};
+		BD7A044D3BC4407C996E6E4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8E269489ABF4B3E88693F3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB13B222568F42ACADA6160F;
+			remoteInfo = gmock;
+		};
+		DFD7069D26E24D3AA43F00F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8E269489ABF4B3E88693F3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5800C5A9629847038D096DAF;
+			remoteInfo = ZERO_CHECK;
+		};
+		F1400C5620E64DD796D3535F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8E269489ABF4B3E88693F3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37A34E7B8A8E4C089743BF97;
+			remoteInfo = gtest;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		077AD4350A774436988C2289 /* gtest_main */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgtest_maind.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C5CE551D94C46258C5ABD35 /* gmock_main */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgmock_maind.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		44EE0293B2BF4D91B273946A /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		47C340E3B4B74898A0C70C65 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt"; sourceTree = "<absolute>"; };
-		489ED1B7D8FF4EE1BCD2BB7A /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest_main.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = gtest_main.cc; path = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest_main.cc"; sourceTree = "<absolute>"; };
-		868D82F453FA4D61BFCF0774 /* gmock */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgmockd.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		894F9228B0B5468BB7EAF22C /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest-all.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = "gtest-all.cc"; path = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest-all.cc"; sourceTree = "<absolute>"; };
-		9F3894E86FF742CB993FC0FA /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt"; sourceTree = "<absolute>"; };
-		B84606DBD0C446AA8ECC9B22 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock-all.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = "gmock-all.cc"; path = "src/gmock-all.cc"; sourceTree = SOURCE_ROOT; };
-		C41B36B26E8D43E2B3DD8973 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock_main.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = gmock_main.cc; path = src/gmock_main.cc; sourceTree = SOURCE_ROOT; };
-		D2A2EE3653F34E9F8329E062 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		DF51D59702BC4F70A4E9F220 /* gtest */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgtestd.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E180A2BE0E924ED091088183 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		046196F61A6446819FC073DD /* gmock_main */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgmock_maind.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA1C2BFD71C45C6A7C1BDD6 /* gmock */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgmockd.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		502CB378681A4DB99F1C2C70 /* gtest_main */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgtest_maind.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		514CA59CF4ED4D65A2FD8284 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		8D07E8E892234749BF69746E /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest-all.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = "gtest-all.cc"; path = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest-all.cc"; sourceTree = "<absolute>"; };
+		AD5040FDDEF34345A415104A /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt"; sourceTree = "<absolute>"; };
+		B2F7F0E434BD4CF9B474C0EA /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock_main.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = gmock_main.cc; path = src/gmock_main.cc; sourceTree = SOURCE_ROOT; };
+		B469D38CD881458BB7867617 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock-all.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = "gmock-all.cc"; path = "src/gmock-all.cc"; sourceTree = SOURCE_ROOT; };
+		C162AE8A73EA4CB981EDDEB6 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		C3F036A0EE18458DAEC77B44 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt"; sourceTree = "<absolute>"; };
+		D838E15C869F4059B56CF15D /* gtest */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgtestd.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF1DC89D4ECA4857A5911512 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest_main.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = gtest_main.cc; path = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest_main.cc"; sourceTree = "<absolute>"; };
+		E2140C3A3B6645B28640FAD8 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		67BE7C98EB894EAEBEDB997A /* Frameworks */ = {
+		0DC4A78D32504C9D8AF0B66B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		85C620E7FBAB4C91B45A1C00 /* Frameworks */ = {
+		37467C396DF748C8A6A0F98F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8F874E5D878D4C5CB3F03D11 /* Frameworks */ = {
+		63CC99285F874AC48E4CF60C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E59AA188FFE14F2D951E4964 /* Frameworks */ = {
+		6F8D435EDB05466C8FB81900 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -225,130 +225,130 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		24E0BA19EABB40A298F8E4AA /* Frameworks */ = {
+		0C3C8FDC0D2A4C499B772B23 /* gtest_main */ = {
+			isa = PBXGroup;
+			children = (
+				D78B61C0CF5A4D84891B8782 /* Source Files */,
+				C3F036A0EE18458DAEC77B44 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt */,
+			);
+			name = gtest_main;
+			sourceTree = "<group>";
+		};
+		2BFA0AF37EF847A9924ACD12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4607C2B691634F1CB0D5DE55 /* Products */ = {
+		460204AEEEDB4CA296207D90 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				868D82F453FA4D61BFCF0774 /* gmock */,
-				3C5CE551D94C46258C5ABD35 /* gmock_main */,
-				DF51D59702BC4F70A4E9F220 /* gtest */,
-				077AD4350A774436988C2289 /* gtest_main */,
+				2BA1C2BFD71C45C6A7C1BDD6 /* gmock */,
+				046196F61A6446819FC073DD /* gmock_main */,
+				D838E15C869F4059B56CF15D /* gtest */,
+				502CB378681A4DB99F1C2C70 /* gtest_main */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		667C964DC1E44ABEB9E20717 /* gtest_main */ = {
+		79910082F6FE41268E2157E1 /* gmock */ = {
 			isa = PBXGroup;
 			children = (
-				F9CE988FCD6A4C3AA95A1846 /* Source Files */,
-				9F3894E86FF742CB993FC0FA /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt */,
+				7ED1CBE1F9BB4476969EF630 /* Source Files */,
+				514CA59CF4ED4D65A2FD8284 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */,
 			);
-			name = gtest_main;
+			name = gmock;
 			sourceTree = "<group>";
 		};
-		6802C7632B40445AA25C8ACE /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				B84606DBD0C446AA8ECC9B22 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock-all.cc */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		8A03197E565047828ED066FB /* CMake Rules */ = {
+		7A8A91C9E11A419D905EE4B6 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		91E53A78CEC6490DB3B356E0 /* gmock */ = {
+		7ED1CBE1F9BB4476969EF630 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				6802C7632B40445AA25C8ACE /* Source Files */,
-				44EE0293B2BF4D91B273946A /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */,
-			);
-			name = gmock;
-			sourceTree = "<group>";
-		};
-		AAE6E657B6924B489D184288 /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				894F9228B0B5468BB7EAF22C /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest-all.cc */,
+				B469D38CD881458BB7867617 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock-all.cc */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
 		};
-		E1639E5B1AD8481AABEB24A6 /* gmock_main */ = {
+		8678BD7D26E84B01989E6BCF /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				F663BD5006D14E0DB486EC12 /* Source Files */,
-				E180A2BE0E924ED091088183 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */,
+				B2F7F0E434BD4CF9B474C0EA /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock_main.cc */,
 			);
-			name = gmock_main;
+			name = "Source Files";
 			sourceTree = "<group>";
 		};
-		E44B9E1527EC4A0A9CE25452 /* gtest */ = {
+		8DE22CC7E00344CB9D320EF4 = {
 			isa = PBXGroup;
 			children = (
-				AAE6E657B6924B489D184288 /* Source Files */,
-				47C340E3B4B74898A0C70C65 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt */,
+				79910082F6FE41268E2157E1 /* gmock */,
+				FF53393BF8394435BB70A203 /* gmock_main */,
+				E6CA7909A2A04BD7A3108299 /* ALL_BUILD */,
+				C8DF57AB31DD4DEB8A350D49 /* gtest */,
+				0C3C8FDC0D2A4C499B772B23 /* gtest_main */,
+				460204AEEEDB4CA296207D90 /* Products */,
+				2BFA0AF37EF847A9924ACD12 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C8DF57AB31DD4DEB8A350D49 /* gtest */ = {
+			isa = PBXGroup;
+			children = (
+				E0FFBFB3CC2E460A99DD064A /* Source Files */,
+				AD5040FDDEF34345A415104A /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/CMakeLists.txt */,
 			);
 			name = gtest;
 			sourceTree = "<group>";
 		};
-		E48798C51C4442CAB5196F7F /* ALL_BUILD */ = {
+		D78B61C0CF5A4D84891B8782 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				8A03197E565047828ED066FB /* CMake Rules */,
-				D2A2EE3653F34E9F8329E062 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */,
+				DF1DC89D4ECA4857A5911512 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest_main.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		E0FFBFB3CC2E460A99DD064A /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D07E8E892234749BF69746E /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest-all.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		E6CA7909A2A04BD7A3108299 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				7A8A91C9E11A419D905EE4B6 /* CMake Rules */,
+				C162AE8A73EA4CB981EDDEB6 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
 			sourceTree = "<group>";
 		};
-		EC5514BA1454419A9AA7C958 = {
+		FF53393BF8394435BB70A203 /* gmock_main */ = {
 			isa = PBXGroup;
 			children = (
-				91E53A78CEC6490DB3B356E0 /* gmock */,
-				E1639E5B1AD8481AABEB24A6 /* gmock_main */,
-				E48798C51C4442CAB5196F7F /* ALL_BUILD */,
-				E44B9E1527EC4A0A9CE25452 /* gtest */,
-				667C964DC1E44ABEB9E20717 /* gtest_main */,
-				4607C2B691634F1CB0D5DE55 /* Products */,
-				24E0BA19EABB40A298F8E4AA /* Frameworks */,
+				8678BD7D26E84B01989E6BCF /* Source Files */,
+				E2140C3A3B6645B28640FAD8 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/CMakeLists.txt */,
 			);
-			sourceTree = "<group>";
-		};
-		F663BD5006D14E0DB486EC12 /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				C41B36B26E8D43E2B3DD8973 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock_main.cc */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		F9CE988FCD6A4C3AA95A1846 /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				489ED1B7D8FF4EE1BCD2BB7A /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest_main.cc */,
-			);
-			name = "Source Files";
+			name = gmock_main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		545C2757DA884E39A3478345 /* gtest */ = {
+		37A34E7B8A8E4C089743BF97 /* gtest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D5A51E5689A415394AB55D7 /* Build configuration list for PBXNativeTarget "gtest" */;
+			buildConfigurationList = 2A8CAB1A5BF94A66AE6159CE /* Build configuration list for PBXNativeTarget "gtest" */;
 			buildPhases = (
-				9D164F1B486D4ABFA67DF7CC /* Sources */,
-				E59AA188FFE14F2D951E4964 /* Frameworks */,
+				D2EED3A2E4A745DC827425A6 /* Sources */,
+				6F8D435EDB05466C8FB81900 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -356,94 +356,94 @@
 			);
 			name = gtest;
 			productName = gtest;
-			productReference = DF51D59702BC4F70A4E9F220 /* gtest */;
+			productReference = D838E15C869F4059B56CF15D /* gtest */;
 			productType = "com.apple.product-type.library.static";
 		};
-		A6996AAD2EE84FBD909A9FEA /* gmock_main */ = {
+		59579BB5F008471AB02F79D3 /* gtest_main */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57AE081D684E4A04840A7A7B /* Build configuration list for PBXNativeTarget "gmock_main" */;
+			buildConfigurationList = 9B1A44E0E44B4A95AC1547AF /* Build configuration list for PBXNativeTarget "gtest_main" */;
 			buildPhases = (
-				F981730235BD4EE09CFB1682 /* Sources */,
-				67BE7C98EB894EAEBEDB997A /* Frameworks */,
+				2556DCB487674AD19452A41C /* Sources */,
+				63CC99285F874AC48E4CF60C /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				57FE3AAD581B4A318D9CAB79 /* PBXTargetDependency */,
-				54E8C48CF872447695D70F09 /* PBXTargetDependency */,
-				EA3E01D5FA20498DA9A9A18C /* PBXTargetDependency */,
-			);
-			name = gmock_main;
-			productName = gmock_main;
-			productReference = 3C5CE551D94C46258C5ABD35 /* gmock_main */;
-			productType = "com.apple.product-type.library.static";
-		};
-		BEDF61EE96F246FF84C8890C /* gmock */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 05533E2033E9449790E41F15 /* Build configuration list for PBXNativeTarget "gmock" */;
-			buildPhases = (
-				6668ED72F9C449A68F1EF85A /* Sources */,
-				8F874E5D878D4C5CB3F03D11 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				390BEA75A77543BD9FC56273 /* PBXTargetDependency */,
-				E2AD4CF7B2D441D0988074D5 /* PBXTargetDependency */,
-			);
-			name = gmock;
-			productName = gmock;
-			productReference = 868D82F453FA4D61BFCF0774 /* gmock */;
-			productType = "com.apple.product-type.library.static";
-		};
-		C6619341921D4EA092DFB018 /* gtest_main */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A3E8D30E67DF409AA87130CE /* Build configuration list for PBXNativeTarget "gtest_main" */;
-			buildPhases = (
-				7009A4AC1DF9454C86FC71A1 /* Sources */,
-				85C620E7FBAB4C91B45A1C00 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F1567EE33EA546D28DBA90D5 /* PBXTargetDependency */,
+				FF0903D6F9034DB89920755F /* PBXTargetDependency */,
 			);
 			name = gtest_main;
 			productName = gtest_main;
-			productReference = 077AD4350A774436988C2289 /* gtest_main */;
+			productReference = 502CB378681A4DB99F1C2C70 /* gtest_main */;
+			productType = "com.apple.product-type.library.static";
+		};
+		67E9D428C3804F83A2CC9FA8 /* gmock_main */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 367E049D2C7F49559CB42F60 /* Build configuration list for PBXNativeTarget "gmock_main" */;
+			buildPhases = (
+				D7ACA7C3397F48C49144713E /* Sources */,
+				0DC4A78D32504C9D8AF0B66B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7193C174748459D82B24342 /* PBXTargetDependency */,
+				4EF62CF3C14F4BC1A84B1B1B /* PBXTargetDependency */,
+				BDC47B10374C4ECC9BC0D501 /* PBXTargetDependency */,
+			);
+			name = gmock_main;
+			productName = gmock_main;
+			productReference = 046196F61A6446819FC073DD /* gmock_main */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DB13B222568F42ACADA6160F /* gmock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F20F4F52BC14777BF033F69 /* Build configuration list for PBXNativeTarget "gmock" */;
+			buildPhases = (
+				37AA68F3A8664E3AAAA3AB86 /* Sources */,
+				37467C396DF748C8A6A0F98F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46B16865984A4AC685831809 /* PBXTargetDependency */,
+				200B3CC4DCC042949D5D6C9A /* PBXTargetDependency */,
+			);
+			name = gmock;
+			productName = gmock;
+			productReference = 2BA1C2BFD71C45C6A7C1BDD6 /* gmock */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		998D4F05D31047D38A1A4F85 /* Project object */ = {
+		E8E269489ABF4B3E88693F3D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1420;
 			};
-			buildConfigurationList = 2CD0B87563EF48989C1CCD8A /* Build configuration list for PBXProject "gmock" */;
+			buildConfigurationList = AD339D37E1E44E959A7337AE /* Build configuration list for PBXProject "gmock" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				0151D3AE45C246068AE6814C /* Debug */,
-				1C97706CEE7A4E21BA4BD9C0 /* Release */,
-				BE08B80277094176804C507B /* MinSizeRel */,
-				88B5BB9DAD254330AB9C2908 /* RelWithDebInfo */,
+				756FAC53FDFE45FA88AAFA88 /* Debug */,
+				399FE8AEF5C649B1B15212BD /* Release */,
+				9B6747CA4DFA4E9EB1F876EB /* MinSizeRel */,
+				84DD78D7AF9449ABB58883D3 /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = EC5514BA1454419A9AA7C958;
+			mainGroup = 8DE22CC7E00344CB9D320EF4;
 			projectDirPath = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock";
 			projectRoot = "";
 			targets = (
-				B305C428D5674034BB1C385B /* ALL_BUILD */,
-				19D5F1812E6F4684B6B5AFB3 /* ZERO_CHECK */,
-				BEDF61EE96F246FF84C8890C /* gmock */,
-				A6996AAD2EE84FBD909A9FEA /* gmock_main */,
-				545C2757DA884E39A3478345 /* gtest */,
-				C6619341921D4EA092DFB018 /* gtest_main */,
-				22F9D2B71F734E09A1883DD3 /* install */,
+				70A9133FCEB24BDB8A8EE4CA /* ALL_BUILD */,
+				5800C5A9629847038D096DAF /* ZERO_CHECK */,
+				DB13B222568F42ACADA6160F /* gmock */,
+				67E9D428C3804F83A2CC9FA8 /* gmock_main */,
+				37A34E7B8A8E4C089743BF97 /* gtest */,
+				59579BB5F008471AB02F79D3 /* gtest_main */,
+				5E4F83E575664516BD87B2CF /* install */,
 			);
 		};
 /* End PBXProject section */
@@ -594,250 +594,105 @@ fi
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6668ED72F9C449A68F1EF85A /* Sources */ = {
+		2556DCB487674AD19452A41C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B72D4B8EF55342E99BA7110F /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock-all.cc */,
+				19E29C51C18543C6AD68D0BF /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest_main.cc */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7009A4AC1DF9454C86FC71A1 /* Sources */ = {
+		37AA68F3A8664E3AAAA3AB86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2AC170A03D14F2F8B31B5F9 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest_main.cc */,
+				96459DDC70D84B2DA3E09D9E /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock-all.cc */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9D164F1B486D4ABFA67DF7CC /* Sources */ = {
+		D2EED3A2E4A745DC827425A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1FD96A4CFC74C708010FB0B /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest-all.cc */,
+				EA7822DDA78044689269A0F6 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/src/gtest-all.cc */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F981730235BD4EE09CFB1682 /* Sources */ = {
+		D7ACA7C3397F48C49144713E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE88B7BFB4FA409D8E7490A0 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock_main.cc */,
+				F221117B50D949C0AC4FB0E5 /* /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/src/gmock_main.cc */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		390BEA75A77543BD9FC56273 /* PBXTargetDependency */ = {
+		200B3CC4DCC042949D5D6C9A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 545C2757DA884E39A3478345 /* gtest */;
-			targetProxy = 557AB62937494C178810FED4 /* PBXContainerItemProxy */;
+			target = 5800C5A9629847038D096DAF /* ZERO_CHECK */;
+			targetProxy = DFD7069D26E24D3AA43F00F8 /* PBXContainerItemProxy */;
 		};
-		4DA9EFD34737408B91ED0DE2 /* PBXTargetDependency */ = {
+		206E98B811F74949BEA8956C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A6996AAD2EE84FBD909A9FEA /* gmock_main */;
-			targetProxy = 699EF48A92C6460DAC2C7B0E /* PBXContainerItemProxy */;
+			target = DB13B222568F42ACADA6160F /* gmock */;
+			targetProxy = BD7A044D3BC4407C996E6E4D /* PBXContainerItemProxy */;
 		};
-		54E8C48CF872447695D70F09 /* PBXTargetDependency */ = {
+		46B16865984A4AC685831809 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 545C2757DA884E39A3478345 /* gtest */;
-			targetProxy = ED3497BACE934C9CB362B818 /* PBXContainerItemProxy */;
+			target = 37A34E7B8A8E4C089743BF97 /* gtest */;
+			targetProxy = 4F6E4C43A94D47B983BFE349 /* PBXContainerItemProxy */;
 		};
-		57FE3AAD581B4A318D9CAB79 /* PBXTargetDependency */ = {
+		4EF62CF3C14F4BC1A84B1B1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BEDF61EE96F246FF84C8890C /* gmock */;
-			targetProxy = 5FAADD930E7F40ECAC9DF2DB /* PBXContainerItemProxy */;
+			target = 37A34E7B8A8E4C089743BF97 /* gtest */;
+			targetProxy = 1CD4AD35C62A419D95440C27 /* PBXContainerItemProxy */;
 		};
-		5911D58ED20148A78C210B4F /* PBXTargetDependency */ = {
+		7C206864F6494CBEA5A2CF30 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BEDF61EE96F246FF84C8890C /* gmock */;
-			targetProxy = FF44164FFA79405B884DB7BE /* PBXContainerItemProxy */;
+			target = 5800C5A9629847038D096DAF /* ZERO_CHECK */;
+			targetProxy = 6CE3A523A24F4658A21A7400 /* PBXContainerItemProxy */;
 		};
-		6E01A131B42749D8ADCA03F7 /* PBXTargetDependency */ = {
+		960B414B64464806BB89D0CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 19D5F1812E6F4684B6B5AFB3 /* ZERO_CHECK */;
-			targetProxy = 66D395B25B04445AACEED7BA /* PBXContainerItemProxy */;
+			target = 70A9133FCEB24BDB8A8EE4CA /* ALL_BUILD */;
+			targetProxy = 3E97942AE96C4097B94A9546 /* PBXContainerItemProxy */;
 		};
-		8D3B8E2246584AF995AEDDA9 /* PBXTargetDependency */ = {
+		99C36139330445A49D2C3A5F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 545C2757DA884E39A3478345 /* gtest */;
-			targetProxy = 3A0308298EB44345BCDE93E2 /* PBXContainerItemProxy */;
+			target = 67E9D428C3804F83A2CC9FA8 /* gmock_main */;
+			targetProxy = 5A38497B2DAC4F629CB63119 /* PBXContainerItemProxy */;
 		};
-		99EC22EC29304AA990170960 /* PBXTargetDependency */ = {
+		BDC47B10374C4ECC9BC0D501 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C6619341921D4EA092DFB018 /* gtest_main */;
-			targetProxy = 5A5209602C934C32B7374BF2 /* PBXContainerItemProxy */;
+			target = 5800C5A9629847038D096DAF /* ZERO_CHECK */;
+			targetProxy = 3E03FAD6CB9248E2BDBB930D /* PBXContainerItemProxy */;
 		};
-		E02CB36A799B443086536EB8 /* PBXTargetDependency */ = {
+		C510A208B5B6404783753942 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B305C428D5674034BB1C385B /* ALL_BUILD */;
-			targetProxy = 1230D8A6FA1949DFB4BCAC5F /* PBXContainerItemProxy */;
+			target = 59579BB5F008471AB02F79D3 /* gtest_main */;
+			targetProxy = 9D07CD872B58440D8767F4A3 /* PBXContainerItemProxy */;
 		};
-		E2AD4CF7B2D441D0988074D5 /* PBXTargetDependency */ = {
+		DFBF3668ACC14016BA3444A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 19D5F1812E6F4684B6B5AFB3 /* ZERO_CHECK */;
-			targetProxy = EA37342518EC43948187EE5E /* PBXContainerItemProxy */;
+			target = 37A34E7B8A8E4C089743BF97 /* gtest */;
+			targetProxy = 4166F91A33DA4829A97965C1 /* PBXContainerItemProxy */;
 		};
-		EA3E01D5FA20498DA9A9A18C /* PBXTargetDependency */ = {
+		F7193C174748459D82B24342 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 19D5F1812E6F4684B6B5AFB3 /* ZERO_CHECK */;
-			targetProxy = D175EF7C1DA844FB9B827B22 /* PBXContainerItemProxy */;
+			target = DB13B222568F42ACADA6160F /* gmock */;
+			targetProxy = 63109EA0C871495BBEEBF727 /* PBXContainerItemProxy */;
 		};
-		F1567EE33EA546D28DBA90D5 /* PBXTargetDependency */ = {
+		FF0903D6F9034DB89920755F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 545C2757DA884E39A3478345 /* gtest */;
-			targetProxy = 16E87A186E0D49DA981AB7F8 /* PBXContainerItemProxy */;
+			target = 37A34E7B8A8E4C089743BF97 /* gtest */;
+			targetProxy = F1400C5620E64DD796D3535F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		036810A9FF4B49558BF6C737 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk;
-				SYMROOT = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build";
-			};
-			name = MinSizeRel;
-		};
-		03D8BCF8B330400D9E71114B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk;
-				SYMROOT = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build";
-			};
-			name = Debug;
-		};
-		08E0E38381B64B0591230EE3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		0BCE7CD836C74D9BA35FFDA2 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/RelWithDebInfo";
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = gtest;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		0DA833BF8CA64A7888AB4CB9 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/MinSizeRel";
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = gtest;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		0E64E83427A44BB38C4FA9C0 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		1D3E64896CBA4DE798AD3CE4 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/RelWithDebInfo";
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock","$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = gmock;
-				SECTORDER_FLAGS = "";
-				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
-				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gmock.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		22F1767ADADE4EA68407FD84 /* Release */ = {
+		0DCF2B3958704D78B1B5988C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = arm64;
@@ -858,129 +713,7 @@ fi
 			};
 			name = Release;
 		};
-		232A26A786C44EE5BED8ACE4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		2426E1BE47CD41749C983D5B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk;
-				SYMROOT = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build";
-			};
-			name = Release;
-		};
-		246A5FBFF18846D3AA7C70B1 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		2C19DDC5E6C74990BA1B4173 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		2E3791AAA63C4F549DF4EA1E /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		3783529E7D7E4FA799AB6CDD /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/RelWithDebInfo";
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = gtest_main;
-				SECTORDER_FLAGS = "";
-				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
-				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gtest_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		41C33D7CABCA4C67B0F5C17B /* Release */ = {
+		14AB5ABA19E749F48C91ACAC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = arm64;
@@ -1008,94 +741,7 @@ fi
 			};
 			name = Release;
 		};
-		47BC06DF7448462CA57F8A18 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/MinSizeRel";
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock","$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = gmock;
-				SECTORDER_FLAGS = "";
-				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
-				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gmock.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		50B4AF5A25E4406ABCC4F193 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/Release";
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock","$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = gmock;
-				SECTORDER_FLAGS = "";
-				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
-				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gmock.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		6806F24B27744B2D9DD4B08D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/Debug";
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock","$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "    -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = gmockd;
-				SECTORDER_FLAGS = "";
-				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
-				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gmock.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		6C55A56A87024246AD6FE7CA /* Release */ = {
+		172979D48A20453EA0C7AFEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = arm64;
@@ -1115,45 +761,201 @@ fi
 				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
 				OTHER_LIBTOOLFLAGS = ("");
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = gtest_main;
-				SECTORDER_FLAGS = "";
-				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
-				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gtest_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		7BB528DF8E334EB1A2B36995 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/Debug";
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "    -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = gmock_maind;
+				PRODUCT_NAME = gmock_main;
 				SECTORDER_FLAGS = "";
 				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
 				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gmock_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
+			name = Release;
+		};
+		22C5B7C6487F475B80293AF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtestd;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
 			name = Debug;
 		};
-		8D8B416A40FF48299DF545C0 /* Debug */ = {
+		2388286D832A47DA998F6266 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gmock.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		26306A2A5EBD4C9A9AA7E8A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gtest_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		29B9BDF119224D18A10FEC46 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		31BE4A503F3C4531A09A39D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gmock.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		339E02DD41E14EF782B6785C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		35CED8ECE3EE436891D10D8D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		398639D3E96B43369A0C1AF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = arm64;
@@ -1182,106 +984,16 @@ fi
 			};
 			name = Debug;
 		};
-		9FAAF7AAF1CA43A59469802C /* MinSizeRel */ = {
+		4232CD5DD17F41CDBD9C78FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk;
+				SYMROOT = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build";
 			};
-			name = MinSizeRel;
+			name = Release;
 		};
-		A86BFED06B0548D78A4C567B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/Debug";
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "    -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = gtestd;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		B45E15E7202848618085B76F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		BE689DD7C0084F63B6C0D01B /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/RelWithDebInfo";
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = gmock_main;
-				SECTORDER_FLAGS = "";
-				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
-				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gmock_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		CDB1429E538B4A8C960CE7EA /* MinSizeRel */ = {
+		42334AAD42374EB589109B08 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = arm64;
@@ -1310,58 +1022,16 @@ fi
 			};
 			name = MinSizeRel;
 		};
-		CFF884208BD340F6B1436563 /* Release */ = {
+		43C9648A24634EEEB665B265 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		D91E4AD6FD184F85B7E770E9 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk;
 				SYMROOT = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build";
 			};
 			name = RelWithDebInfo;
 		};
-		E5B3E74E0D384E0EA0B86BE5 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		E9E648E0E0EB425F91AE8432 /* MinSizeRel */ = {
+		48DE2AA439AD4A8099B7114B /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = arm64;
@@ -1390,24 +1060,24 @@ fi
 			};
 			name = MinSizeRel;
 		};
-		EB70DEC74CFF4D15A604E561 /* Release */ = {
+		5770F6B8DB35439A9DCBE1F3 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/Release";
+				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/RelWithDebInfo";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_OPTIMIZATION_LEVEL = 2;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","$(inherited)");
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
 				OTHER_LIBTOOLFLAGS = ("");
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = gmock_main;
@@ -1417,9 +1087,230 @@ fi
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Release;
+			name = RelWithDebInfo;
 		};
-		F2E22209543B4FACB7B56377 /* Debug */ = {
+		765AFADAB9A04E6F99A964D4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		790A2822AFB74DF491F90E0E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		7C079F59DB5D4CC1B6303C59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		7DE40FD610654C10B84073E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		92108D28FD7D4764A81F7E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk;
+				SYMROOT = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build";
+			};
+			name = Debug;
+		};
+		98677769951E40A49143A0F5 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		AC93DB534BD348A08C6F16AD /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		ADF9A075166C4A92A57BA1A0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gmock.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		C54F616BB99841D0A1AEE1F3 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		CDEAED199728479495005064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmockd;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gmock.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		CE1A84994F734A44B8875863 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = arm64;
@@ -1440,98 +1331,207 @@ fi
 			};
 			name = Debug;
 		};
+		E83430DFB3324462BE0EDDB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		EE22D94744D44A3B826FB33F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk;
+				SYMROOT = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build";
+			};
+			name = MinSizeRel;
+		};
+		F0E96509CE0B41FC9C58FEC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_maind;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googlemock","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gmock_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		F7A1E33335FB49709496133D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		FD699CC5A52249E7AAFA1FF0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/RatioLib/include","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  -DGTEST_HAS_PTHREAD=1   '-std=c++11' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest/include","/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/googletest/googletest","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/build/gtest_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		05533E2033E9449790E41F15 /* Build configuration list for PBXNativeTarget "gmock" */ = {
+		13A7040415EB4F19AEFA360A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6806F24B27744B2D9DD4B08D /* Debug */,
-				50B4AF5A25E4406ABCC4F193 /* Release */,
-				47BC06DF7448462CA57F8A18 /* MinSizeRel */,
-				1D3E64896CBA4DE798AD3CE4 /* RelWithDebInfo */,
+				7DE40FD610654C10B84073E0 /* Debug */,
+				F7A1E33335FB49709496133D /* Release */,
+				35CED8ECE3EE436891D10D8D /* MinSizeRel */,
+				C54F616BB99841D0A1AEE1F3 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		2CD0B87563EF48989C1CCD8A /* Build configuration list for PBXProject "gmock" */ = {
+		1F20F4F52BC14777BF033F69 /* Build configuration list for PBXNativeTarget "gmock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				03D8BCF8B330400D9E71114B /* Debug */,
-				2426E1BE47CD41749C983D5B /* Release */,
-				036810A9FF4B49558BF6C737 /* MinSizeRel */,
-				D91E4AD6FD184F85B7E770E9 /* RelWithDebInfo */,
+				CDEAED199728479495005064 /* Debug */,
+				31BE4A503F3C4531A09A39D1 /* Release */,
+				2388286D832A47DA998F6266 /* MinSizeRel */,
+				ADF9A075166C4A92A57BA1A0 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		4B981EC783394F3092E4E390 /* Build configuration list for PBXAggregateTarget "install" */ = {
+		2A8CAB1A5BF94A66AE6159CE /* Build configuration list for PBXNativeTarget "gtest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				232A26A786C44EE5BED8ACE4 /* Debug */,
-				08E0E38381B64B0591230EE3 /* Release */,
-				9FAAF7AAF1CA43A59469802C /* MinSizeRel */,
-				E5B3E74E0D384E0EA0B86BE5 /* RelWithDebInfo */,
+				22C5B7C6487F475B80293AF4 /* Debug */,
+				14AB5ABA19E749F48C91ACAC /* Release */,
+				339E02DD41E14EF782B6785C /* MinSizeRel */,
+				98677769951E40A49143A0F5 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		57AE081D684E4A04840A7A7B /* Build configuration list for PBXNativeTarget "gmock_main" */ = {
+		367E049D2C7F49559CB42F60 /* Build configuration list for PBXNativeTarget "gmock_main" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7BB528DF8E334EB1A2B36995 /* Debug */,
-				EB70DEC74CFF4D15A604E561 /* Release */,
-				CDB1429E538B4A8C960CE7EA /* MinSizeRel */,
-				BE689DD7C0084F63B6C0D01B /* RelWithDebInfo */,
+				F0E96509CE0B41FC9C58FEC0 /* Debug */,
+				172979D48A20453EA0C7AFEC /* Release */,
+				42334AAD42374EB589109B08 /* MinSizeRel */,
+				5770F6B8DB35439A9DCBE1F3 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		7D5A51E5689A415394AB55D7 /* Build configuration list for PBXNativeTarget "gtest" */ = {
+		3E2554F3DA7644D182B392CF /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A86BFED06B0548D78A4C567B /* Debug */,
-				41C33D7CABCA4C67B0F5C17B /* Release */,
-				0DA833BF8CA64A7888AB4CB9 /* MinSizeRel */,
-				0BCE7CD836C74D9BA35FFDA2 /* RelWithDebInfo */,
+				CE1A84994F734A44B8875863 /* Debug */,
+				0DCF2B3958704D78B1B5988C /* Release */,
+				765AFADAB9A04E6F99A964D4 /* MinSizeRel */,
+				AC93DB534BD348A08C6F16AD /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		9C06A2FFFD7B41D09109A20D /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		9B1A44E0E44B4A95AC1547AF /* Build configuration list for PBXNativeTarget "gtest_main" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B45E15E7202848618085B76F /* Debug */,
-				CFF884208BD340F6B1436563 /* Release */,
-				2C19DDC5E6C74990BA1B4173 /* MinSizeRel */,
-				0E64E83427A44BB38C4FA9C0 /* RelWithDebInfo */,
+				398639D3E96B43369A0C1AF2 /* Debug */,
+				26306A2A5EBD4C9A9AA7E8A4 /* Release */,
+				48DE2AA439AD4A8099B7114B /* MinSizeRel */,
+				FD699CC5A52249E7AAFA1FF0 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		A3E8D30E67DF409AA87130CE /* Build configuration list for PBXNativeTarget "gtest_main" */ = {
+		AD339D37E1E44E959A7337AE /* Build configuration list for PBXProject "gmock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8D8B416A40FF48299DF545C0 /* Debug */,
-				6C55A56A87024246AD6FE7CA /* Release */,
-				E9E648E0E0EB425F91AE8432 /* MinSizeRel */,
-				3783529E7D7E4FA799AB6CDD /* RelWithDebInfo */,
+				92108D28FD7D4764A81F7E13 /* Debug */,
+				4232CD5DD17F41CDBD9C78FD /* Release */,
+				EE22D94744D44A3B826FB33F /* MinSizeRel */,
+				43C9648A24634EEEB665B265 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		D6F130C6904B4FDCAE1C2C3E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		DD4BFFAB5AFD4CA3849D6DAD /* Build configuration list for PBXAggregateTarget "install" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F2E22209543B4FACB7B56377 /* Debug */,
-				22F1767ADADE4EA68407FD84 /* Release */,
-				246A5FBFF18846D3AA7C70B1 /* MinSizeRel */,
-				2E3791AAA63C4F549DF4EA1E /* RelWithDebInfo */,
+				7C079F59DB5D4CC1B6303C59 /* Debug */,
+				E83430DFB3324462BE0EDDB2 /* Release */,
+				790A2822AFB74DF491F90E0E /* MinSizeRel */,
+				29B9BDF119224D18A10FEC46 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 998D4F05D31047D38A1A4F85 /* Project object */;
+	rootObject = E8E269489ABF4B3E88693F3D /* Project object */;
 }

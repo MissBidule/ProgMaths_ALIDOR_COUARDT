@@ -1,0 +1,91 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : false,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a72879b51f0a0166a99ad5bc7693a4a656"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a76874ead143dafca3ee5fd23911b85f36"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a7f892f64b325783c8c1b5c3be1fd2766b"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a7ad620bd5f3fcb57c9cc86f8af247712f"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a70898afeb2fa5f7de82436f0238c9e267"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a70e306f7ff16c392067b030262599cafb"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a76fb20ceb32a0d2cc2783366ad42811fb"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a7edf796263550af911f0c29d391d24b32"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a774b79bbf0906adf7954257875895a120"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a77460d9ad27fb629c0520a8156e8c2afc"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a7e0bbcbfba52b682ee6bea9dc85fe5a03"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a7724b957d8658959ad3ca15b65ade51c4"
+    }
+  ],
+  "containerPath" : "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/Ratio.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx13.1",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "",
+      "buildProductsPath" : "",
+      "derivedDataPath" : "/Users/liloualidor/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/liloualidor/Library/Developer/Xcode/DerivedData/Ratio-driuxxyhubrbszccwlmqbrzwyrdd/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/liloualidor/Library/Developer/Xcode/DerivedData/Ratio-driuxxyhubrbszccwlmqbrzwyrdd/Index.noindex/PrecompiledHeaders",
+      "pchPath" : ""
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : true,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
