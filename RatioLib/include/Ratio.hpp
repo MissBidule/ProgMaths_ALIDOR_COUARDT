@@ -81,8 +81,8 @@ public:
     Ratio operator+(const Ratio &r) const;
     Ratio operator-(const Ratio &r) const;
     Ratio operator-() const;
-    Ratio operator*(const Ratio &r) const;
     Ratio operator*(const float &f) const;
+    Ratio operator*(const Ratio &r) const;
     Ratio operator/(const Ratio &r) const;
     //operator >
     //operator <

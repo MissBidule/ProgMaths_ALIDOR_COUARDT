@@ -54,6 +54,8 @@ float Ratio::convertRatioToFloat()const {
 }
 
 Ratio Ratio::invert() const {
+    if (mNum == 0 || mDenom == 0)
+        return *this;
     return Ratio(mDenom*signRatio(), std::abs(mNum));
 }
 
