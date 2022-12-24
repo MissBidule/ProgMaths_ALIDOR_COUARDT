@@ -115,12 +115,9 @@ Ratio Ratio::operator-(const Ratio &r) const{
     return Ratio(a*d - b*c, b*d).simplify();
 }
 
-bool Ratio::operator!=(const Ratio &r) const{
-    return (!(*this==r));
-}
-
-bool Ratio::operator==(const Ratio &r) const{
-    return ((r.mNum == mNum) && (r.mDenom == mDenom));
+//Overload unary minus operator
+Ratio Ratio::operator-() const{
+    return Ratio(-mNum,mDenom);
 }
 
 //Overload / operator
@@ -137,9 +134,33 @@ Ratio Ratio::operator/(const Ratio &r) const{
     return Ratio(a*d, b*c);
 }
 
-//Overload unary minus operator
-Ratio Ratio::operator-() const{
-    return Ratio(-mNum,mDenom);
+Ratio Ratio::operator/(const float &f)const{
+    Ratio r(mNum,mDenom);
+
+    return Ratio((r.convertRatioToFloat())/f);
+}
+
+//Overload % operator
+Ratio Ratio::operator%(const Ratio &r) const{
+    long a = mNum;
+    long b = mDenom;
+    long c = r.mNum;
+    long d = r.mDenom;
+
+    if (b == 0 || d == 0){
+        throw std::runtime_error("Math error: Attempted to divide by Zero\n");
+    }
+
+    return Ratio(((a*d)%(b*c)), b*d).simplify();
+}
+
+
+bool Ratio::operator!=(const Ratio &r) const{
+    return (!(*this==r));
+}
+
+bool Ratio::operator==(const Ratio &r) const{
+    return ((r.mNum == mNum) && (r.mDenom == mDenom));
 }
 
 bool Ratio::operator<(const Ratio &r)const{
@@ -167,6 +188,40 @@ bool Ratio::operator<=(const Ratio &r)const{
 bool Ratio::operator>=(const Ratio &r)const{
     return(!(*this<r));
 }
+
+
+//Comparing Ratio with float//
+
+bool Ratio::operator==(const float &f) const{
+    Ratio r(mNum,mDenom);
+
+    return(r.convertRatioToFloat() == f);
+}
+
+bool Ratio::operator!=(const float &f) const{
+    return (!(*this==f));
+}
+
+bool Ratio::operator<(const float &f)const{
+    Ratio r(mNum,mDenom);
+    
+    return(r.convertRatioToFloat() < f);
+}
+
+bool Ratio::operator>(const float &f)const{
+    Ratio r(mNum,mDenom);
+    
+    return(r.convertRatioToFloat() > f);
+}
+
+bool Ratio::operator<=(const float &f)const{
+    return(!(*this>f));
+}
+
+bool Ratio::operator>=(const float &f)const{
+    return(!(*this<f));
+}
+
 
 //Square root of a Rational
 Ratio Ratio::sqrt(const Ratio &r){

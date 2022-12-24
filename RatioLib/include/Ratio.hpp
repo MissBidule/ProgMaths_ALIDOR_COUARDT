@@ -75,24 +75,41 @@ public:
     
 public:
     
-    //Operators
+    //Operators//
     
-    //operator%
-    
-    Ratio operator+(const Ratio &r);
     Ratio operator+(const Ratio &r)const;
     Ratio operator-(const Ratio &r)const;
     Ratio operator-()const;
     Ratio operator*(const Ratio &r)const;
+
+    //ratio * float
     Ratio operator*(const float &f)const;
+
     Ratio operator/(const Ratio &r)const;
+
+    //ratio / float
+    Ratio operator/(const float &f)const;
+    
+    Ratio operator%(const Ratio &r)const;
+
+    //comparing Ratio with Ratio//
+
     bool operator==(const Ratio &r)const;
     bool operator!=(const Ratio &r)const;
     bool operator<(const Ratio &r)const;
     bool operator>(const Ratio &r)const;
     bool operator<=(const Ratio &r)const;
     bool operator>=(const Ratio &r)const;
-    
+
+    //comparing Ratio with float//
+
+    bool operator==(const float &f)const;
+    bool operator!=(const float &f)const;
+    bool operator<(const float &f)const;
+    bool operator>(const float &f)const;
+    bool operator<=(const float &f)const;
+    bool operator>=(const float &f)const;
+
     friend std::ostream& operator<< (std::ostream& stream, const Ratio& ratio);
 
     /// \brief operator to access to the ist element of a vector
