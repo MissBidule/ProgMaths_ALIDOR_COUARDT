@@ -48,29 +48,29 @@ public:
     
     //Constructors
     
-    /// \brief constructor from rational
-    /// \param num : the numerator component of the rational
-    /// \param denom : the denominator component of the rational
+    /// \brief Constructor from rational
+    /// \param num : The numerator component of the rational
+    /// \param denom : The denominator component of the rational
     Ratio(const long & num = 0, const long & denom = 1);
     
-    /// \brief constructor from float
-    /// \param number : the number to be converted into rational
+    /// \brief Constructor from float
+    /// \param number : The number to be converted into rational
     Ratio(const float & number);
     
-    /// \brief copy-constructor
-    /// \param r : the source rational to be copied
+    /// \brief Copy-constructor
+    /// \param r : The source rational to be copied
     Ratio(const Ratio & r);
     
-    /// \brief destructor
+    /// \brief Destructor
     ~Ratio() = default;
     
 public:
     //Getters
     
-    /// \brief returns the numerator value
+    /// \brief Returns the numerator value
     inline long getNum() const { return mNum;};
     
-    /// \brief returns the denominator value
+    /// \brief Returns the denominator value
     inline long getDenom() const { return mDenom;};
     
 public:
@@ -143,51 +143,88 @@ public:
     
     //Various other functions
     
-    /// \brief Do the square root of rational
-    /// \param  r: the rational to be squared
-    /// \return the square root of a rational
+    /// \brief Compute the square root of rational
+    /// \param  r: The rational to be squared
+    /// \return Returns the square root of a rational
     static Ratio sqrt(const Ratio &r);
 
     /// \brief Compute exponential function
-    /// \param  r: the rational to be computed in the exponential function
+    /// \param  r: The rational to be computed in the exponential function
     /// \return Returns the base-e exponential function of r
     static Ratio exp(const Ratio &r);
 
-    static Ratio cos(Ratio &r);
-    //cos
-    //sin
-    //tan
-    //abs
-    //ent
-    //gcd
-    //log
-    //pow
-    
+    /// \brief Compute cosinus function in degrees
+    /// \param  r: The rational to be computed in the cosinus function
+    /// \return Returns the cosinus of the rational in degrees
+    static Ratio cos(const Ratio &r);
 
+    /// \brief Compute sinus function in degrees
+    /// \param  r: The rational to be computed in the sinus function
+    /// \return Returns the sinus of the rational in degrees
+    static Ratio sin(const Ratio &r);
+
+    /// \brief Compute tangent function in degrees
+    /// \param  r: The rational to be computed in the tangent function
+    /// \return Returns the tangent of the rational in degrees
+    static Ratio tan(const Ratio &r);
+
+    /// \brief Compute absolute value of a rational
+    /// \param  r: The rational to be computed in the absolute value function
+    /// \return Returns the absolute value of the rational number
+    static Ratio abs(const Ratio &r);
+
+    /// \brief Compute round down value of a rational
+    /// \param  r: The rational to round down
+    /// \return Returns the value of r rounded downward
+    static Ratio floor(const Ratio &r);
+
+    /// \brief Searches the greatest common rational divisor between two rational numbers
+    /// \param  r1: First rational number
+    /// \param  r2: Second rational number
+    /// \return If both r1 and r2 are zero, returns zero. If both r1 and r2 tend towards Inf., returns Inf.
+    ///         Otherwise, returns the greatest common rational divisor of |r1| and |r2|
+    static Ratio gcrd(const Ratio &r1, const Ratio &r2);
+
+    /// \brief Compute the natural logarithm of a rational number
+    /// \param  r: The rational number whose logarithm is calculated
+    /// \return Returns the natural logarithm of r
+    static Ratio log(const Ratio &r);
+
+    /// \brief Raise the given rational number to the power exponent
+    /// \param  r: The rational number to raise
+    /// \param  exponent: The power exponent
+    /// \return Returns r raised to the power exponent
+    static Ratio pow(const Ratio &r, const long &exponent);
+
+    /// \brief Indicates that a rational equals to 0
+    /// \return Returns a null rational number(0/1)
     static Ratio Zero();
+
+    /// \brief Indicates that a rational is tending towards infinity
+    /// \return Returns a rational number tending towards infinity (1/0)
     static Ratio Infinite();
 
-    /// \brief convert a real to a rational
-    /// \param  number: the real to be converted
-    /// \param  nb_iter: iterations of the conversion
-    /// \return the rational number
+    /// \brief Convert a real to a rational
+    /// \param  number: The real to be converted
+    /// \param  nb_iter: Iterations of the conversion
+    /// \return Returns the corresponding rational number
     static Ratio convertFloatToRatio(const float & number, unsigned nb_iter = 15);
 
-    /// \brief convert a rational to a real
-    /// \param  number: the rational to be converted
-    /// \return the real number
+    /// \brief Convert a rational to a real
+    /// \param  number: The rational to be converted
+    /// \return Returns the corresponding real number
     float convertRatioToFloat()const;
     
-    /// \brief return the sign of the rational
-    /// \return 1 if positive or equal to 0, -1 otherwise
+    /// \brief Returns the sign of the rational
+    /// \return Returns 1 if positive or equal to 0, -1 otherwise
     inline int signRatio() const {return sign(mNum);}
     
-    /// \brief simplify a rational
-    /// \return the modified number
+    /// \brief Simplify a rational
+    /// \return Returns the number, simplified
     Ratio& simplify();
 
-    /// \brief invert a rational
-    /// \return the inverted rational
+    /// \brief Inverse a rational
+    /// \return Returns the inversed rational
     Ratio invert() const;  
     
 };

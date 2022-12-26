@@ -27,6 +27,14 @@ std::ostream& operator<< (std::ostream& stream, const Ratio& ratio) {
     if (ratio == Ratio::Infinite()){
         stream << "Inf.";
     }
+    else if (ratio == - Ratio::Infinite())
+    {
+        stream << "-Inf.";
+    }
+    else if (ratio == Ratio::Zero())
+    {
+        stream << "0";
+    }
     else
         stream << ratio.mNum << '/' << ratio.mDenom;
     return stream;
@@ -40,7 +48,7 @@ Ratio Ratio::convertFloatToRatio(const float & number, unsigned nb_iter) {
     }
     
     if (fabs(number) > 1) {
-        float q = fabs(floor(number));
+        float q = fabs(std::floor(number));
         return (Ratio(q,1) + convertFloatToRatio(fabs(number)-q, nb_iter-1)) * sign(number);
     }
     
@@ -157,6 +165,11 @@ Ratio Ratio::operator/(const float &f)const{
 
 //float / Ratio
 Ratio operator/(const float &f, const Ratio &r){
+
+    if (r.mNum == 0.0){
+        throw std::runtime_error("Math error: Attempted to divide by Zero\n");
+    }
+
     return Ratio((r.mDenom)*f,r.mNum).simplify();
 }
 
@@ -271,8 +284,8 @@ bool operator>=(const float &f, const Ratio &r){
 
 //Square root of a Rational
 Ratio Ratio::sqrt(const Ratio &r){
-    long a = r.mNum;
-    long b = r.mDenom;
+    float a = r.mNum;
+    float b = r.mDenom;
     Ratio result;
 
     a = std::sqrt(a);
@@ -282,7 +295,7 @@ Ratio Ratio::sqrt(const Ratio &r){
     if (((a-std::floor(a)) != 0) || ((b-std::floor(b)) != 0)){
         double temp = r.convertRatioToFloat();
         temp = std::sqrt(temp);
-        result = Ratio::convertFloatToRatio(temp);
+        result = convertFloatToRatio(temp);
     }
     else{
         result = Ratio(a,b);
@@ -304,15 +317,15 @@ Ratio Ratio::exp(const Ratio &r){
         result = Infinite();
     }
     else{
-        result = convertFloatToRatio(std::pow(std::exp(1/b),a));
+        result = convertFloatToRatio(std::exp(a/b));
     }
 
     return result;
 }
 
-//Approximation of cosinus
-Ratio Ratio::cos(Ratio &r){
-
+//Cosinus in degrees
+Ratio Ratio::cos(const Ratio &r){
+    return Ratio(convertFloatToRatio(std::cos((r.convertRatioToFloat())*M_PI/180.0)));
 
     
     /*long a = r.mNum;
@@ -343,6 +356,98 @@ Ratio Ratio::cos(Ratio &r){
         }
     }
     return result;*/
+}
+
+
+//Sinus in degrees
+Ratio Ratio::sin(const Ratio &r){
+    return Ratio(convertFloatToRatio(std::sin((r.convertRatioToFloat())*M_PI/180.0)));
+}
+
+//Tangent in degrees
+Ratio Ratio::tan(const Ratio &r){
+    return Ratio(sin(r)/cos(r));
+}
+
+Ratio Ratio::abs(const Ratio &r){
+    long a = r.mNum;
+    long b = r.mDenom;
+
+    if (a == 0){
+        return Zero();
+    }
+    if (b == 0){
+        return Infinite();
+    }
+
+    return Ratio(std::labs(a), b);
+}
+
+Ratio Ratio::floor(const Ratio &r){
+    long a = r.mNum;
+    long b = r.mDenom;
+
+    if (a == 0){
+        return Zero();
+    }
+    if (b == 0){
+        return Infinite();
+    }
+
+    return Ratio(std::floor(r.convertRatioToFloat()), 1);
+}
+
+Ratio Ratio::gcrd(const Ratio &r1, const Ratio &r2){
+    long a = r1.mNum;
+    long b = r1.mDenom;
+    long c = r2.mNum;
+    long d = r2.mDenom;
+
+    if (a == 0 && c == 0){
+        return Zero();
+    }
+    if (b == 0 && d == 0){
+        return Infinite();
+    }
+    
+    return Ratio(std::gcd(a*d,b*c), b*d);
+}
+
+Ratio Ratio::log(const Ratio &r){
+    long a = r.mNum;
+    long b = r.mDenom;
+
+    if (a == 0){
+        return -Infinite();
+    }
+    if (b == 0){
+        return Infinite();
+    }
+    if (r < 0){
+        throw std::runtime_error("Domain error: natural logarithm is defined between ]0; Inf.[\n");
+    }
+    
+    return Ratio(convertFloatToRatio((std::log(a))-(std::log(b))));
+    
+}
+
+Ratio Ratio::pow(const Ratio &r, const long &exponent){
+    float a = r.mNum;
+    float b = r.mDenom;
+    Ratio result;
+
+    if (r == Zero() && exponent < 0){
+        return Infinite();
+    }
+    
+    if (exponent < 0){
+        result = convertFloatToRatio((std::pow(std::pow((a/b),-exponent),-1)));
+    }
+    else{
+        result = Ratio(std::pow(a,exponent),std::pow(b,exponent)).simplify();
+    }
+
+    return result;
 }
 
 Ratio Ratio::Zero(){
