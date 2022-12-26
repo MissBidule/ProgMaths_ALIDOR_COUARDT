@@ -80,20 +80,28 @@ public:
     Ratio operator+(const Ratio &r)const;
     Ratio operator-(const Ratio &r)const;
     Ratio operator-()const;
+    Ratio operator%(const Ratio &r)const;
+
+    //Ratio * Ratio
     Ratio operator*(const Ratio &r)const;
 
     //ratio * float
     Ratio operator*(const float &f)const;
 
+    //float * Ratio
+    friend Ratio operator*(const float &f, const Ratio &r);
+
+    //Ratio / Ratio
     Ratio operator/(const Ratio &r)const;
 
     //ratio / float
     Ratio operator/(const float &f)const;
-    
-    Ratio operator%(const Ratio &r)const;
+
+    //float / Ratio
+    friend Ratio operator/(const float &f, const Ratio &r);
+
 
     //comparing Ratio with Ratio//
-
     bool operator==(const Ratio &r)const;
     bool operator!=(const Ratio &r)const;
     bool operator<(const Ratio &r)const;
@@ -102,7 +110,6 @@ public:
     bool operator>=(const Ratio &r)const;
 
     //comparing Ratio with float//
-
     bool operator==(const float &f)const;
     bool operator!=(const float &f)const;
     bool operator<(const float &f)const;
@@ -110,7 +117,19 @@ public:
     bool operator<=(const float &f)const;
     bool operator>=(const float &f)const;
 
+
+    //comparing float with Ratio//
+    friend bool operator==(const float &f, const Ratio &r);
+    friend bool operator!=(const float &f, const Ratio &r);
+    friend bool operator<(const float &f, const Ratio &r);
+    friend bool operator>(const float &f, const Ratio &r);
+    friend bool operator<=(const float &f, const Ratio &r);
+    friend bool operator>=(const float &f, const Ratio &r);
+
+
+
     friend std::ostream& operator<< (std::ostream& stream, const Ratio& ratio);
+    
 
     /// \brief operator to access to the ist element of a vector
     /// \param  i: index of the targeted vector component
@@ -124,6 +143,17 @@ public:
     
     //Various other functions
     
+    /// \brief Do the square root of rational
+    /// \param  r: the rational to be squared
+    /// \return the square root of a rational
+    static Ratio sqrt(const Ratio &r);
+
+    /// \brief Compute exponential function
+    /// \param  r: the rational to be computed in the exponential function
+    /// \return Returns the base-e exponential function of r
+    static Ratio exp(const Ratio &r);
+
+    static Ratio cos(Ratio &r);
     //cos
     //sin
     //tan
@@ -133,20 +163,15 @@ public:
     //log
     //pow
     
+
+    static Ratio Zero();
+    static Ratio Infinite();
+
     /// \brief convert a real to a rational
     /// \param  number: the real to be converted
     /// \param  nb_iter: iterations of the conversion
     /// \return the rational number
     static Ratio convertFloatToRatio(const float & number, unsigned nb_iter = 15);
-    
-    /// \brief Do the square root of rational
-    /// \return the square root of a rational
-    static Ratio sqrt(const Ratio &r);
-    static Ratio exp(const Ratio &r);
-    static Ratio cos(Ratio &r);
-
-    static Ratio Zero();
-    static Ratio Infinite();
 
     /// \brief convert a rational to a real
     /// \param  number: the rational to be converted
@@ -159,7 +184,10 @@ public:
     
     /// \brief simplify a rational
     /// \return the modified number
-    Ratio& simplify();    
+    Ratio& simplify();
+
+    /// \brief invert a rational
+    /// \return the inverted rational
     Ratio invert() const;  
     
 };

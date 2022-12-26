@@ -99,6 +99,17 @@ Ratio Ratio::operator*(const Ratio &r) const{
 //Overload * operator (ratio * float)
 Ratio Ratio::operator*(const float &f) const{
     return Ratio(mNum*f,mDenom).simplify();
+
+    //seg fault here
+    /*Ratio r(mNum,mDenom);
+    float ftemp = f * r.convertRatioToFloat();
+    Ratio temp = convertFloatToRatio(ftemp,15);
+    return temp;*/
+}
+
+//float * Ratio
+Ratio operator*(const float &f, const Ratio &r){
+    return Ratio((r.mNum)*f,r.mDenom).simplify();
 }
 
 //Overload - operator
@@ -131,13 +142,22 @@ Ratio Ratio::operator/(const Ratio &r) const{
         throw std::runtime_error("Math error: Attempted to divide by Zero\n");
     }
 
-    return Ratio(a*d, b*c);
+    return Ratio(a*d, b*c).simplify();
 }
 
 Ratio Ratio::operator/(const float &f)const{
     Ratio r(mNum,mDenom);
 
-    return Ratio((r.convertRatioToFloat())/f);
+    if (f == 0.0){
+        throw std::runtime_error("Math error: Attempted to divide by Zero\n");
+    }
+
+    return Ratio((r.convertRatioToFloat())/f); // if (r*(1.0/f)), it would return absolute division
+}
+
+//float / Ratio
+Ratio operator/(const float &f, const Ratio &r){
+    return Ratio((r.mDenom)*f,r.mNum).simplify();
 }
 
 //Overload % operator
@@ -222,6 +242,32 @@ bool Ratio::operator>=(const float &f)const{
     return(!(*this<f));
 }
 
+//comparing float with Ratio//
+
+
+bool operator==(const float &f, const Ratio &r){
+    return (f == r.convertRatioToFloat());
+}
+
+bool operator!=(const float &f, const Ratio &r){
+    return (f != r.convertRatioToFloat());
+}
+
+bool operator<(const float &f, const Ratio &r){
+    return (f < r.convertRatioToFloat());
+}
+
+bool operator>(const float &f, const Ratio &r){
+    return (f > r.convertRatioToFloat());
+}
+
+bool operator<=(const float &f, const Ratio &r){
+    return (f <= r.convertRatioToFloat());
+}
+
+bool operator>=(const float &f, const Ratio &r){
+    return (f >= r.convertRatioToFloat());
+}
 
 //Square root of a Rational
 Ratio Ratio::sqrt(const Ratio &r){
@@ -266,7 +312,10 @@ Ratio Ratio::exp(const Ratio &r){
 
 //Approximation of cosinus
 Ratio Ratio::cos(Ratio &r){
-    long a = r.mNum;
+
+
+    
+    /*long a = r.mNum;
     long b = r.mDenom;
     int n = 0;
     Ratio unitaire(1,1);
@@ -293,7 +342,7 @@ Ratio Ratio::cos(Ratio &r){
             n-=1;
         }
     }
-    return result;
+    return result;*/
 }
 
 Ratio Ratio::Zero(){

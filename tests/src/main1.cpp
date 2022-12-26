@@ -7,9 +7,10 @@ int main() {
 
     //exemple test unitaire : static_assert ( factoriel(4) == 24, " factoriel error ");
     
-    Ratio r(2,1);
+    Ratio r(54,3);
     Ratio r2(3,1);
-    //float f = 7.3891;
-    std::cout << r%r2 << std::endl;
+    float f = 1.791;
+    std::cout << r*f << std::endl;
+
     return 0;
 }
