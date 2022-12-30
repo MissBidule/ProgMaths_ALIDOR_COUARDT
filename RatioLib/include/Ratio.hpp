@@ -78,24 +78,35 @@ public:
     
     //Operators//
     
-    //Ratio + float
-    //float + Ratio
-    //Ratio - float
-    //float - Ratio
-    //Ratio % float
-    //float % Ratio
-    
     //Ratio + Ratio
     Ratio operator+(const Ratio &r)const;
     
+    //Ratio + float
+    Ratio operator+(const float &f)const;
+    
+    //float + Ratio
+    friend Ratio operator+(const float &f, const Ratio &r);
+    
     //Ratio - Ratio
     Ratio operator-(const Ratio &r)const;
+    
+    //Ratio - float
+    Ratio operator-(const float &f)const;
+    
+    //float - Ratio
+    friend Ratio operator-(const float &f, const Ratio &r);
     
     //-Ratio
     Ratio operator-()const;
     
     //Ratio % Ratio
     Ratio operator%(const Ratio &r)const;
+    
+    //Ratio % float
+    Ratio operator%(const float &f)const;
+    
+    //float % Ratio
+    friend Ratio operator%(const float &f, const Ratio &r);
 
     //Ratio * Ratio
     Ratio operator*(const Ratio &r)const;

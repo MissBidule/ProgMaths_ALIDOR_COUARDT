@@ -102,10 +102,40 @@ Ratio Ratio::operator+(const Ratio &r) const{
     long d = r.mDenom;
 
     if (b == 0 || d == 0){
-        throw std::runtime_error("Math error: Attempted to divide by Zero\n");
+        return Infinite()*signRatio();
     }
 
     return Ratio(a*d + b*c, b*d, signRatio()).simplify();
+}
+
+//Ratio + float
+Ratio Ratio::operator+(const float &f)const {
+    return operator+(Ratio(f));
+}
+
+//float + Ratio
+Ratio operator+(const float &f, const Ratio &r) {
+    return r+f;
+}
+
+//Ratio - float
+Ratio Ratio::operator-(const float &f)const {
+    return operator-(Ratio(f));
+}
+
+//float - Ratio
+Ratio operator-(const float &f, const Ratio &r) {
+    return -r+f;
+}
+
+//Ratio % float
+Ratio Ratio::operator%(const float &f)const {
+    return operator%(Ratio(f));
+}
+
+//float % Ratio
+Ratio operator%(const float &f, const Ratio &r) {
+    return Ratio(f)%r;
 }
 
 //Overload * operator
@@ -115,9 +145,10 @@ Ratio Ratio::operator*(const Ratio &r) const{
     long c = r.mNum;
     long d = r.mDenom;
 
-    if (b == 0 || d == 0){
-        throw std::runtime_error("Math error: Attempted to divide by Zero\n");
-    }
+    //if one of the term is infinite, the result will be too
+//    if (b == 0 || d == 0){
+//        throw std::runtime_error("Math error: Attempted to divide by Zero\n");
+//    }
 
     return Ratio(a*c, b*d, mSign*r.signRatio()).simplify();
 }
@@ -148,6 +179,13 @@ Ratio Ratio::operator-(const Ratio &r) const{
     long d = r.mDenom;
     int sign = mSign;
     
+    if (b == 0 && d == 0)
+        throw std::runtime_error("Math error: Inf - Inf undetermined\n");
+    if (d == 0)
+        throw std::runtime_error("Math error: F - Inf impossible\n");
+    if (b == 0)
+        return Infinite()*mSign;
+    
     //in order to make an substraction of 2 differents sign, we use the bigger one to
     if (abs(r)>abs(*this)) {
         long temp = a;
@@ -159,10 +197,6 @@ Ratio Ratio::operator-(const Ratio &r) const{
         d = temp;
         
         sign = -r.mSign;
-    }
-
-    if (b == 0 || d == 0){
-        throw std::runtime_error("Math error: Attempted to divide by Zero\n");
     }
 
     return Ratio(a*d - b*c, b*d, sign).simplify();
@@ -212,10 +246,10 @@ Ratio Ratio::operator%(const Ratio &r) const{
     long d = r.mDenom;
 
     if (b == 0 || d == 0){
-        throw std::runtime_error("Math error: Attempted to divide by Zero\n");
+        return *this;
     }
 
-    return Ratio(((a*d)%(b*c)), b*d).simplify();
+    return Ratio(((a*d)%(b*c)), b*d, mSign).simplify();
 }
 
 
@@ -315,6 +349,8 @@ Ratio Ratio::sqrt(const Ratio &r){
     
     if (r.signRatio() == -1)
         throw std::runtime_error("Math error: Attempted to squared a negative value\n");
+    if (b() == 0)
+        return Infinite();
 
     a = std::sqrt(a);
     b = std::sqrt(b);

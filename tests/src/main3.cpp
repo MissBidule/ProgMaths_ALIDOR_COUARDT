@@ -9,8 +9,7 @@
 //tester :
 //toutes les fonctions //manque celles pas déjà faites
 //les cas particuliers
-//les exceptions
-
+//trier les fonctions
 //tout passer en template
 
 /////////////////////////////////////////////////////
