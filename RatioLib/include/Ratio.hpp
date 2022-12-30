@@ -41,8 +41,9 @@ inline int sign(const float nb) {return (nb >= 0) - (nb < 0);}
 class Ratio {
     
 private:
-    long mNum; /*!< numerator component */
-    long mDenom; /*!< denominator component */
+    long unsigned mNum; /*!< numerator component */
+    long unsigned mDenom; /*!< denominator component */
+    int mSign;
     
 public:
     
@@ -51,7 +52,7 @@ public:
     /// \brief Constructor from rational
     /// \param num : The numerator component of the rational
     /// \param denom : The denominator component of the rational
-    Ratio(const long & num = 0, const long & denom = 1);
+    Ratio(const long & num = 0, const long & denom = 1, const int & sign = 0);
     
     /// \brief Constructor from float
     /// \param number : The number to be converted into rational
@@ -59,7 +60,7 @@ public:
     
     /// \brief Copy-constructor
     /// \param r : The source rational to be copied
-    Ratio(const Ratio & r);
+    Ratio(const Ratio & r, const int & sign = 0);
     
     /// \brief Destructor
     ~Ratio() = default;
@@ -77,9 +78,23 @@ public:
     
     //Operators//
     
+    //Ratio + float
+    //float + Ratio
+    //Ratio - float
+    //float - Ratio
+    //Ratio % float
+    //float % Ratio
+    
+    //Ratio + Ratio
     Ratio operator+(const Ratio &r)const;
+    
+    //Ratio - Ratio
     Ratio operator-(const Ratio &r)const;
+    
+    //-Ratio
     Ratio operator-()const;
+    
+    //Ratio % Ratio
     Ratio operator%(const Ratio &r)const;
 
     //Ratio * Ratio
@@ -129,15 +144,6 @@ public:
 
 
     friend std::ostream& operator<< (std::ostream& stream, const Ratio& ratio);
-    
-
-    /// \brief operator to access to the ist element of a vector
-    /// \param  i: index of the targeted vector component
-    /// \return vector[i]
-    /// \bug
-    /// \todo
-    /// \test
-    //exemple de doc doxygen À ENLEVER
     
 public:
     
@@ -217,7 +223,7 @@ public:
     
     /// \brief Returns the sign of the rational
     /// \return Returns 1 if positive or equal to 0, -1 otherwise
-    inline int signRatio() const {return sign(mNum);}
+    inline int signRatio() const {return mSign;}
     
     /// \brief Simplify a rational
     /// \return Returns the number, simplified
