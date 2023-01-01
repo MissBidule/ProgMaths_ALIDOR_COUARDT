@@ -257,7 +257,7 @@ bool Ratio::operator!=(const Ratio &r) const{
 }
 
 bool Ratio::operator==(const Ratio &r) const{
-    return ((r.mNum == mNum) && (r.mDenom == mDenom) && (r.mSign == mSign));
+    return ((r.mNum == 0 && mNum == 0) || ((r.mNum == mNum) && (r.mDenom == mDenom) && (r.mSign == mSign)));
 }
 
 bool Ratio::operator<(const Ratio &r)const{
@@ -453,7 +453,7 @@ Ratio Ratio::abs(const Ratio &r){
 }
 
 Ratio Ratio::floor(const Ratio &r){
-    return Ratio(std::floor(r.convertRatioToFloat()), 1, 1);
+    return Ratio((long)std::floor(r.convertRatioToFloat()), (long)1);
 }
 
 Ratio Ratio::gcrd(const Ratio &r1, const Ratio &r2){
@@ -491,21 +491,22 @@ Ratio Ratio::log(const Ratio &r){
 }
 
 Ratio Ratio::pow(const Ratio &r, const long &exponent){
-    float a = r.mNum;
-    float b = r.mDenom;
+    long a = r.mNum;
+    long b = r.mDenom;
     Ratio result;
 
-    if (r == Zero() && exponent < 0){
-        return Infinite();
+    if (r == Zero() || r == abs(Infinite())) {
+        throw std::runtime_error("Math error: Undefined behaviour\n");
     }
     
     if (exponent < 0){
-        result = convertFloatToRatio((std::pow(std::pow((a/b)*r.signRatio(),-exponent),-1)));
+        long temp = a;
+        a = b;
+        b = temp;
     }
-    else{
-        result = Ratio(std::pow(a*r.signRatio(),exponent),std::pow(b,exponent)).simplify();
-    }
-
+    
+    result = Ratio(std::pow(a*r.signRatio(),std::abs(exponent)),std::pow(b,std::abs(exponent))).simplify();
+    
     return result;
 }
 
