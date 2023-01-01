@@ -7,6 +7,39 @@
   "buildCommand" : "build",
   "configuredTargets" : [
     {
+      "guid" : "0b73ba7045a2529270712259fb1f38a72879b51f0a0166a99ad5bc7693a4a656"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a76874ead143dafca3ee5fd23911b85f36"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a7f892f64b325783c8c1b5c3be1fd2766b"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a7ad620bd5f3fcb57c9cc86f8af247712f"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a70898afeb2fa5f7de82436f0238c9e267"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a70e306f7ff16c392067b030262599cafb"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a76fb20ceb32a0d2cc2783366ad42811fb"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a7edf796263550af911f0c29d391d24b32"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a774b79bbf0906adf7954257875895a120"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a77460d9ad27fb629c0520a8156e8c2afc"
+    },
+    {
+      "guid" : "0b73ba7045a2529270712259fb1f38a7e0bbcbfba52b682ee6bea9dc85fe5a03"
+    },
+    {
       "guid" : "0b73ba7045a2529270712259fb1f38a7724b957d8658959ad3ca15b65ade51c4"
     }
   ],
@@ -16,19 +49,6 @@
   "hideShellScriptEnvironment" : false,
   "parameters" : {
     "action" : "build",
-    "activeArchitecture" : "arm64",
-    "activeRunDestination" : {
-      "disableOnlyActiveArch" : false,
-      "platform" : "macosx",
-      "sdk" : "macosx13.1",
-      "sdkVariant" : "macos",
-      "supportedArchitectures" : [
-        "arm64e",
-        "arm64",
-        "x86_64"
-      ],
-      "targetArchitecture" : "arm64"
-    },
     "arenaInfo" : {
       "buildIntermediatesPath" : "",
       "buildProductsPath" : "",

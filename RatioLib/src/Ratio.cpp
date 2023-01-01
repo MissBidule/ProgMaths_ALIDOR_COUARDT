@@ -36,61 +36,6 @@ Ratio::Ratio(const Ratio & r, const int & sign) : mNum(r.mNum), mDenom(r.mDenom)
     }
 }
 
-//Overload << operator
-std::ostream& operator<< (std::ostream& stream, const Ratio& ratio) {
-    if (ratio == Ratio::Infinite()){
-        stream << "Inf.";
-    }
-    else if (ratio == - Ratio::Infinite())
-    {
-        stream << "-Inf.";
-    }
-    else if (ratio == Ratio::Zero())
-    {
-        stream << "0";
-    }
-    else
-        stream << ratio.signRatio() * (long)ratio.mNum << '/' << ratio.mDenom;
-    return stream;
-}
-
-Ratio Ratio::convertFloatToRatio(const float & number, unsigned nb_iter) {
-    if ((roundf(fabs(number) * 1000) / 1000) == 0 || nb_iter == 0) return Ratio();
-    
-    if ((roundf(fabs(number) * 1000) / 1000) < 1) {
-        return Ratio((convertFloatToRatio(1/fabs(number), nb_iter).invert()),sign(number));
-    }
-    
-    if ((roundf(fabs(number) * 1000) / 1000) > 1) {
-        float q = fabs(std::floor(number));
-        return Ratio(Ratio(q, (long)1) + convertFloatToRatio(fabs(number)-q, nb_iter-1),sign(number));
-    }
-    
-    return Ratio((long)1, (long)1, sign(number));
-}
-
-float Ratio::convertRatioToFloat()const {
-    if (mDenom == 0)
-        throw std::runtime_error("Math error: Attempted to divide by Zero\n");
-    return mNum/(float)mDenom*signRatio();
-}
-
-Ratio Ratio::invert() const {
-    if (mNum == 0 || mDenom == 0)
-        return *this;
-    return Ratio(mDenom, mNum, mSign);
-}
-
-Ratio& Ratio::simplify() {
-    if (mNum == 0) mDenom = 1;
-    if (mDenom == 0) mNum = 1;
-    long GCD = std::gcd(mNum, mDenom);
-    if (GCD == 1) return *this;
-    mNum /= GCD;
-    mDenom /= GCD;
-    return *this;
-}
-
 //Overload + operator
 Ratio Ratio::operator+(const Ratio &r) const{
     if (mSign != r.mSign)
@@ -118,6 +63,39 @@ Ratio operator+(const float &f, const Ratio &r) {
     return r+f;
 }
 
+//Overload - operator
+Ratio Ratio::operator-(const Ratio &r) const{
+    if (mSign != r.mSign)
+        return operator+(-r);
+    long a = mNum;
+    long b = mDenom;
+    long c = r.mNum;
+    long d = r.mDenom;
+    int sign = mSign;
+    
+    if (b == 0 && d == 0)
+        throw std::runtime_error("Math error: Inf - Inf undetermined\n");
+    if (d == 0)
+        throw std::runtime_error("Math error: F - Inf impossible\n");
+    if (b == 0)
+        return Infinite()*mSign;
+    
+    //in order to make an substraction of 2 differents sign, we use the bigger one to
+    if (abs(r)>abs(*this)) {
+        long temp = a;
+        a = c;
+        c = temp;
+        
+        temp = b;
+        b = d;
+        d = temp;
+        
+        sign = -r.mSign;
+    }
+
+    return Ratio(a*d - b*c, b*d, sign).simplify();
+}
+
 //Ratio - float
 Ratio Ratio::operator-(const float &f)const {
     return operator-(Ratio(f));
@@ -126,6 +104,25 @@ Ratio Ratio::operator-(const float &f)const {
 //float - Ratio
 Ratio operator-(const float &f, const Ratio &r) {
     return -r+f;
+}
+
+//Overload unary minus operator
+Ratio Ratio::operator-() const{
+    return Ratio(*this, signRatio()*-1);
+}
+
+//Overload % operator
+Ratio Ratio::operator%(const Ratio &r) const{
+    long a = mNum;
+    long b = mDenom;
+    long c = r.mNum;
+    long d = r.mDenom;
+
+    if (b == 0 || d == 0){
+        return *this;
+    }
+
+    return Ratio(((a*d)%(b*c)), b*d, mSign).simplify();
 }
 
 //Ratio % float
@@ -169,44 +166,6 @@ Ratio operator*(const float &f, const Ratio &r){
     return r*f;
 }
 
-//Overload - operator
-Ratio Ratio::operator-(const Ratio &r) const{
-    if (mSign != r.mSign)
-        return operator+(-r);
-    long a = mNum;
-    long b = mDenom;
-    long c = r.mNum;
-    long d = r.mDenom;
-    int sign = mSign;
-    
-    if (b == 0 && d == 0)
-        throw std::runtime_error("Math error: Inf - Inf undetermined\n");
-    if (d == 0)
-        throw std::runtime_error("Math error: F - Inf impossible\n");
-    if (b == 0)
-        return Infinite()*mSign;
-    
-    //in order to make an substraction of 2 differents sign, we use the bigger one to
-    if (abs(r)>abs(*this)) {
-        long temp = a;
-        a = c;
-        c = temp;
-        
-        temp = b;
-        b = d;
-        d = temp;
-        
-        sign = -r.mSign;
-    }
-
-    return Ratio(a*d - b*c, b*d, sign).simplify();
-}
-
-//Overload unary minus operator
-Ratio Ratio::operator-() const{
-    return Ratio(*this, signRatio()*-1);
-}
-
 //Overload / operator
 Ratio Ratio::operator/(const Ratio &r) const{
 
@@ -237,27 +196,12 @@ Ratio operator/(const float &f, const Ratio &r){
     return f * r.invert();
 }
 
-//Overload % operator
-Ratio Ratio::operator%(const Ratio &r) const{
-    long a = mNum;
-    long b = mDenom;
-    long c = r.mNum;
-    long d = r.mDenom;
-
-    if (b == 0 || d == 0){
-        return *this;
-    }
-
-    return Ratio(((a*d)%(b*c)), b*d, mSign).simplify();
+bool Ratio::operator==(const Ratio &r) const{
+    return ((r.mNum == 0 && mNum == 0) || ((r.mNum == mNum) && (r.mDenom == mDenom) && (r.mSign == mSign)));
 }
-
 
 bool Ratio::operator!=(const Ratio &r) const{
     return (!(*this==r));
-}
-
-bool Ratio::operator==(const Ratio &r) const{
-    return ((r.mNum == 0 && mNum == 0) || ((r.mNum == mNum) && (r.mDenom == mDenom) && (r.mSign == mSign)));
 }
 
 bool Ratio::operator<(const Ratio &r)const{
@@ -285,7 +229,6 @@ bool Ratio::operator<=(const Ratio &r)const{
 bool Ratio::operator>=(const Ratio &r)const{
     return(!(*this<r));
 }
-
 
 //Comparing Ratio with float//
 
@@ -338,6 +281,24 @@ bool operator<=(const float &f, const Ratio &r){
 
 bool operator>=(const float &f, const Ratio &r){
     return (r <= f);
+}
+
+//Overload << operator
+std::ostream& operator<< (std::ostream& stream, const Ratio& ratio) {
+    if (ratio == Ratio::Infinite()){
+        stream << "Inf.";
+    }
+    else if (ratio == - Ratio::Infinite())
+    {
+        stream << "-Inf.";
+    }
+    else if (ratio == Ratio::Zero())
+    {
+        stream << "0";
+    }
+    else
+        stream << ratio.signRatio() * (long)ratio.mNum << '/' << ratio.mDenom;
+    return stream;
 }
 
 //Square root of a Rational
@@ -517,3 +478,41 @@ Ratio Ratio::Zero(){
 Ratio Ratio::Infinite(){
     return Ratio(1,0,1);
 }
+
+Ratio Ratio::convertFloatToRatio(const float & number, unsigned nb_iter) {
+    if ((roundf(fabs(number) * 1000) / 1000) == 0 || nb_iter == 0) return Ratio();
+    
+    if ((roundf(fabs(number) * 1000) / 1000) < 1) {
+        return Ratio((convertFloatToRatio(1/fabs(number), nb_iter).invert()),sign(number));
+    }
+    
+    if ((roundf(fabs(number) * 1000) / 1000) > 1) {
+        float q = fabs(std::floor(number));
+        return Ratio(Ratio(q, (long)1) + convertFloatToRatio(fabs(number)-q, nb_iter-1),sign(number));
+    }
+    
+    return Ratio((long)1, (long)1, sign(number));
+}
+
+float Ratio::convertRatioToFloat()const {
+    if (mDenom == 0)
+        throw std::runtime_error("Math error: Attempted to divide by Zero\n");
+    return mNum/(float)mDenom*signRatio();
+}
+
+Ratio& Ratio::simplify() {
+    if (mNum == 0) mDenom = 1;
+    if (mDenom == 0) mNum = 1;
+    long GCD = std::gcd(mNum, mDenom);
+    if (GCD == 1) return *this;
+    mNum /= GCD;
+    mDenom /= GCD;
+    return *this;
+}
+
+Ratio Ratio::invert() const {
+    if (mNum == 0 || mDenom == 0)
+        return *this;
+    return Ratio(mDenom, mNum, mSign);
+}
+
