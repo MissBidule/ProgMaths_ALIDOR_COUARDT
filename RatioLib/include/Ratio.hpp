@@ -175,15 +175,30 @@ public:
     /// \return Returns the cosinus of the rational in degrees
     static Ratio cos(const Ratio &r);
 
+    /// \brief Compute arc cosinus function in degrees
+    /// \param  r: The rational to be computed in the arc cosinus function
+    /// \return Returns the angle in degrees of the rational cosinus
+    static Ratio acos(const Ratio &r);
+
     /// \brief Compute sinus function in degrees
     /// \param  r: The rational to be computed in the sinus function
     /// \return Returns the sinus of the rational in degrees
     static Ratio sin(const Ratio &r);
-
+    
+    /// \brief Compute arc sinus function in degrees
+    /// \param  r: The rational to be computed in the arc sinus function
+    /// \return Returns the angle of the rational sinus
+    static Ratio asin(const Ratio &r);
+    
     /// \brief Compute tangent function in degrees
     /// \param  r: The rational to be computed in the tangent function
     /// \return Returns the tangent of the rational in degrees
     static Ratio tan(const Ratio &r);
+
+    /// \brief Compute arc tangent function in degrees
+    /// \param  r: The rational to be computed in the arc tangent function
+    /// \return Returns the angle of the rational tangent
+    static Ratio atan(const Ratio &r);
 
     /// \brief Compute absolute value of a rational
     /// \param  r: The rational to be computed in the absolute value function

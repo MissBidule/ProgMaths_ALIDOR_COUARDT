@@ -41,10 +41,12 @@ TEST (RatioConstructor, defaultConstructor) {
     Ratio r1;
     ASSERT_EQ (r1.getNum(), 0);
     ASSERT_EQ (r1.getDenom(), 1);
+    ASSERT_EQ (r1.signRatio(), 1);
     
-    Ratio r2((long)1,(long)3);
+    Ratio r2((long)-1,(long)3);
     ASSERT_EQ (r2.getNum(), 1);
     ASSERT_EQ (r2.getDenom(), 3);
+    ASSERT_EQ (r2.signRatio(), -1);
 }
 
 TEST (RatioConstructor, floatConstructor) {
@@ -86,6 +88,7 @@ TEST (RatioConstructor, copyConstructor) {
         r2 = r1;
         ASSERT_EQ (r2.getNum(), r1.getNum());
         ASSERT_EQ (r2.getDenom(), r1.getDenom());
+        ASSERT_EQ (r2.signRatio(), r1.signRatio());
         
     }
 }
@@ -93,43 +96,6 @@ TEST (RatioConstructor, copyConstructor) {
 
 /////////////////////////////////////////////////////
 // arithmetic
-
-//TEST (RatioArithmetic, modulo) {
-//
-//    const size_t maxSize = 1000;  // max size of the tested vectors
-//    std::mt19937 generator(0);
-//    std::uniform_int_distribution<int> uniformIntDistribution(1,maxSize);
-//    std::uniform_real_distribution<double> uniformDistributionValue(-int(maxSize),maxSize);
-//    auto gen = [&uniformDistributionValue, &generator](){ return uniformDistributionValue(generator);};
-//
-//    // run many times the same test with different values
-//    for(int run=0; run<100; ++run){
-//
-//        // define a vector dimension
-//        const size_t dim = uniformIntDistribution(generator);
-//
-//        // generate random data
-//        std::vector<double> data1(dim), data2(dim);
-//        std::generate(data1.begin(), data1.end(), gen);
-//        std::generate(data2.begin(), data2.end(), gen);
-//
-//        // build the corresponding VectorD
-//        VectorD vec1(dim), vec2(dim), vec3(dim);
-//        for(size_t i=0; i<dim; ++i){
-//            vec1[i] = data1[i];
-//            vec2[i] = data2[i];
-//        }
-//
-//        vec3 = vec1 + vec2;
-//        ASSERT_EQ (vec3.size(), dim);
-//
-//        for(size_t i=0; i<dim; ++i){
-//            ASSERT_DOUBLE_EQ (vec3[i], data1[i] + data2[i]);    // EXPECT_DOUBLE_EQ would be fine too
-//        }
-//
-//    }
-//}
-//
 
 TEST (RatioArithmetic, addition) {
 
@@ -150,9 +116,15 @@ TEST (RatioArithmetic, addition) {
         while (data1 == 0)
             data1 = uniformIntDistribution(generator);
         
+        while (data2 == 0)
+            data2 = uniformIntDistribution(generator);
+        
         while (data3 == 0)
             data3 = uniformIntDistribution(generator);
 
+        while (data4 == 0)
+            data4 = uniformIntDistribution(generator);
+        
         // build the corresponding rational
         Ratio r1((long)data1, (long)data2), r2((long)data3, (long)data4), r3;
 
@@ -160,6 +132,13 @@ TEST (RatioArithmetic, addition) {
         
         ASSERT_NEAR(data1/(float)data2 + data3/(float)data4, r3.getNum()/(float)r3.getDenom()*r3.signRatio(), 0.000015);
         
+        r3 = r1 + data3;
+        
+        ASSERT_NEAR(data1/(float)data2 + data3, r3.getNum()/(float)r3.getDenom()*r3.signRatio(), 0.000015);
+        
+        r3 = data1 + r2;
+        
+        ASSERT_NEAR(data1 + data3/(float)data4, r3.getNum()/(float)r3.getDenom()*r3.signRatio(), 0.000015);
     }
 }
 
@@ -182,15 +161,29 @@ TEST (RatioArithmetic, substraction) {
         while (data1 == 0)
             data1 = uniformIntDistribution(generator);
         
+        while (data2 == 0)
+            data2 = uniformIntDistribution(generator);
+        
         while (data3 == 0)
             data3 = uniformIntDistribution(generator);
 
+        while (data4 == 0)
+            data4 = uniformIntDistribution(generator);
+        
         // build the corresponding rational
         Ratio r1((long)data1, (long)data2), r2((long)data3, (long)data4), r3;
         
         r3 = r1 - r2;
         
         ASSERT_NEAR((data1/(float)data2) - (data3/(float)data4), r3.getNum()/(float)r3.getDenom()*r3.signRatio(), 0.000015);
+        
+        r3 = r1 - data3;
+        
+        ASSERT_NEAR((data1/(float)data2) - data3, r3.getNum()/(float)r3.getDenom()*r3.signRatio(), 0.000015);
+        
+        r3 = data2 - r2;
+        
+        ASSERT_NEAR(data2 - (data3/(float)data4), r3.getNum()/(float)r3.getDenom()*r3.signRatio(), 0.000015);
         
     }
 }
@@ -221,6 +214,55 @@ TEST (RatioArithmetic, unaryMinus) {
     }
 }
 
+TEST (RatioArithmetic, modulo) {
+
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 100;
+    std::uniform_int_distribution<int> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+        
+        // generate random data
+        int data1 = uniformIntDistribution(generator);
+        int data2 = uniformIntDistribution(generator);
+        int data3 = uniformIntDistribution(generator);
+        int data4 = uniformIntDistribution(generator);
+        
+        while (data1 == 0)
+            data1 = uniformIntDistribution(generator);
+        
+        while (data2 == 0)
+            data2 = uniformIntDistribution(generator);
+        
+        while (data3 == 0)
+            data3 = uniformIntDistribution(generator);
+        
+        while (data4 == 0)
+            data4 = uniformIntDistribution(generator);
+        
+        // build the corresponding rational
+        
+        Ratio r1((long)data1, (long)data2), r2((long)data3, (long)data4), r3;
+        
+        //The fact that there are modulos that works way better in rational provokes some errors :
+        //ex : 2%0.667=0.667 <=> (2/1)%(2/3)=0
+        r3 = r1 % r2;
+        
+        EXPECT_NEAR(fmod((data1/(float)data2), (data3/(float)data4)), r3.getNum()/(float)r3.getDenom()*r3.signRatio(), 0.000015);
+        
+        r3 = r1 % data3;
+        
+        EXPECT_NEAR(fmod((data1/(float)data2),data3), r3.getNum()/(float)r3.getDenom()*r3.signRatio(), 0.000015);
+        
+        r3 = data2 % r2;
+        
+        EXPECT_NEAR(fmod(data2,(data3/(float)data4)), r3.getNum()/(float)r3.getDenom()*r3.signRatio(), 0.000015);
+    }
+}
+
+
 TEST (RatioArithmetic, multiply) {
 
     std::mt19937 generator(0);
@@ -248,8 +290,13 @@ TEST (RatioArithmetic, multiply) {
         r3 = r1*r2;
         //precision expected for a 10x10 operation
         ASSERT_NEAR((data1/(float)data2) * (data3/(float)data4), r3.getNum()/(float)r3.getDenom()*r3.signRatio(), 0.00015);
+        
         r3 = r1*data2;
         ASSERT_NEAR((data1/(float)data2) * data2, r3.getNum()/(float)r3.getDenom()*r3.signRatio(), 0.00015);
+        
+        r3 = data1*r2;
+        //precision expected for a 10x10 operation
+        ASSERT_NEAR(data1 * (data3/(float)data4), r3.getNum()/(float)r3.getDenom()*r3.signRatio(), 0.00015);
     }
         
 }
@@ -282,111 +329,15 @@ TEST (RatioArithmetic, division) {
         
         r3 = r1/r2;
         ASSERT_NEAR((data1/(float)data2)/(data3/(float)data4), r3.getNum()/(float)r3.getDenom()*r3.signRatio(), 0.000015);
+        
         r3 = r1/data2;
         ASSERT_NEAR((data1/(float)data2)/data2, r3.getNum()/(float)r3.getDenom()*r3.signRatio(), 0.000015);
+        
+        r3 = data1/r2;
+        ASSERT_NEAR(data1/(data3/(float)data4), r3.getNum()/(float)r3.getDenom()*r3.signRatio(), 0.000015);
     }
         
 }
-
-//TEST (RatioComparison, greaterThan) {
-//
-//    std::mt19937 generator(0);
-//    //max value
-//    const size_t maxValue = 10;
-//    std::uniform_real_distribution<float> uniformDistribution(-(int)maxValue,(int)maxValue);
-//
-//    // run many times the same test with different values
-//    for(int run=0; run<100; ++run){
-//
-//        // generate random data
-//        float data1 = uniformDistribution(generator);
-//        float data2 = uniformDistribution(generator);
-//
-//        // build the corresponding rational
-//        Ratio r1(data1), r2(data2), r3;
-//
-//        r3 = r1/r2;
-//        ASSERT_NEAR(data1/data2, r3.getNum()/(float)r3.getDenom(), 0.000015);
-//        r3 = r1/data2;
-//        ASSERT_NEAR(data1/data2, r3.getNum()/(float)r3.getDenom(), 0.000015);
-//    }
-//
-//}
-
-//TEST (RatioComparison, LessThan) {
-//
-//    std::mt19937 generator(0);
-//    //max value
-//    const size_t maxValue = 10;
-//    std::uniform_real_distribution<float> uniformDistribution(-(int)maxValue,(int)maxValue);
-//
-//    // run many times the same test with different values
-//    for(int run=0; run<100; ++run){
-//
-//        // generate random data
-//        float data1 = uniformDistribution(generator);
-//        float data2 = uniformDistribution(generator);
-//
-//        // build the corresponding rational
-//        Ratio r1(data1), r2(data2), r3;
-//
-//        r3 = r1/r2;
-//        ASSERT_NEAR(data1/data2, r3.getNum()/(float)r3.getDenom(), 0.000015);
-//        r3 = r1/data2;
-//        ASSERT_NEAR(data1/data2, r3.getNum()/(float)r3.getDenom(), 0.000015);
-//    }
-//
-//}
-
-//TEST (RatioComparison, greaterEqual) {
-//
-//    std::mt19937 generator(0);
-//    //max value
-//    const size_t maxValue = 10;
-//    std::uniform_real_distribution<float> uniformDistribution(-(int)maxValue,(int)maxValue);
-//
-//    // run many times the same test with different values
-//    for(int run=0; run<100; ++run){
-//
-//        // generate random data
-//        float data1 = uniformDistribution(generator);
-//        float data2 = uniformDistribution(generator);
-//
-//        // build the corresponding rational
-//        Ratio r1(data1), r2(data2), r3;
-//
-//        r3 = r1/r2;
-//        ASSERT_NEAR(data1/data2, r3.getNum()/(float)r3.getDenom(), 0.000015);
-//        r3 = r1/data2;
-//        ASSERT_NEAR(data1/data2, r3.getNum()/(float)r3.getDenom(), 0.000015);
-//    }
-//
-//}
-
-//TEST (RatioComparison, lessEqual) {
-//
-//    std::mt19937 generator(0);
-//    //max value
-//    const size_t maxValue = 10;
-//    std::uniform_real_distribution<float> uniformDistribution(-(int)maxValue,(int)maxValue);
-//
-//    // run many times the same test with different values
-//    for(int run=0; run<100; ++run){
-//
-//        // generate random data
-//        float data1 = uniformDistribution(generator);
-//        float data2 = uniformDistribution(generator);
-//
-//        // build the corresponding rational
-//        Ratio r1(data1), r2(data2), r3;
-//
-//        r3 = r1/r2;
-//        ASSERT_NEAR(data1/data2, r3.getNum()/(float)r3.getDenom(), 0.000015);
-//        r3 = r1/data2;
-//        ASSERT_NEAR(data1/data2, r3.getNum()/(float)r3.getDenom(), 0.000015);
-//    }
-//
-//}
 
 TEST (RatioComparison, equal) {
 
@@ -402,7 +353,7 @@ TEST (RatioComparison, equal) {
         float data = uniformDistribution(generator);
 
         // build the corresponding rational
-        Ratio r1(data), r2(data), r3 (data*-1);
+        Ratio r1(data), r2(data), r3 (-data);
 
         ASSERT_TRUE(r1==r2);
         ASSERT_FALSE(r1==r3);
@@ -410,108 +361,274 @@ TEST (RatioComparison, equal) {
 
 }
 
-//TEST (RatioComparison, notEqual) {
-//
-//    std::mt19937 generator(0);
-//    //max value
-//    const size_t maxValue = 10;
-//    std::uniform_real_distribution<float> uniformDistribution(-(int)maxValue,(int)maxValue);
-//
-//    // run many times the same test with different values
-//    for(int run=0; run<100; ++run){
-//
-//        // generate random data
-//        float data1 = uniformDistribution(generator);
-//        float data2 = uniformDistribution(generator);
-//
-//        // build the corresponding rational
-//        Ratio r1(data1), r2(data2), r3;
-//
-//        r3 = r1/r2;
-//        ASSERT_NEAR(data1/data2, r3.getNum()/(float)r3.getDenom(), 0.000015);
-//        r3 = r1/data2;
-//        ASSERT_NEAR(data1/data2, r3.getNum()/(float)r3.getDenom(), 0.000015);
-//    }
-//
-//}
+TEST (RatioComparison, notEqual) {
+
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_real_distribution<float> uniformDistribution(-(int)maxValue,(int)maxValue);
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+
+        // generate random data
+        float data = uniformDistribution(generator);
+
+        // build the corresponding rational
+        Ratio r1(data), r2(data), r3 (-data);
+
+        ASSERT_FALSE(r1!=r2);
+        ASSERT_TRUE(r1!=r3);
+    }
+
+
+}
+
+TEST (RatioComparison, LessThan) {
+
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+        
+        // generate random data
+        int data1 = uniformIntDistribution(generator);
+        int data2 = uniformIntDistribution(generator);
+        
+        while (data2 == 0)
+            data2 = uniformIntDistribution(generator);
+        
+        // build the corresponding rational
+        Ratio r1((long)data1, (long)data2), r2(r1), r3(r1+1), r4(r1-1);
+        
+        ASSERT_FALSE(r1<r2);
+        ASSERT_TRUE(r1<r3);
+        ASSERT_FALSE(r1<r4);
+    }
+
+}
+
+TEST (RatioComparison, greaterThan) {
+
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+        
+        // generate random data
+        int data1 = uniformIntDistribution(generator);
+        int data2 = uniformIntDistribution(generator);
+        
+        while (data2 == 0)
+            data2 = uniformIntDistribution(generator);
+        
+        // build the corresponding rational
+        Ratio r1((long)data1, (long)data2), r2(r1), r3(r1+1), r4(r1-1);
+        
+        ASSERT_FALSE(r1>r2);
+        ASSERT_FALSE(r1>r3);
+        ASSERT_TRUE(r1>r4);
+    }
+
+}
+
+TEST (RatioComparison, lessEqual) {
+
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+        
+        // generate random data
+        int data1 = uniformIntDistribution(generator);
+        int data2 = uniformIntDistribution(generator);
+        
+        while (data2 == 0)
+            data2 = uniformIntDistribution(generator);
+        
+        // build the corresponding rational
+        Ratio r1((long)data1, (long)data2), r2(r1), r3(r1+1), r4(r1-1);
+        
+        ASSERT_TRUE(r1<=r2);
+        ASSERT_TRUE(r1<=r3);
+        ASSERT_FALSE(r1<=r4);
+    }
+
+}
+
+TEST (RatioComparison, greaterEqual) {
+
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+        
+        // generate random data
+        int data1 = uniformIntDistribution(generator);
+        int data2 = uniformIntDistribution(generator);
+        
+        while (data2 == 0)
+            data2 = uniformIntDistribution(generator);
+        
+        // build the corresponding rational
+        Ratio r1((long)data1, (long)data2), r2(r1), r3(r1+1), r4(r1-1);
+        
+        ASSERT_TRUE(r1>=r2);
+        ASSERT_FALSE(r1>=r3);
+        ASSERT_TRUE(r1>=r4);
+    }
+
+}
 
 ///////////////////////////////////////////////////////
 //// Various functions
-//
-//TEST (RatioFunction, cosinus) {
-//
-//    std::mt19937 generator(0);
-//    //max value
-//    const size_t maxValue = 10;
-//    std::uniform_real_distribution<float> uniformDistribution(-(int)maxValue,(int)maxValue);
-//
-//    // run many times the same test with different values
-//    for(int run=0; run<100; ++run){
-//
-//        // generate random data
-//        float data1 = uniformDistribution(generator);
-//        float data2 = uniformDistribution(generator);
-//
-//        // build the corresponding rational
-//        Ratio r1(data1), r2(data2), r3;
-//
-//        r3 = r1/r2;
-//        ASSERT_NEAR(data1/data2, r3.getNum()/(float)r3.getDenom(), 0.000015);
-//        r3 = r1/data2;
-//        ASSERT_NEAR(data1/data2, r3.getNum()/(float)r3.getDenom(), 0.000015);
-//    }
-//
-//}
 
-//TEST (RatioFunction, sinus) {
-//
-//    std::mt19937 generator(0);
-//    //max value
-//    const size_t maxValue = 10;
-//    std::uniform_real_distribution<float> uniformDistribution(-(int)maxValue,(int)maxValue);
-//
-//    // run many times the same test with different values
-//    for(int run=0; run<100; ++run){
-//
-//        // generate random data
-//        float data1 = uniformDistribution(generator);
-//        float data2 = uniformDistribution(generator);
-//
-//        // build the corresponding rational
-//        Ratio r1(data1), r2(data2), r3;
-//
-//        r3 = r1/r2;
-//        ASSERT_NEAR(data1/data2, r3.getNum()/(float)r3.getDenom(), 0.000015);
-//        r3 = r1/data2;
-//        ASSERT_NEAR(data1/data2, r3.getNum()/(float)r3.getDenom(), 0.000015);
-//    }
-//
-//}
+TEST (RatioFunction, cosinus) {
 
-//TEST (RatioFunction, tangent) {
-//
-//    std::mt19937 generator(0);
-//    //max value
-//    const size_t maxValue = 10;
-//    std::uniform_real_distribution<float> uniformDistribution(-(int)maxValue,(int)maxValue);
-//
-//    // run many times the same test with different values
-//    for(int run=0; run<100; ++run){
-//
-//        // generate random data
-//        float data1 = uniformDistribution(generator);
-//        float data2 = uniformDistribution(generator);
-//
-//        // build the corresponding rational
-//        Ratio r1(data1), r2(data2), r3;
-//
-//        r3 = r1/r2;
-//        ASSERT_NEAR(data1/data2, r3.getNum()/(float)r3.getDenom(), 0.000015);
-//        r3 = r1/data2;
-//        ASSERT_NEAR(data1/data2, r3.getNum()/(float)r3.getDenom(), 0.000015);
-//    }
-//
-//}
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_real_distribution<float> uniformDistribution(-(int)maxValue,(int)maxValue);
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+
+        // generate random data
+        float data1 = uniformDistribution(generator);
+
+        // build the corresponding rational
+        Ratio r1(data1), r2;
+        
+        r2 = Ratio::cos(r1);
+        ASSERT_NEAR(std::cos(data1*M_PI/180.0), r2.getNum()/(float)r2.getDenom()*r2.signRatio(), 0.0015);
+    }
+
+}
+
+TEST (RatioFunction, arcCosinus) {
+
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 1;
+    std::uniform_real_distribution<float> uniformDistribution(-(int)maxValue,(int)maxValue);
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+
+        // generate random data
+        float data1 = uniformDistribution(generator);
+
+        // build the corresponding rational
+        Ratio r1(data1), r2;
+        
+        r2 = Ratio::acos(r1);
+        ASSERT_NEAR(std::acos(data1)*180.0/M_PI, r2.getNum()/(float)r2.getDenom()*r2.signRatio(), 0.0015);
+    }
+
+
+}
+
+TEST (RatioFunction, sinus) {
+
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_real_distribution<float> uniformDistribution(-(int)maxValue,(int)maxValue);
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+
+        // generate random data
+        float data1 = uniformDistribution(generator);
+
+        // build the corresponding rational
+        Ratio r1(data1), r2;
+        
+        r2 = Ratio::sin(r1);
+        ASSERT_NEAR(std::sin(data1*M_PI/180.0), r2.getNum()/(float)r2.getDenom()*r2.signRatio(), 0.0015);
+    }
+
+}
+
+TEST (RatioFunction, arcSinus) {
+    
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 1;
+    std::uniform_real_distribution<float> uniformDistribution(-(int)maxValue,(int)maxValue);
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+
+        // generate random data
+        float data1 = uniformDistribution(generator);
+
+        // build the corresponding rational
+        Ratio r1(data1), r2;
+        
+        r2 = Ratio::asin(r1);
+        ASSERT_NEAR(std::asin(data1)*180.0/M_PI, r2.getNum()/(float)r2.getDenom()*r2.signRatio(), 0.0015);
+    }
+
+
+}
+
+TEST (RatioFunction, tangent) {
+
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_real_distribution<float> uniformDistribution(-(int)maxValue,(int)maxValue);
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+
+        // generate random data
+        float data1 = uniformDistribution(generator);
+
+        // build the corresponding rational
+        Ratio r1(data1), r2;
+        
+        r2 = Ratio::tan(r1);
+        ASSERT_NEAR(std::tan(data1*M_PI/180.0), r2.getNum()/(float)r2.getDenom()*r2.signRatio(), 0.0015);
+    }
+
+}
+
+TEST (RatioFunction, arcTangent) {
+    
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 1;
+    std::uniform_real_distribution<float> uniformDistribution(-(int)maxValue,(int)maxValue);
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+
+        // generate random data
+        float data1 = uniformDistribution(generator);
+
+        // build the corresponding rational
+        Ratio r1(data1), r2;
+        
+        r2 = Ratio::atan(r1);
+        ASSERT_NEAR(std::atan(data1)*180.0/M_PI, r2.getNum()/(float)r2.getDenom()*r2.signRatio(), 0.0015);
+    }
+
+
+}
 
 //TEST (RatioFunction, absolute) {
 //

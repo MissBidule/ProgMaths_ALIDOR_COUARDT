@@ -237,7 +237,6 @@ Ratio operator/(const float &f, const Ratio &r){
     return f * r.invert();
 }
 
-///////////////////////////////////////////////
 //Overload % operator
 Ratio Ratio::operator%(const Ratio &r) const{
     long a = mNum;
@@ -349,7 +348,7 @@ Ratio Ratio::sqrt(const Ratio &r){
     
     if (r.signRatio() == -1)
         throw std::runtime_error("Math error: Attempted to squared a negative value\n");
-    if (b() == 0)
+    if (b == 0)
         return Infinite();
 
     a = std::sqrt(a);
@@ -422,15 +421,31 @@ Ratio Ratio::cos(const Ratio &r){
     return result;*/
 }
 
+//ArcCos in degrees
+Ratio Ratio::acos(const Ratio &r){
+    return Ratio(convertFloatToRatio((std::acos(r.convertRatioToFloat()))*180.0/M_PI));
+}
 
 //Sinus in degrees
 Ratio Ratio::sin(const Ratio &r){
     return Ratio(convertFloatToRatio(std::sin((r.convertRatioToFloat())*M_PI/180.0)));
 }
 
+//ArcSin in degrees
+Ratio Ratio::asin(const Ratio &r){
+    return Ratio(convertFloatToRatio((std::asin(r.convertRatioToFloat()))*180.0/M_PI));
+}
+
 //Tangent in degrees
 Ratio Ratio::tan(const Ratio &r){
-    return Ratio(sin(r)/cos(r));
+    return Ratio(convertFloatToRatio(std::tan((r.convertRatioToFloat())*M_PI/180.0)));
+    //sin/cos precision not enough
+    //return Ratio(sin(r)/cos(r));
+}
+
+//ArcTan in degrees
+Ratio Ratio::atan(const Ratio &r){
+    return Ratio(convertFloatToRatio((std::atan(r.convertRatioToFloat()))*180.0/M_PI));
 }
 
 Ratio Ratio::abs(const Ratio &r){
