@@ -6,9 +6,6 @@
 #include "RatioFunctions.hpp"
 #include "RatioOperators.hpp"
 
-//#include "Ratio.hpp"
-
-
 int main() {
 
     //testing file to use if you want to make rational operations
@@ -21,8 +18,8 @@ int main() {
     //std::cout << r*f << std::endl;
     
     std::cout << r4%r3 << " " << r2%r3 << " " << r4%r3 << " " << -5%-4 << std::endl;
-    std::cout << (r+r4).convertRatioToFloat<float>() << std::endl;
-    std::cout << r2.convertRatioToFloat<float>() << std::endl;
+    std::cout << (r+r4).convertRatioToFloat() << std::endl;
+    std::cout << r2.convertRatioToFloat() << std::endl;
 
     return 0;
 }

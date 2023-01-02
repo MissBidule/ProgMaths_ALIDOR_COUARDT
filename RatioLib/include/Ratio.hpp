@@ -5,7 +5,7 @@
 #include <cmath>
 
 // Doxygen menu
-/// \version 0.1
+/// \version (a lot at this point...)
 /// \mainpage
 /// \image html myImage.jpg
 /// \tableofcontents

@@ -1,9 +1,6 @@
 //
 //  RatioFunctions.hpp
 //  Ratio
-//
-//  Created by MissBidule on 02/01/2023.
-//
 
 #ifndef RatioFunctions_h
 #define RatioFunctions_h

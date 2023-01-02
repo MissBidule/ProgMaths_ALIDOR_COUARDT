@@ -1,9 +1,6 @@
 //
 //  RatioOperators.hpp
 //  Ratio
-//
-//  Created by MissBidule on 02/01/2023.
-//
 
 #ifndef RatioOperators_h
 #define RatioOperators_h

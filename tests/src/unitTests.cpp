@@ -9,14 +9,6 @@
 #include "RatioFunctions.hpp"
 #include "RatioOperators.hpp"
 
-//#include "Ratio.hpp"
- 
-//tester :
-//toutes les fonctions //manque celles pas déjà faites
-//les cas particuliers
-//trier les fonctions
-//tout passer en template
-
 /////////////////////////////////////////////////////
 // other operations
 

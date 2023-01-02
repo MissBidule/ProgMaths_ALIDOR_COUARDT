@@ -1,9 +1,6 @@
 //
 //  RatioConstructors.hpp
 //  Ratio
-//
-//  Created by MissBidule on 02/01/2023.
-//
 
 #ifndef RatioConstructors_h
 #define RatioConstructors_h
