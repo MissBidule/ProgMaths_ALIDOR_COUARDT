@@ -1,4 +1,4 @@
-Target dependency graph (12 targets)
+Target dependency graph (10 targets)
 ZERO_CHECK in Ratio, no dependencies
 Ratio in Ratio, no dependencies
 gtest in Ratio, no dependencies
@@ -28,6 +28,3 @@ gtest_main in Ratio (explicit)
 main1 in Ratio (explicit)
 main2 in Ratio (explicit)
 main3 in Ratio (explicit)
-html in Ratio, no dependencies
-install in Ratio, depends on:
-ALL_BUILD in Ratio (explicit)

@@ -263,7 +263,7 @@ TEST (RatioArithmetic, modulo) {
 }
 
 
-TEST (RatioArithmetic, multiply) {
+TEST (RatioArithmetic, multiplication) {
 
     std::mt19937 generator(0);
     //max value
@@ -649,9 +649,9 @@ TEST (RatioFunction, absolute) {
         
         r2 = Ratio::abs(r1);
         
-        ASSERT_EQ (r2.getNum(), r1.getNum());
-        ASSERT_EQ (r2.getDenom(), r1.getDenom());
-        ASSERT_EQ (r2.signRatio(), 1);
+        ASSERT_EQ(r2.getNum(), r1.getNum());
+        ASSERT_EQ(r2.getDenom(), r1.getDenom());
+        ASSERT_EQ(r2.signRatio(), 1);
         
     }
 
@@ -675,7 +675,7 @@ TEST (RatioFunction, floor) {
         
         r2 = Ratio::floor(r1);
         
-        ASSERT_EQ (std::floor(data1), r2.getNum()/r2.getDenom()*r2.signRatio());
+        ASSERT_EQ(std::floor(data1), r2.getNum()/r2.getDenom()*r2.signRatio());
     }
 
 }
@@ -699,6 +699,7 @@ TEST (RatioFunction, floor) {
 //        Ratio r1(data1), r2(data2), r3;
 //
 //        r3 = Ratio::gcrd(r1, r2);
+//        //Here we need a gcd function between 2 real numbers
 //        ASSERT_NEAR(gcd(data1,data2), r3.getNum()/(float)r3.getDenom(), 0.15);
 //    }
 //
@@ -722,7 +723,7 @@ TEST (RatioFunction, logarithm) {
         
         r2 = Ratio::log(r1);
 
-        ASSERT_NEAR (std::log(data1), r2.getNum()/(float)r2.getDenom()*r2.signRatio(), 0.000015);
+        ASSERT_NEAR(std::log(data1), r2.getNum()/(float)r2.getDenom()*r2.signRatio(), 0.000015);
     }
 
 }
@@ -751,10 +752,6 @@ TEST (RatioFunction, power) {
         Ratio r1((long)data1, (long)data2), r2;
 
         r2 = Ratio::pow(r1,data3);
-        
-        std::cout << "Expected pow(" << data1 << "/" << data2 << "," << data3 << ") = " << pow(data1/(float)data2, data3) << std::endl;
-
-        std::cout << "Outputed pow(" << r1 << "," << data3 << ") = " << Ratio::pow(r1, data3).convertRatioToFloat() << std::endl;
         
         ASSERT_NEAR(std::pow(data1/(float)data2, data3), r2.getNum()/(float)r2.getDenom()*r2.signRatio(), 0.00015);
     }
@@ -947,59 +944,590 @@ TEST (RatioFunction, invert) {
     }
 }
 
-
-
 ///////////////////////////////////////////////////////
-//// exception
-//
-//TEST (VectorDException, loadExceptionMessage) {
-//    const std::string filename = "filename.txt";
-//    const std::string expectedException = "VectorD::load: error: can not open file: " + filename;
-//
-//    // check the exception message
-//    try{
-//        VectorD vec;
-//        vec.load(filename);
-//    }
-//    catch( const std::exception &e){
-//        EXPECT_TRUE( std::string(e.what()).find(expectedException) == 0);
-//    }
-//}
-//
-//
-//TEST (VectorDException, loadExceptionType) {
-//
-//    // check exception type
-//    VectorD vec;
-//    EXPECT_THROW(vec.load("filename.txt"), std::ios_base::failure);
-//}
-//
-//TEST (VectorDException, plusExceptionMessage) {
-//    const std::string expectedException = "VectorD::operator+: operand with incompatible size : ";
-//
-//    const size_t maxSize = 1000;  // max size of the tested vectors
-//    std::mt19937 generator(0);
-//    std::uniform_int_distribution<int> uniformIntDistribution(1,maxSize);
-//    std::uniform_real_distribution<double> uniformDistributionValue(-int(maxSize),maxSize);
-//    auto gen = [&uniformDistributionValue, &generator](){ return uniformDistributionValue(generator);};
-//
-//    // check the exception message
-//    try{
-//        // define a vector dimension
-//        const size_t dim = uniformIntDistribution(generator);
-//
-//        // build the corresponding VectorD
-//        VectorD vec1(dim), vec2(dim+1);
-//
-//        vec1 + vec2;
-//    }
-//    catch( const std::exception &e){
-//        EXPECT_TRUE( std::string(e.what()).find(expectedException) == 0);
-//    }
-//}
+//// Infini, zero and other special operation tests
+
+TEST (SpecialOperations, addition) {
+    
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    
+    Ratio r2(Ratio::Zero()), r3(Ratio::Infinite()), r4(-Ratio::Infinite());
+    
+    ASSERT_EQ((r2+r3), Ratio::Infinite());
+    ASSERT_EQ((r2+r4), -Ratio::Infinite());
+    
+    try{
+        r3+r4;
+        }
+        catch( const std::exception &e){
+            EXPECT_TRUE( std::string(e.what()).find("Math error: Inf - Inf undetermined\n") == 0);
+        }
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+        
+        // generate random data
+        int data1 = uniformIntDistribution(generator);
+        int data2 = uniformIntDistribution(generator);
+        
+        while (data2 == 0)
+            data2 = uniformIntDistribution(generator);
+        
+        // build the corresponding rational
+        Ratio r1((long)data1, (long)data2);
+        
+        ASSERT_EQ((r1+r2), r1);
+        ASSERT_EQ(r1+r3, Ratio::Infinite());
+        ASSERT_EQ(r1+r4, -Ratio::Infinite());
+        
+    }
+    
+}
+
+TEST (SpecialOperations, substraction) {
+    
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    
+    Ratio r2(Ratio::Zero()), r3(Ratio::Infinite()), r4(-Ratio::Infinite());
+    
+    ASSERT_EQ((r2-r3), -Ratio::Infinite());
+    ASSERT_EQ((r2-r4), Ratio::Infinite());
+    ASSERT_EQ((r3-r4), Ratio::Infinite());
+    
+    try{
+        r4-r3;
+        }
+        catch( const std::exception &e){
+            EXPECT_TRUE( std::string(e.what()).find("Math error: Inf - Inf undetermined\n") == 0);
+        }
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+        
+        // generate random data
+        int data1 = uniformIntDistribution(generator);
+        int data2 = uniformIntDistribution(generator);
+        
+        while (data2 == 0)
+            data2 = uniformIntDistribution(generator);
+        
+        // build the corresponding rational
+        Ratio r1((long)data1, (long)data2);
+        
+        ASSERT_EQ((r1-r2), r1);
+        ASSERT_EQ((r1-r3), -Ratio::Infinite());
+        ASSERT_EQ((r1-r4), Ratio::Infinite());
+        
+    }
+    
+}
+
+TEST (SpecialOperations, unaryMinus) {
+    
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    
+    Ratio r2(Ratio::Zero()), r3(Ratio::Infinite()), r4(-Ratio::Infinite());
+    
+    ASSERT_EQ(r2, -r2);
+    ASSERT_EQ(r3, -r4);
+    ASSERT_EQ(-r4, r3);
+    
+}
+
+TEST (SpecialOperations, modulo) {
+    
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    
+    Ratio r2(Ratio::Zero()), r3(Ratio::Infinite());
+    
+    ASSERT_EQ((r2%r3), r2);
+    ASSERT_EQ((r3%r2), r3);
+    
+    try{
+        r3%r3;
+        }
+        catch( const std::exception &e){
+            EXPECT_TRUE( std::string(e.what()).find("Math error: Inf % Inf undetermined\n") == 0);
+        }
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+        
+        // generate random data
+        int data1 = uniformIntDistribution(generator);
+        int data2 = uniformIntDistribution(generator);
+        
+        while (data2 == 0)
+            data2 = uniformIntDistribution(generator);
+        
+        // build the corresponding rational
+        Ratio r1((long)data1, (long)data2);
+        
+        ASSERT_EQ((r1%r2), r1);
+        ASSERT_EQ((r2%r1), r2);
+        ASSERT_EQ((r1%r3), r1);
+        
+    }
+    
+}
+
+TEST (SpecialOperations, multiplication) {
+    
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    
+    Ratio r2(Ratio::Zero()), r3(Ratio::Infinite()), r4(-r3);
+    
+    ASSERT_EQ((r3*r4), r4);
+    ASSERT_EQ((r3*r3), r3);
+    ASSERT_EQ((r4*r4), r3);
+    
+    try{
+        r2*r3;
+        }
+        catch( const std::exception &e){
+            EXPECT_TRUE( std::string(e.what()).find("Math error: Inf x 0 undetermined\n") == 0);
+        }
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+        
+        // generate random data
+        int data1 = uniformIntDistribution(generator);
+        int data2 = uniformIntDistribution(generator);
+        
+        while (data1 == 0)
+            data1 = uniformIntDistribution(generator);
+        while (data2 == 0)
+            data2 = uniformIntDistribution(generator);
+        
+        // build the corresponding rational
+        Ratio r1((long)data1, (long)data2);
+        
+        ASSERT_EQ((r1*r2), r2);
+        ASSERT_EQ((r1*r3), r3*r1.signRatio());
+        ASSERT_EQ((r1*r4), r4*r1.signRatio());
+        
+    }
+    
+}
+
+TEST (SpecialOperations, division) {
+    
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    
+    Ratio r2(Ratio::Zero()), r3(Ratio::Infinite());
+    
+    ASSERT_EQ((r2/r3), r2);
+    
+    try{
+        r2/r2;
+        }
+        catch( const std::exception &e){
+            EXPECT_TRUE( std::string(e.what()).find("Math error: Attempted to divide by Zero\n") == 0);
+        }
+
+    try{
+        r3/r2;
+        }
+        catch( const std::exception &e){
+            EXPECT_TRUE( std::string(e.what()).find("Math error: Attempted to divide by Zero\n") == 0);
+        }
+    
+    try{
+        r3/r3;
+        }
+        catch( const std::exception &e){
+            EXPECT_TRUE( std::string(e.what()).find("Math error: Inf / Inf undetermined\n") == 0);
+        }
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+        
+        // generate random data
+        int data1 = uniformIntDistribution(generator);
+        int data2 = uniformIntDistribution(generator);
+        
+        while (data1 == 0)
+            data1 = uniformIntDistribution(generator);
+        while (data2 == 0)
+            data2 = uniformIntDistribution(generator);
+        
+        // build the corresponding rational
+        Ratio r1((long)data1, (long)data2);
+        
+        try{
+            r1/r2;
+            }
+            catch( const std::exception &e){
+                EXPECT_TRUE( std::string(e.what()).find("Math error: Attempted to divide by Zero\n") == 0);
+            }
+        
+        ASSERT_EQ((r1/r3), r2);
+        ASSERT_EQ((r3/r1), r3);
+        
+    }
+    
+}
+
+TEST (SpecialOperations, equal) {
+
+    Ratio r2(Ratio::Zero()), r3(Ratio::Infinite()), r4(-r3);
+    
+    ASSERT_TRUE(r2==-r2);
+    ASSERT_TRUE(r3==r3);
+    ASSERT_FALSE(r3==r4);
+
+}
+
+TEST (SpecialOperations, notEqual) {
+
+    Ratio r2(Ratio::Zero()), r3(Ratio::Infinite()), r4(-r3);
+    
+    ASSERT_FALSE(r2!=-r2);
+    ASSERT_FALSE(r3!=r3);
+    ASSERT_TRUE(r3!=r4);
+
+}
+
+TEST (SpecialOperations, LessThan) {
+
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_int_distribution<int> uniformIntDistribution(1,(int)maxValue);
+
+    Ratio r2(Ratio::Zero()), r3(Ratio::Infinite()), r4(-r3);
+    
+    ASSERT_FALSE(r2<-r2);
+    ASSERT_FALSE(-r2<r2);
+    ASSERT_TRUE(r2<r3);
+    ASSERT_FALSE(r2<r4);
+    ASSERT_FALSE(r3<r3);
+    ASSERT_FALSE(r3<r4);
+    ASSERT_TRUE(r4<r3);
+    
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+        
+        // generate random data
+        int data1 = uniformIntDistribution(generator);
+        int data2 = uniformIntDistribution(generator);
+        
+        // build the corresponding rational
+        Ratio r1((long)data1, (long)data2);
+        
+        ASSERT_FALSE(r1<r2);
+        ASSERT_TRUE(-r1<r2);
+        ASSERT_TRUE(r1<r3);
+        ASSERT_FALSE(r1<r4);
+    }
 
 
+}
 
+TEST (SpecialOperations, greaterThan) {
+
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_int_distribution<int> uniformIntDistribution(1,(int)maxValue);
+
+    Ratio r2(Ratio::Zero()), r3(Ratio::Infinite()), r4(-r3);
+    
+    ASSERT_FALSE(r2>-r2);
+    ASSERT_FALSE(-r2>r2);
+    ASSERT_FALSE(r2>r3);
+    ASSERT_TRUE(r2>r4);
+    ASSERT_FALSE(r3>r3);
+    ASSERT_TRUE(r3>r4);
+    ASSERT_FALSE(r4>r3);
+    
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+        
+        // generate random data
+        int data1 = uniformIntDistribution(generator);
+        int data2 = uniformIntDistribution(generator);
+        
+        // build the corresponding rational
+        Ratio r1((long)data1, (long)data2);
+        
+        ASSERT_TRUE(r1>r2);
+        ASSERT_FALSE(-r1>r2);
+        ASSERT_FALSE(r1>r3);
+        ASSERT_TRUE(r1>r4);
+    }
+
+}
+
+TEST (SpecialOperations, lessEqual) {
+
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_int_distribution<int> uniformIntDistribution(1,(int)maxValue);
+
+    Ratio r2(Ratio::Zero()), r3(Ratio::Infinite()), r4(-r3);
+    
+    ASSERT_TRUE(r2<=-r2);
+    ASSERT_TRUE(-r2<=r2);
+    ASSERT_TRUE(r2<=r3);
+    ASSERT_FALSE(r2<=r4);
+    ASSERT_TRUE(r3<=r3);
+    ASSERT_FALSE(r3<=r4);
+    ASSERT_TRUE(r4<=r3);
+    
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+        
+        // generate random data
+        int data1 = uniformIntDistribution(generator);
+        int data2 = uniformIntDistribution(generator);
+        
+        // build the corresponding rational
+        Ratio r1((long)data1, (long)data2);
+        
+        ASSERT_FALSE(r1<=r2);
+        ASSERT_TRUE(-r1<=r2);
+        ASSERT_TRUE(r1<=r3);
+        ASSERT_FALSE(r1<=r4);
+    }
+
+}
+
+TEST (SpecialOperations, greaterEqual) {
+
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_int_distribution<int> uniformIntDistribution(1,(int)maxValue);
+
+    Ratio r2(Ratio::Zero()), r3(Ratio::Infinite()), r4(-r3);
+    
+    ASSERT_TRUE(r2>=-r2);
+    ASSERT_TRUE(-r2>=r2);
+    ASSERT_FALSE(r2>=r3);
+    ASSERT_TRUE(r2>=r4);
+    ASSERT_TRUE(r3>=r3);
+    ASSERT_TRUE(r3>=r4);
+    ASSERT_FALSE(r4>=r3);
+    
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+        
+        // generate random data
+        int data1 = uniformIntDistribution(generator);
+        int data2 = uniformIntDistribution(generator);
+        
+        // build the corresponding rational
+        Ratio r1((long)data1, (long)data2);
+        
+        ASSERT_TRUE(r1>=r2);
+        ASSERT_FALSE(-r1>=r2);
+        ASSERT_FALSE(r1>=r3);
+        ASSERT_TRUE(r1>=r4);
+    }
+
+}
+
+TEST (SpecialOperations, squareRoot) {
+
+    ASSERT_EQ(Ratio::sqrt(Ratio::Infinite()), Ratio::Infinite());
+    
+    try{
+        Ratio::sqrt(Ratio((long)-1));
+    }
+    catch( const std::exception &e){
+        EXPECT_TRUE( std::string(e.what()).find("Math error: Attempted to squared a negative value\n") == 0);
+    }
+
+}
+
+TEST (SpecialOperations, exponential) {
+
+    Ratio r2(Ratio::Zero()), r3(Ratio::Infinite());
+    
+    ASSERT_EQ(Ratio::exp(r2), 1);
+    ASSERT_EQ(Ratio::exp(r3), Ratio::Infinite());
+    ASSERT_EQ(Ratio::exp(-r3), 0);
+
+}
+
+TEST (SpecialOperations, allTrigonometry) {
+    
+    try{
+        Ratio::cos(Ratio::Infinite());
+    }
+    catch( const std::exception &e){
+        EXPECT_TRUE( std::string(e.what()).find("Math error: cos(Inf) not determined\n") == 0);
+    }
+    
+    try{
+        Ratio::acos(Ratio::Infinite());
+    }
+    catch( const std::exception &e){
+        EXPECT_TRUE( std::string(e.what()).find("Math error: acos(Inf) not determined\n") == 0);
+    }
+    
+    try{
+        Ratio::sin(Ratio::Infinite());
+    }
+    catch( const std::exception &e){
+        EXPECT_TRUE( std::string(e.what()).find("Math error: sin(Inf) not determined\n") == 0);
+    }
+    
+    try{
+        Ratio::asin(Ratio::Infinite());
+    }
+    catch( const std::exception &e){
+        EXPECT_TRUE( std::string(e.what()).find("Math error: asin(Inf) not determined\n") == 0);
+    }
+    
+    try{
+        Ratio::tan(Ratio::Infinite());
+    }
+    catch( const std::exception &e){
+        EXPECT_TRUE( std::string(e.what()).find("Math error: tan(Inf) not determined\n") == 0);
+    }
+    
+    try{
+        Ratio::atan(Ratio::Infinite());
+    }
+    catch( const std::exception &e){
+        EXPECT_TRUE( std::string(e.what()).find("Math error: atan(Inf) not determined\n") == 0);
+    }
+
+}
+
+TEST (SpecialOperations, absolute) {
+    
+    ASSERT_EQ(Ratio::abs(-Ratio::Infinite()), Ratio::Infinite());
+
+}
+
+TEST (SpecialOperations, floor) {
+    
+    ASSERT_EQ(Ratio::floor(Ratio::Infinite()), Ratio::Infinite());
+    ASSERT_EQ(Ratio::floor(-Ratio::Infinite()), -Ratio::Infinite());
+
+}
+
+TEST (SpecialOperations, gcrd) {
+    
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_int_distribution<int> uniformIntDistribution(1,(int)maxValue);
+
+    Ratio r2(Ratio::Zero()), r3(Ratio::Infinite());
+
+    ASSERT_EQ(Ratio::gcrd(r2,r2), r2);
+    ASSERT_EQ(Ratio::gcrd(r3,r3), r3);
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+        
+        // generate random data
+        int data1 = uniformIntDistribution(generator);
+        int data2 = uniformIntDistribution(generator);
+        
+        // build the corresponding rational
+        Ratio r1((long)data1, (long)data2);
+        
+        ASSERT_EQ(Ratio::gcrd(r2,r1), r1);
+        
+        try{
+            ASSERT_EQ(Ratio::gcrd(r2,r3), r1);
+        }
+        catch( const std::exception &e){
+            EXPECT_TRUE( std::string(e.what()).find("Math error: trying to find common divisor of a number with infinite\n") == 0);
+        }
+
+    }
+
+}
+
+TEST (SpecialOperations, log) {
+    
+    ASSERT_EQ(Ratio::log(Ratio::Zero()), -Ratio::Infinite());
+    ASSERT_EQ(Ratio::log(Ratio::Infinite()), Ratio::Infinite());
+
+    try{
+        Ratio::log(-Ratio::Infinite());
+    }
+    catch( const std::exception &e){
+        EXPECT_TRUE( std::string(e.what()).find("Domain error: natural logarithm is defined between ]0; Inf.[\n") == 0);
+    }
+}
+
+TEST (SpecialOperations, power) {
+    
+    std::mt19937 generator(0);
+    //max value
+    const size_t maxValue = 10;
+    std::uniform_int_distribution<int> uniformIntDistribution(1,(int)maxValue);
+
+    Ratio r2(Ratio::Zero()), r3(Ratio::Infinite());
+
+    ASSERT_EQ(Ratio::pow(r3,0), 1);
+
+    // run many times the same test with different values
+    for(int run=0; run<100; ++run){
+        
+        // generate random data
+        int data1 = uniformIntDistribution(generator);
+        
+        ASSERT_EQ(Ratio::pow(r2,data1), r2);
+        ASSERT_EQ(Ratio::pow(r3,data1), r3);
+        ASSERT_EQ(Ratio::pow(r3,-data1), r2);
+    
+        try{
+            Ratio::pow(r2,-data1);
+        }
+        catch( const std::exception &e){
+            EXPECT_TRUE( std::string(e.what()).find("Math error: 0 exponent negative number is impossible\n") == 0);
+        }
+        
+    }
+    
+}
+
+TEST (SpecialOperations, infiniToReal) {
+    
+    try{
+        Ratio::Infinite().convertRatioToFloat();
+    }
+    catch( const std::exception &e){
+        EXPECT_TRUE( std::string(e.what()).find("Domain error: Infini cannot be converted into float\n") == 0);
+    }
+}
+
+TEST (SpecialOperations, invert) {
+    
+    ASSERT_EQ((Ratio::Zero().invert()), Ratio::Infinite());
+    ASSERT_EQ((-Ratio::Zero().invert()), -Ratio::Infinite());
+    ASSERT_EQ((Ratio::Infinite().invert()), Ratio::Zero());
+    ASSERT_EQ((-Ratio::Infinite().invert()), Ratio::Zero());
+
+}
 
 
 int main(int argc, char **argv) {
