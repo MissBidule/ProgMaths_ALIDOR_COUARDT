@@ -32,16 +32,17 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Prevents compiler-specific extensions to C++ because they might allow code to compile on your machine but not on other people's machine
 #set_target_properties(${PROJECT_NAME} PROPERTIES CXX_EXTENSIONS OFF)
 
-# (optional) add a "output" directory in the project binary directory
+# (optional) add an "output" directory in the project binary directory
 file(MAKE_DIRECTORY ${PROJECT_BINARY_DIR}/output)
 
 # (optional) put the binary files in this directory
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 
-# add RatioDLib
+# add RatioLib
 message(STATUS "RatioLib cmake part ..." )
 add_subdirectory(RatioLib INTERFACE)
-include_directories(${CMAKE_SOURCE_DIR}/RatioLib/include) # important : other projects called by this cmake will know this include directory
+include_directories(${CMAKE_SOURCE_DIR}/RatioLib/src) # important : other projects called by this cmake will know this include directory
+include_directories(${CMAKE_SOURCE_DIR}/RatioLib/include) 
 
 # add google test
 message(STATUS "google test cmake part ..." )

@@ -34,15 +34,17 @@
 
 /// \brief return the sign of the number
 /// \return 1 if positive or equal to 0, -1 otherwise
-inline int sign(const float nb) {return (nb >= 0) - (nb < 0);}
+template<typename U>
+inline int sign(const U nb) {return (nb >= 0) - (nb < 0);}
 
 /// \class Ratio
 /// \brief class defining a rational for algebra operations.
+template <typename T>
 class Ratio {
     
 private:
-    long unsigned mNum; /*!< numerator component */
-    long unsigned mDenom; /*!< denominator component */
+    T mNum; /*!< numerator component */
+    T mDenom; /*!< denominator component */
     int mSign;
     
 public:
@@ -52,11 +54,11 @@ public:
     /// \brief Constructor from rational
     /// \param num : The numerator component of the rational
     /// \param denom : The denominator component of the rational
-    Ratio(const long & num = 0, const long & denom = 1, const int & sign = 0);
+    Ratio(const T & num = 0, const T & denom = 1, const int & sign = 0);
     
     /// \brief Constructor from float
     /// \param number : The number to be converted into rational
-    Ratio(const float & number);
+    Ratio(const double & number);
     
     /// \brief Copy-constructor
     /// \param r : The source rational to be copied
@@ -69,10 +71,10 @@ public:
     //Getters
     
     /// \brief Returns the numerator value
-    inline long getNum() const { return mNum;};
+    inline T getNum() const { return mNum;};
     
     /// \brief Returns the denominator value
-    inline long getDenom() const { return mDenom;};
+    inline T getDenom() const { return mDenom;};
     
 public:
     
@@ -81,20 +83,22 @@ public:
     //Ratio + Ratio
     Ratio operator+(const Ratio &r)const;
     
-    //Ratio + float
-    Ratio operator+(const float &f)const;
+    //Ratio + double
+    Ratio operator+(const double &f)const;
     
     //float + Ratio
-    friend Ratio operator+(const float &f, const Ratio &r);
+    template<typename U>
+    friend Ratio<U> operator+(const double &f, const Ratio<U> &r);
     
     //Ratio - Ratio
     Ratio operator-(const Ratio &r)const;
     
     //Ratio - float
-    Ratio operator-(const float &f)const;
+    Ratio operator-(const double &f)const;
     
     //float - Ratio
-    friend Ratio operator-(const float &f, const Ratio &r);
+    template<typename U>
+    friend Ratio<U> operator-(const double &f, const Ratio<U> &r);
     
     //-Ratio
     Ratio operator-()const;
@@ -103,28 +107,31 @@ public:
     Ratio operator%(const Ratio &r)const;
     
     //Ratio % float
-    Ratio operator%(const float &f)const;
+    Ratio operator%(const double &f)const;
     
     //float % Ratio
-    friend Ratio operator%(const float &f, const Ratio &r);
+    template<typename U>
+    friend Ratio<U> operator%(const double &f, const Ratio<U> &r);
 
     //Ratio * Ratio
     Ratio operator*(const Ratio &r)const;
 
-    //ratio * float
-    Ratio operator*(const float &f)const;
+    //ratio * float-
+    Ratio operator*(const double &f)const;
 
     //float * Ratio
-    friend Ratio operator*(const float &f, const Ratio &r);
+    template<typename U>
+    friend Ratio<U> operator*(const double &f, const Ratio<U> &r);
 
     //Ratio / Ratio
     Ratio operator/(const Ratio &r)const;
 
     //ratio / float
-    Ratio operator/(const float &f)const;
+    Ratio operator/(const double &f)const;
 
     //float / Ratio
-    friend Ratio operator/(const float &f, const Ratio &r);
+    template<typename U>
+    friend Ratio<U> operator/(const double &f, const Ratio<U> &r);
 
 
     //comparing Ratio with Ratio//
@@ -136,25 +143,30 @@ public:
     bool operator>=(const Ratio &r)const;
 
     //comparing Ratio with float//
-    bool operator==(const float &f)const;
-    bool operator!=(const float &f)const;
-    bool operator<(const float &f)const;
-    bool operator>(const float &f)const;
-    bool operator<=(const float &f)const;
-    bool operator>=(const float &f)const;
+    bool operator==(const double &f)const;
+    bool operator!=(const double &f)const;
+    bool operator<(const double &f)const;
+    bool operator>(const double &f)const;
+    bool operator<=(const double &f)const;
+    bool operator>=(const double &f)const;
 
 
     //comparing float with Ratio//
-    friend bool operator==(const float &f, const Ratio &r);
-    friend bool operator!=(const float &f, const Ratio &r);
-    friend bool operator<(const float &f, const Ratio &r);
-    friend bool operator>(const float &f, const Ratio &r);
-    friend bool operator<=(const float &f, const Ratio &r);
-    friend bool operator>=(const float &f, const Ratio &r);
+    template<typename U>
+    friend bool operator==(const double &f, const Ratio<U> &r);
+    template<typename U>
+    friend bool operator!=(const double &f, const Ratio<U> &r);
+    template<typename U>
+    friend bool operator<(const double &f, const Ratio<U> &r);
+    template<typename U>
+    friend bool operator>(const double &f, const Ratio<U> &r);
+    template<typename U>
+    friend bool operator<=(const double &f, const Ratio<U> &r);
+    template<typename U>
+    friend bool operator>=(const double &f, const Ratio<U> &r);
 
-
-
-    friend std::ostream& operator<< (std::ostream& stream, const Ratio& ratio);
+    template<typename U>
+    friend std::ostream& operator<< (std::ostream& stream, const Ratio<U>& ratio);
     
 public:
     
@@ -240,12 +252,12 @@ public:
     /// \param  number: The real to be converted
     /// \param  nb_iter: Iterations of the conversion
     /// \return Returns the corresponding rational number
-    static Ratio convertFloatToRatio(const float & number, unsigned nb_iter = 15);
+    static Ratio convertFloatToRatio(const double & number, unsigned nb_iter = 15);
 
     /// \brief Convert a rational to a real
     /// \param  number: The rational to be converted
     /// \return Returns the corresponding real number
-    float convertRatioToFloat()const;
+    auto convertRatioToFloat()const;
     
     /// \brief Returns the sign of the rational
     /// \return Returns 1 if positive or equal to 0, -1 otherwise

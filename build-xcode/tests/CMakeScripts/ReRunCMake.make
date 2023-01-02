@@ -7,5 +7,5 @@ spaceplus:= $(empty)\ $(empty)
 
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/tests/CMakeLists.txt))
 
-/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/CMakeFiles/cmake.check_cache: $(TARGETS)
-	/opt/homebrew/Cellar/cmake/3.25.0/bin/cmake -H/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3 -B/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode
+/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-Xcode/CMakeFiles/cmake.check_cache: $(TARGETS)
+	/opt/homebrew/Cellar/cmake/3.25.0/bin/cmake -H/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3 -B/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-Xcode

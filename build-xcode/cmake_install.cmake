@@ -37,13 +37,13 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
 endif()
 
-set(CMAKE_BINARY_DIR "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode")
+set(CMAKE_BINARY_DIR "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-Xcode")
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/INTERFACE/cmake_install.cmake")
-  include("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/googletest/cmake_install.cmake")
-  include("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/tests/cmake_install.cmake")
+  include("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-Xcode/INTERFACE/cmake_install.cmake")
+  include("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-Xcode/googletest/cmake_install.cmake")
+  include("/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-Xcode/tests/cmake_install.cmake")
 
 endif()
 
@@ -55,5 +55,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-xcode/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/liloualidor/Documents/IMAC/annee_2/C++/S3/Projet_prog_S3/build-Xcode/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
