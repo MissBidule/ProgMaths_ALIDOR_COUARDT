@@ -39,14 +39,19 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/local/include/Ratio/Ratio.hpp")
+   "/usr/local/include/Ratio/Ratio.hpp;/usr/local/include/Ratio/RatioConstructors.hpp;/usr/local/include/Ratio/RatioFunctions.hpp;/usr/local/include/Ratio/RatioOperators.hpp")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/include/Ratio" TYPE FILE FILES "/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/RatioLib/include/Ratio.hpp")
+file(INSTALL DESTINATION "/usr/local/include/Ratio" TYPE FILE FILES
+    "/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/RatioLib/include/Ratio.hpp"
+    "/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/RatioLib/include/RatioConstructors.hpp"
+    "/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/RatioLib/include/RatioFunctions.hpp"
+    "/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/RatioLib/include/RatioOperators.hpp"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

@@ -68,6 +68,18 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -112,18 +124,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build/CMakeFiles /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build/tests/CMakeFiles/progress.marks
@@ -157,130 +157,88 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-tests/CMakeFiles/main3.dir/rule:
-	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/main3.dir/rule
-.PHONY : tests/CMakeFiles/main3.dir/rule
+tests/CMakeFiles/unitTests.dir/rule:
+	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/unitTests.dir/rule
+.PHONY : tests/CMakeFiles/unitTests.dir/rule
 
 # Convenience name for target.
-main3: tests/CMakeFiles/main3.dir/rule
+unitTests: tests/CMakeFiles/unitTests.dir/rule
 
-.PHONY : main3
+.PHONY : unitTests
 
 # fast build rule for target.
-main3/fast:
-	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/main3.dir/build.make tests/CMakeFiles/main3.dir/build
-.PHONY : main3/fast
+unitTests/fast:
+	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/unitTests.dir/build.make tests/CMakeFiles/unitTests.dir/build
+.PHONY : unitTests/fast
 
 # Convenience name for target.
-tests/CMakeFiles/main2.dir/rule:
-	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/main2.dir/rule
-.PHONY : tests/CMakeFiles/main2.dir/rule
+tests/CMakeFiles/simpleTests.dir/rule:
+	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/simpleTests.dir/rule
+.PHONY : tests/CMakeFiles/simpleTests.dir/rule
 
 # Convenience name for target.
-main2: tests/CMakeFiles/main2.dir/rule
+simpleTests: tests/CMakeFiles/simpleTests.dir/rule
 
-.PHONY : main2
+.PHONY : simpleTests
 
 # fast build rule for target.
-main2/fast:
-	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/main2.dir/build.make tests/CMakeFiles/main2.dir/build
-.PHONY : main2/fast
+simpleTests/fast:
+	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/simpleTests.dir/build.make tests/CMakeFiles/simpleTests.dir/build
+.PHONY : simpleTests/fast
 
-# Convenience name for target.
-tests/CMakeFiles/main1.dir/rule:
-	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/main1.dir/rule
-.PHONY : tests/CMakeFiles/main1.dir/rule
+src/simpleTests.o: src/simpleTests.cpp.o
 
-# Convenience name for target.
-main1: tests/CMakeFiles/main1.dir/rule
-
-.PHONY : main1
-
-# fast build rule for target.
-main1/fast:
-	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/main1.dir/build.make tests/CMakeFiles/main1.dir/build
-.PHONY : main1/fast
-
-src/main1.o: src/main1.cpp.o
-
-.PHONY : src/main1.o
+.PHONY : src/simpleTests.o
 
 # target to build an object file
-src/main1.cpp.o:
-	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/main1.dir/build.make tests/CMakeFiles/main1.dir/src/main1.cpp.o
-.PHONY : src/main1.cpp.o
+src/simpleTests.cpp.o:
+	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/simpleTests.dir/build.make tests/CMakeFiles/simpleTests.dir/src/simpleTests.cpp.o
+.PHONY : src/simpleTests.cpp.o
 
-src/main1.i: src/main1.cpp.i
+src/simpleTests.i: src/simpleTests.cpp.i
 
-.PHONY : src/main1.i
+.PHONY : src/simpleTests.i
 
 # target to preprocess a source file
-src/main1.cpp.i:
-	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/main1.dir/build.make tests/CMakeFiles/main1.dir/src/main1.cpp.i
-.PHONY : src/main1.cpp.i
+src/simpleTests.cpp.i:
+	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/simpleTests.dir/build.make tests/CMakeFiles/simpleTests.dir/src/simpleTests.cpp.i
+.PHONY : src/simpleTests.cpp.i
 
-src/main1.s: src/main1.cpp.s
+src/simpleTests.s: src/simpleTests.cpp.s
 
-.PHONY : src/main1.s
+.PHONY : src/simpleTests.s
 
 # target to generate assembly for a file
-src/main1.cpp.s:
-	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/main1.dir/build.make tests/CMakeFiles/main1.dir/src/main1.cpp.s
-.PHONY : src/main1.cpp.s
+src/simpleTests.cpp.s:
+	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/simpleTests.dir/build.make tests/CMakeFiles/simpleTests.dir/src/simpleTests.cpp.s
+.PHONY : src/simpleTests.cpp.s
 
-src/main2.o: src/main2.cpp.o
+src/unitTests.o: src/unitTests.cpp.o
 
-.PHONY : src/main2.o
+.PHONY : src/unitTests.o
 
 # target to build an object file
-src/main2.cpp.o:
-	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/main2.dir/build.make tests/CMakeFiles/main2.dir/src/main2.cpp.o
-.PHONY : src/main2.cpp.o
+src/unitTests.cpp.o:
+	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/unitTests.dir/build.make tests/CMakeFiles/unitTests.dir/src/unitTests.cpp.o
+.PHONY : src/unitTests.cpp.o
 
-src/main2.i: src/main2.cpp.i
+src/unitTests.i: src/unitTests.cpp.i
 
-.PHONY : src/main2.i
-
-# target to preprocess a source file
-src/main2.cpp.i:
-	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/main2.dir/build.make tests/CMakeFiles/main2.dir/src/main2.cpp.i
-.PHONY : src/main2.cpp.i
-
-src/main2.s: src/main2.cpp.s
-
-.PHONY : src/main2.s
-
-# target to generate assembly for a file
-src/main2.cpp.s:
-	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/main2.dir/build.make tests/CMakeFiles/main2.dir/src/main2.cpp.s
-.PHONY : src/main2.cpp.s
-
-src/main3.o: src/main3.cpp.o
-
-.PHONY : src/main3.o
-
-# target to build an object file
-src/main3.cpp.o:
-	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/main3.dir/build.make tests/CMakeFiles/main3.dir/src/main3.cpp.o
-.PHONY : src/main3.cpp.o
-
-src/main3.i: src/main3.cpp.i
-
-.PHONY : src/main3.i
+.PHONY : src/unitTests.i
 
 # target to preprocess a source file
-src/main3.cpp.i:
-	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/main3.dir/build.make tests/CMakeFiles/main3.dir/src/main3.cpp.i
-.PHONY : src/main3.cpp.i
+src/unitTests.cpp.i:
+	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/unitTests.dir/build.make tests/CMakeFiles/unitTests.dir/src/unitTests.cpp.i
+.PHONY : src/unitTests.cpp.i
 
-src/main3.s: src/main3.cpp.s
+src/unitTests.s: src/unitTests.cpp.s
 
-.PHONY : src/main3.s
+.PHONY : src/unitTests.s
 
 # target to generate assembly for a file
-src/main3.cpp.s:
-	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/main3.dir/build.make tests/CMakeFiles/main3.dir/src/main3.cpp.s
-.PHONY : src/main3.cpp.s
+src/unitTests.cpp.s:
+	cd /home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build && $(MAKE) -f tests/CMakeFiles/unitTests.dir/build.make tests/CMakeFiles/unitTests.dir/src/unitTests.cpp.s
+.PHONY : src/unitTests.cpp.s
 
 # Help Target
 help:
@@ -289,23 +247,19 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... main3"
-	@echo "... install/local"
-	@echo "... main2"
-	@echo "... main1"
-	@echo "... src/main1.o"
-	@echo "... src/main1.i"
-	@echo "... src/main1.s"
-	@echo "... src/main2.o"
-	@echo "... src/main2.i"
-	@echo "... src/main2.s"
-	@echo "... src/main3.o"
-	@echo "... src/main3.i"
-	@echo "... src/main3.s"
+	@echo "... unitTests"
+	@echo "... simpleTests"
+	@echo "... src/simpleTests.o"
+	@echo "... src/simpleTests.i"
+	@echo "... src/simpleTests.s"
+	@echo "... src/unitTests.o"
+	@echo "... src/unitTests.i"
+	@echo "... src/unitTests.s"
 .PHONY : help
 
 

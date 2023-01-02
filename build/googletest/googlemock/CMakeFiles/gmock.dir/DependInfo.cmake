@@ -10,6 +10,7 @@ set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../RatioLib/src"
   "../RatioLib/include"
   "../googletest/googlemock/include"
   "../googletest/googlemock"

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libRatio.a  CMakeFiles/Ratio.dir/src/Ratio.cpp.o
+/usr/bin/ranlib libRatio.a

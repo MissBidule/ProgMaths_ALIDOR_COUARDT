@@ -1,1 +1,0 @@
-/usr/bin/clang++  -g   CMakeFiles/main3.dir/src/main3.cpp.o  -o ../bin/main3  ../INTERFACE/libRatio.a ../lib/libgtestd.a -lpthread 

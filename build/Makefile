@@ -235,43 +235,30 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
-# Target rules for targets named main3
+# Target rules for targets named unitTests
 
 # Build rule for target.
-main3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main3
-.PHONY : main3
+unitTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 unitTests
+.PHONY : unitTests
 
 # fast build rule for target.
-main3/fast:
-	$(MAKE) -f tests/CMakeFiles/main3.dir/build.make tests/CMakeFiles/main3.dir/build
-.PHONY : main3/fast
+unitTests/fast:
+	$(MAKE) -f tests/CMakeFiles/unitTests.dir/build.make tests/CMakeFiles/unitTests.dir/build
+.PHONY : unitTests/fast
 
 #=============================================================================
-# Target rules for targets named main2
+# Target rules for targets named simpleTests
 
 # Build rule for target.
-main2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main2
-.PHONY : main2
+simpleTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simpleTests
+.PHONY : simpleTests
 
 # fast build rule for target.
-main2/fast:
-	$(MAKE) -f tests/CMakeFiles/main2.dir/build.make tests/CMakeFiles/main2.dir/build
-.PHONY : main2/fast
-
-#=============================================================================
-# Target rules for targets named main1
-
-# Build rule for target.
-main1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main1
-.PHONY : main1
-
-# fast build rule for target.
-main1/fast:
-	$(MAKE) -f tests/CMakeFiles/main1.dir/build.make tests/CMakeFiles/main1.dir/build
-.PHONY : main1/fast
+simpleTests/fast:
+	$(MAKE) -f tests/CMakeFiles/simpleTests.dir/build.make tests/CMakeFiles/simpleTests.dir/build
+.PHONY : simpleTests/fast
 
 # Help Target
 help:
@@ -291,9 +278,8 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... main3"
-	@echo "... main2"
-	@echo "... main1"
+	@echo "... unitTests"
+	@echo "... simpleTests"
 .PHONY : help
 
 

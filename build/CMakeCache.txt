@@ -281,12 +281,6 @@ DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
 INSTALL_GTEST:BOOL=ON
 
 //Value Computed by CMake
-RatioLib_BINARY_DIR:STATIC=/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build
-
-//Value Computed by CMake
-RatioLib_SOURCE_DIR:STATIC=/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT
-
-//Value Computed by CMake
 Ratio_BINARY_DIR:STATIC=/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/build/INTERFACE
 
 //Value Computed by CMake

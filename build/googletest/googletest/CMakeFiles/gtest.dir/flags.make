@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -Wall -Wshadow -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions 
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/RatioLib/include -I/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/googletest/googletest/include -I/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/googletest/googletest 
+CXX_INCLUDES = -I/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/RatioLib/src -I/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/RatioLib/include -I/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/googletest/googletest/include -I/home/frankie/Bureau/IMAC_2/ProgMaths_ALIDOR_COUARDT/googletest/googletest 
 

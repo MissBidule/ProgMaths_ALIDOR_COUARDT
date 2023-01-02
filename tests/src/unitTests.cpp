@@ -265,7 +265,7 @@ TEST (RatioArithmetic, multiplication) {
     std::mt19937 generator(0);
     //max value
     const size_t maxValue = 10;
-    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    std::uniform_int_distribution<int> uniformIntDistribution(-(int)maxValue,(int)maxValue);
 
     // run many times the same test with different values
     for(int run=0; run<100; ++run){
@@ -303,7 +303,7 @@ TEST (RatioArithmetic, division) {
     std::mt19937 generator(0);
     //max value
     const size_t maxValue = 10;
-    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    std::uniform_int_distribution<int> uniformIntDistribution(-(int)maxValue,(int)maxValue);
 
     // run many times the same test with different values
     for(int run=0; run<100; ++run){
@@ -386,7 +386,7 @@ TEST (RatioComparison, LessThan) {
     std::mt19937 generator(0);
     //max value
     const size_t maxValue = 10;
-    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    std::uniform_int_distribution<int> uniformIntDistribution(-(int)maxValue,(int)maxValue);
 
     // run many times the same test with different values
     for(int run=0; run<100; ++run){
@@ -413,7 +413,7 @@ TEST (RatioComparison, greaterThan) {
     std::mt19937 generator(0);
     //max value
     const size_t maxValue = 10;
-    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    std::uniform_int_distribution<int> uniformIntDistribution(-(int)maxValue,(int)maxValue);
 
     // run many times the same test with different values
     for(int run=0; run<100; ++run){
@@ -440,7 +440,7 @@ TEST (RatioComparison, lessEqual) {
     std::mt19937 generator(0);
     //max value
     const size_t maxValue = 10;
-    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    std::uniform_int_distribution<int> uniformIntDistribution(-(int)maxValue,(int)maxValue);
 
     // run many times the same test with different values
     for(int run=0; run<100; ++run){
@@ -467,7 +467,7 @@ TEST (RatioComparison, greaterEqual) {
     std::mt19937 generator(0);
     //max value
     const size_t maxValue = 10;
-    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    std::uniform_int_distribution<int> uniformIntDistribution(-(int)maxValue,(int)maxValue);
 
     // run many times the same test with different values
     for(int run=0; run<100; ++run){
@@ -949,7 +949,7 @@ TEST (SpecialOperations, addition) {
     std::mt19937 generator(0);
     //max value
     const size_t maxValue = 10;
-    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    std::uniform_int_distribution<int> uniformIntDistribution(-(int)maxValue,(int)maxValue);
     
     Ratio<long> r2(Ratio<long>::Zero()), r3(Ratio<long>::Infinite()), r4(-Ratio<long>::Infinite());
     
@@ -989,7 +989,7 @@ TEST (SpecialOperations, substraction) {
     std::mt19937 generator(0);
     //max value
     const size_t maxValue = 10;
-    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    std::uniform_int_distribution<int> uniformIntDistribution(-(int)maxValue,(int)maxValue);
     
     Ratio<long> r2(Ratio<long>::Zero()), r3(Ratio<long>::Infinite()), r4(-Ratio<long>::Infinite());
     
@@ -1030,7 +1030,7 @@ TEST (SpecialOperations, unaryMinus) {
     std::mt19937 generator(0);
     //max value
     const size_t maxValue = 10;
-    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    std::uniform_int_distribution<int> uniformIntDistribution(-(int)maxValue,(int)maxValue);
     
     Ratio<long> r2(Ratio<long>::Zero()), r3(Ratio<long>::Infinite()), r4(-Ratio<long>::Infinite());
     
@@ -1045,7 +1045,7 @@ TEST (SpecialOperations, modulo) {
     std::mt19937 generator(0);
     //max value
     const size_t maxValue = 10;
-    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    std::uniform_int_distribution<int> uniformIntDistribution(-(int)maxValue,(int)maxValue);
     
     Ratio<long> r2(Ratio<long>::Zero()), r3(Ratio<long>::Infinite());
     
@@ -1085,7 +1085,7 @@ TEST (SpecialOperations, multiplication) {
     std::mt19937 generator(0);
     //max value
     const size_t maxValue = 10;
-    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    std::uniform_int_distribution<int> uniformIntDistribution(-(int)maxValue,(int)maxValue);
     
     Ratio<long> r2(Ratio<long>::Zero()), r3(Ratio<long>::Infinite()), r4(-r3);
     
@@ -1128,7 +1128,7 @@ TEST (SpecialOperations, division) {
     std::mt19937 generator(0);
     //max value
     const size_t maxValue = 10;
-    std::uniform_int_distribution<float> uniformIntDistribution(-(int)maxValue,(int)maxValue);
+    std::uniform_int_distribution<int> uniformIntDistribution(-(int)maxValue,(int)maxValue);
     
     Ratio<long> r2(Ratio<long>::Zero()), r3(Ratio<long>::Infinite());
     
