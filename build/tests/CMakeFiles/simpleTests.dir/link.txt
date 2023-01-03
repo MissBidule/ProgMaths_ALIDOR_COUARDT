@@ -1,1 +1,0 @@
-/usr/bin/clang++  -g   CMakeFiles/simpleTests.dir/src/simpleTests.cpp.o  -o ../bin/simpleTests  ../INTERFACE/libRatio.a ../lib/libgtestd.a -lpthread 

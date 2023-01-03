@@ -45,7 +45,7 @@ class Ratio {
 private:
     T mNum; /*!< numerator component */
     T mDenom; /*!< denominator component */
-    int mSign;
+    int mSign; /*!< the sign */
     
 public:
     
@@ -54,6 +54,7 @@ public:
     /// \brief Constructor from rational
     /// \param num : The numerator component of the rational
     /// \param denom : The denominator component of the rational
+    /// \param sign : The sign of the rational ( "+" if >= 0 "-" otherwise)
     Ratio(const T & num = 0, const T & denom = 1, const int & sign = 0);
     
     /// \brief Constructor from float
@@ -62,6 +63,7 @@ public:
     
     /// \brief Copy-constructor
     /// \param r : The source rational to be copied
+    /// \param sign : The sign of the rational ( "+" if >= 0 "-" otherwise)
     Ratio(const Ratio & r, const int & sign = 0);
     
     /// \brief Destructor
@@ -241,7 +243,7 @@ public:
     static Ratio pow(const Ratio &r, const long &exponent);
 
     /// \brief Indicates that a rational equals to 0
-    /// \return Returns a null rational number(0/1)
+    /// \return Returns a null rational number (0/1)
     static Ratio Zero();
 
     /// \brief Indicates that a rational is tending towards infinity
@@ -255,7 +257,6 @@ public:
     static Ratio convertFloatToRatio(const double & number, unsigned nb_iter = 15);
 
     /// \brief Convert a rational to a real
-    /// \param  number: The rational to be converted
     /// \return Returns the corresponding real number
     auto convertRatioToFloat()const;
     

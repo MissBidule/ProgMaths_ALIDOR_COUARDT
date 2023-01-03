@@ -186,7 +186,7 @@ Ratio<T> Ratio<T>::gcrd(const Ratio<T> &r1, const Ratio<T> &r2){
         return Infinite();
     }
     if (b==0 || d == 0)
-        throw std::runtime_error("Math error: trying to find common divisor of a number with infinite\n");
+        throw std::runtime_error("Math error: trying to find common divisor of a number with infinity\n");
 
     return Ratio<T>(std::gcd(a*d,b*c), b*d);
 }
@@ -255,7 +255,7 @@ Ratio<T> Ratio<T>::convertFloatToRatio(const double & number, unsigned nb_iter) 
 template<typename T>
 auto Ratio<T>::convertRatioToFloat()const {
     if (mDenom == 0)
-        throw std::runtime_error("Domain error: Infini cannot be converted into float\n");
+        throw std::runtime_error("Domain error: Infinity cannot be converted into float\n");
     return mNum/(float)mDenom*signRatio();
 }
 

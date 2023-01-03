@@ -35,8 +35,18 @@ Optional : if you want to install a lib
 ```shell
 sudo make install
 ```
-Optional : if you want to generate the doc
+Optional : if you want to generate the doc (in a separate folder)
 ```shell
+cd projectDirectory
+mkdir build-html
+cd build-html
+cmake ..
+make
 make html
 ```
+The documentation is located in:
+
+* [path to build]/doc/doc-doxygen/html/index.html or
+* or [path to build]/INTERFACE/doc/doc-doxygen/html/index.html
+
 
