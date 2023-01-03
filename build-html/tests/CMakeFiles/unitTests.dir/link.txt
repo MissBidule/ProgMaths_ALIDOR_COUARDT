@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/unitTests.dir/src/unitTests.cpp.o  -o ../bin/unitTests  ../INTERFACE/libRatio.a ../lib/libgtest.a -lpthread 
